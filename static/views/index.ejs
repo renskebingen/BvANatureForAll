@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Farm Map</title>
+
+  <!-- Leaflet -->
+  <link
+    rel="stylesheet"
+    href="https://unpkg.com/leaflet/dist/leaflet.css"
+  />
+
+  <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+
+  <link rel="stylesheet" href="/css/style.css">
+</head>
+
+<body>
+
+  <!-- FILTER (boven links) -->
+  <div id="uiTopLeft">
+    <select id="filter">
+      <option value="all">Alle</option>
+      <option value="melkvee">Melkvee</option>
+      <option value="akkerbouw">Akkerbouw</option>
+    </select>
+  </div>
+
+  <!-- OVERLAY PANEL -->
+  <div id="panel" class="panel">
+    <button id="closePanel">✕</button>
+
+    <h2 id="farmTitle">Klik op een boerderij</h2>
+    <p id="farmDesc">Selecteer een marker.</p>
+  </div>
+
+  <!-- MAP -->
+  <div id="map"></div>
+
+  <!-- DATA -->
+  <script>
+    window.FARMS = <%- JSON.stringify(farms) %>;
+  </script>
+
+  <!-- APP -->
+  <script src="/js/app.js"></script>
+
+</body>
+</html>
