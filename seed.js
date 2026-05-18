@@ -30,4 +30,4 @@ mongoose.connect(process.env.MONGO_URI)
     console.log("Seed complete")
 
     process.exit()
-  });
+  })
