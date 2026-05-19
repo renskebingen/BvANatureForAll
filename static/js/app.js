@@ -1,4 +1,14 @@
-const map = L.map('map').setView([52.1326, 5.2913], 7);
+/* -----------------------------
+   MAP
+------------------------------*/
+const map = L.map('map', {
+  zoomControl: false
+}).setView([52.28, 4.90], 12)
+
+L.control.zoom({
+  position: 'topright'
+}).addTo(map)
+
 
 /* -----------------------------
    TILE LAYER
@@ -8,140 +18,324 @@ L.tileLayer(
   {
     attribution: '&copy; OpenStreetMap & Carto'
   }
-).addTo(map);
+).addTo(map)
 
 
 /* -----------------------------
-   POLYGONS (velden)
+   DARK OVERLAY
 ------------------------------*/
-L.polygon([
-  [52.37, 4.90],
-  [52.38, 4.91],
-  [52.36, 4.93],
-  [52.35, 4.89]
-], {
-  color: 'green',
-  fillColor: 'green',
-  fillOpacity: 0.4
-}).addTo(map);
-
-
-L.polygon([
-  [52.365, 4.905],
-  [52.375, 4.925],
-  [52.355, 4.94],
-  [52.345, 4.91]
-], {
-  color: 'orange',
-  fillColor: 'orange',
-  fillOpacity: 0.4
-}).addTo(map);
-
-
-/* -----------------------------
-   RIVER (GeoJSON)
-------------------------------*/
-const riverGeoJSON = {
-  type: "Feature",
-  geometry: {
-    type: "LineString",
-    coordinates: [
-      [4.880, 52.385],
-      [4.890, 52.382],
-      [4.900, 52.380],
-      [4.910, 52.378],
-      [4.920, 52.375],
-      [4.930, 52.372],
-      [4.940, 52.370]
-    ]
+L.rectangle(
+  [
+    [-90, -180],
+    [90, 180]
+  ],
+  {
+    color: 'transparent',
+    fillColor: 'green',
+    fillOpacity: 0.1,
+    interactive: false
   }
-};
-
-L.geoJSON(riverGeoJSON, {
-  style: () => ({
-    color: "#1e88e5",
-    weight: 6,
-    opacity: 0.8
-  })
-}).addTo(map);
+).addTo(map)
 
 
 /* -----------------------------
-   OVERLAY PANEL
+   POLYGON GROUPS
 ------------------------------*/
-const panel = document.getElementById("panel");
-const closeBtn = document.getElementById("closePanel");
+const allPolygons = L.featureGroup().addTo(map)
+const amstellandGroup = L.featureGroup().addTo(map)
+
+
+/* -----------------------------
+   LOAD POLYGONS
+------------------------------*/
+function loadPolygon(url, style, group = allPolygons) {
+
+  fetch(url)
+    .then(res => res.json())
+    .then(data => {
+
+      L.geoJSON(data, {
+
+        style,
+
+        interactive: false
+
+      }).addTo(group)
+
+    })
+    .catch(err => console.error(url, err))
+
+}
+
+
+/* -----------------------------
+   RONDE HOEP
+------------------------------*/
+loadPolygon(
+  '/poldergebieden/rondehoep.geojson',
+  {
+    color: 'green',
+    weight: 3,
+    fillColor: '#51af4c',
+    fillOpacity: 0.2
+  }
+)
+
+
+/* -----------------------------
+   BOVENKERKERPOLDER
+------------------------------*/
+loadPolygon(
+  '/poldergebieden/bovenkerkerpolder.geojson',
+  {
+    color: 'blue',
+    weight: 3,
+    fillColor: '#4f8cff',
+    fillOpacity: 0.2
+  }
+)
+
+
+/* -----------------------------
+   MIDDENPOLDER
+------------------------------*/
+loadPolygon(
+  '/poldergebieden/middenpolder.geojson',
+  {
+    color: 'orange',
+    weight: 3,
+    fillColor: '#ff9800',
+    fillOpacity: 0.2
+  }
+)
+
+
+/* -----------------------------
+   AMSTELLAND
+------------------------------*/
+loadPolygon(
+  '/amstelland/amstelland.geojson',
+  {
+    color: '#7b1fa2',
+    weight: 4,
+    fillColor: '#ba68c8',
+    fillOpacity: 0.15
+  },
+  amstellandGroup
+)
+
+
+/* -----------------------------
+   PANEL
+------------------------------*/
+const panel = document.getElementById('panel')
+const closeBtn = document.getElementById('closePanel')
 
 function openPanel(farm) {
 
-  panel.classList.add("open");
+  panel.classList.add('open')
 
-  document.getElementById("farmTitle").innerText = farm.name;
+  document.getElementById('farmTitle').innerText =
+    farm.name
 
-  document.getElementById("farmDesc").innerHTML = `
+  document.getElementById('farmDesc').innerHTML = `
     <p>${farm.description}</p>
-    <hr>
-    <p><b>Type:</b> ${farm.type || "onbekend"}</p>
-    <p><b>Locatie:</b> ${farm.lat}, ${farm.lng}</p>
-  `;
+  `
 }
 
-closeBtn.addEventListener("click", () => {
-  panel.classList.remove("open");
-});
+closeBtn.addEventListener('click', () => {
+  panel.classList.remove('open')
+})
 
 
 /* -----------------------------
    MARKERS
 ------------------------------*/
-const markers = [];
+const markers = []
 
 window.FARMS.forEach(farm => {
 
-  const marker = L.marker([farm.lat, farm.lng]).addTo(map);
+  const marker = L.marker([
+    farm.lat,
+    farm.lng
+  ]).addTo(map)
 
-  marker.on("click", () => {
+  const popupContent =
+    document.createElement('div')
 
-    openPanel(farm);
+  popupContent.innerHTML = `
+    <div class="popup-content">
 
-    map.flyTo([farm.lat, farm.lng], 14, {
-      duration: 1.2
-    });
+      <h3>${farm.name}</h3>
 
-  });
+      <p>
+        ${farm.description || ''}
+      </p>
 
-  markers.push({ marker, farm });
-});
+      <button class="read-more-btn">
+        Lees meer
+      </button>
+
+    </div>
+  `
+
+  popupContent
+    .querySelector('.read-more-btn')
+    .addEventListener('click', () => {
+
+      openPanel(farm)
+
+      map.flyTo(
+        [farm.lat, farm.lng],
+        14,
+        {
+          duration: 1.2
+        }
+      )
+
+    })
+
+  marker.bindPopup(popupContent)
+
+  marker.on('click', () => {
+
+    map.flyTo(
+      [farm.lat, farm.lng],
+      14,
+      {
+        duration: 1.2
+      }
+    )
+
+  })
+
+  markers.push({
+    marker,
+    farm
+  })
+
+})
 
 
 /* -----------------------------
    FILTER
 ------------------------------*/
-const filter = document.getElementById("filter");
+const filter =
+  document.getElementById('filter')
 
-filter.addEventListener("change", (e) => {
+filter.addEventListener('change', e => {
 
-  const value = e.target.value;
+  const value = e.target.value
 
-  markers.forEach(obj => {
+  /* -----------------------------
+     ALLE
+  ------------------------------*/
+  if (value === 'all') {
 
-    const show =
-      value === "all" || obj.farm.type === value;
+    /* markers tonen */
+    markers.forEach(obj => {
 
-    if (show) {
-      obj.marker.addTo(map);
-    } else {
-      map.removeLayer(obj.marker);
+      if (!map.hasLayer(obj.marker)) {
+        obj.marker.addTo(map)
+      }
+
+    })
+
+    /* polders tonen */
+    if (!map.hasLayer(allPolygons)) {
+      allPolygons.addTo(map)
     }
 
-  });
+    /* amstelland tonen */
+    if (!map.hasLayer(amstellandGroup)) {
+      amstellandGroup.addTo(map)
+    }
 
-});
+  }
+
+  /* -----------------------------
+     ALLEEN BOERDERIJEN
+  ------------------------------*/
+  if (value === 'boerderij') {
+
+    /* markers tonen */
+    markers.forEach(obj => {
+
+      if (!map.hasLayer(obj.marker)) {
+        obj.marker.addTo(map)
+      }
+
+    })
+
+    /* polygons verbergen */
+    if (map.hasLayer(allPolygons)) {
+      map.removeLayer(allPolygons)
+    }
+
+    if (map.hasLayer(amstellandGroup)) {
+      map.removeLayer(amstellandGroup)
+    }
+
+  }
+
+  /* -----------------------------
+     ALLEEN POLDERS
+  ------------------------------*/
+  if (value === 'polder') {
+
+    /* markers verbergen */
+    markers.forEach(obj => {
+
+      if (map.hasLayer(obj.marker)) {
+        map.removeLayer(obj.marker)
+      }
+
+    })
+
+    /* alleen polders tonen */
+    if (!map.hasLayer(allPolygons)) {
+      allPolygons.addTo(map)
+    }
+
+    /* amstelland verbergen */
+    if (map.hasLayer(amstellandGroup)) {
+      map.removeLayer(amstellandGroup)
+    }
+
+  }
+
+  /* -----------------------------
+     ALLEEN AMSTELLAND
+  ------------------------------*/
+  if (value === 'amstelland') {
+
+    /* markers verbergen */
+    markers.forEach(obj => {
+
+      if (map.hasLayer(obj.marker)) {
+        map.removeLayer(obj.marker)
+      }
+
+    })
+
+    /* polders verbergen */
+    if (map.hasLayer(allPolygons)) {
+      map.removeLayer(allPolygons)
+    }
+
+    /* amstelland tonen */
+    if (!map.hasLayer(amstellandGroup)) {
+      amstellandGroup.addTo(map)
+    }
+
+  }
+
+})
 
 
 /* -----------------------------
-   FIX LEAFLET RENDER BUG
+   FIX LEAFLET
 ------------------------------*/
 setTimeout(() => {
-  map.invalidateSize();
-}, 200);
+  map.invalidateSize()
+}, 200)
