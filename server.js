@@ -25,6 +25,10 @@ app.get("/", async (req, res) => {
   })
 })
 
+app.get("/oevertjekopen", (req, res) => {
+  res.render("oevertjekopen")
+})
+
 app.listen(process.env.PORT, () => {
   console.log("Server running")
 })

@@ -1,8 +1,7 @@
 /* -----------------------------
    BASIC LAYOUT
 ------------------------------*/
-html,
-body {
+.map {
   height: 100%;
   margin: 0;
   overflow: hidden;
@@ -113,4 +112,123 @@ body {
   border-radius: 0.4em;
 
   cursor: pointer;
+}
+
+/* -----------------------------
+   oevertje kopen styling
+------------------------------*/
+
+.h1oevertje {
+  font-size: 2em;
+
+  margin-bottom: 1em;
+}
+
+
+/* -----------------------------
+   3 kaarten naast elkaar
+------------------------------*/
+.oevertjekopen{
+  display: flex;
+  flex-direction: row;
+
+  justify-content: center;
+
+  gap: 2em;
+
+  width: 100%;
+}
+
+
+/* -----------------------------
+   kaart styling
+------------------------------*/
+.oevertjekopen article{
+  background: #f3f3f3;
+
+  border-radius: 1em;
+
+  padding: 2em;
+
+  width: 30vw;
+
+  min-width: 16em;
+  max-width: 24em;
+
+  min-height: 32em;
+
+  display: flex;
+  flex-direction: column;
+
+  box-sizing: border-box;
+}
+
+
+/* -----------------------------
+   afbeelding
+------------------------------*/
+.oevertje-image{
+  width: 100%;
+
+  height: 13vw;
+
+  min-height: 8em;
+  max-height: 12em;
+
+  object-fit: cover;
+
+  border-radius: 0.7em;
+
+  margin-top: 0.5em;
+  margin-bottom: 1.5em;
+}
+
+
+/* -----------------------------
+   titel
+------------------------------*/
+.oevertjekopen h2{
+  font-size: 1.5em;
+
+  margin-top: 0;
+  margin-bottom: 1em;
+}
+
+
+/* -----------------------------
+   lijst links houden
+------------------------------*/
+.oevertjekopen ul{
+  padding-left: 1.4em;
+
+  margin-top: 0;
+  margin-bottom: 2em;
+
+  font-size: 1em;
+
+  line-height: 1.8;
+}
+
+
+/* -----------------------------
+   knop
+------------------------------*/
+.kopen-btn{
+  margin-top: auto;
+
+  align-self: center;
+
+  border: none;
+
+  background: #d9d9d9;
+
+  padding: 0.8em 2.8em;
+
+  border-radius: 0.4em;
+
+  cursor: pointer;
+
+  font-size: 1em;
+
+  margin-bottom: 0.5em;
 }
