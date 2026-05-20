@@ -124,6 +124,57 @@ loadPolygon(
   amstellandGroup
 )
 
+/* -----------------------------
+   HEATMAP (DUMMY DATA)
+------------------------------*/
+const fallbackHeatData = [
+  [52.292, 4.914, 0.9],
+  [52.287, 4.902, 0.8],
+  [52.281, 4.925, 0.7],
+  [52.274, 4.893, 0.75],
+  [52.269, 4.914, 0.6],
+  [52.298, 4.885, 0.55],
+  [52.304, 4.931, 0.5],
+  [52.259, 4.901, 0.65]
+]
+
+const LIVE_HEATMAP_REFRESH_MS = 30000
+let currentHeatData = fallbackHeatData
+
+const heatLayer = L.heatLayer(currentHeatData, {
+  radius: 30,
+  blur: 22,
+  maxZoom: 16,
+  minOpacity: 0.35,
+  gradient: {
+    0.2: '#8bc34a',
+    0.4: '#ffeb3b',
+    0.7: '#ff9800',
+    1.0: '#e53935'
+  }
+})
+
+async function loadLiveHeatmapData() {
+  try {
+    const response = await fetch('/api/heatmap')
+
+    if (!response.ok) {
+      throw new Error(`HTTP ${response.status}`)
+    }
+
+    const payload = await response.json()
+
+    if (Array.isArray(payload.points)) {
+      currentHeatData = payload.points
+      heatLayer.setLatLngs(currentHeatData)
+    }
+  } catch (error) {
+    console.error('Kon live heatmap data niet laden:', error)
+    currentHeatData = fallbackHeatData
+    heatLayer.setLatLngs(currentHeatData)
+  }
+}
+
 
 /* -----------------------------
    PANEL
@@ -224,7 +275,7 @@ const filter =
   document.getElementById('filter')
 
 filter.addEventListener('change', e => {
-
+  
   const value = e.target.value
 
   /* -----------------------------
@@ -251,6 +302,11 @@ filter.addEventListener('change', e => {
       amstellandGroup.addTo(map)
     }
 
+    /* heatmap tonen */
+    if (!map.hasLayer(heatLayer)) {
+      heatLayer.addTo(map)
+    }
+
   }
 
   /* -----------------------------
@@ -274,6 +330,11 @@ filter.addEventListener('change', e => {
 
     if (map.hasLayer(amstellandGroup)) {
       map.removeLayer(amstellandGroup)
+    }
+
+    /* heatmap verbergen */
+    if (map.hasLayer(heatLayer)) {
+      map.removeLayer(heatLayer)
     }
 
   }
@@ -302,6 +363,11 @@ filter.addEventListener('change', e => {
       map.removeLayer(amstellandGroup)
     }
 
+    /* heatmap verbergen */
+    if (map.hasLayer(heatLayer)) {
+      map.removeLayer(heatLayer)
+    }
+
   }
 
   /* -----------------------------
@@ -328,9 +394,48 @@ filter.addEventListener('change', e => {
       amstellandGroup.addTo(map)
     }
 
+    /* heatmap verbergen */
+    if (map.hasLayer(heatLayer)) {
+      map.removeLayer(heatLayer)
+    }
+
+  }
+
+  /* -----------------------------
+     ALLEEN HEATMAP
+  ------------------------------*/
+  if (value === 'heatmap') {
+
+    /* markers verbergen */
+    markers.forEach(obj => {
+      if (map.hasLayer(obj.marker)) {
+        map.removeLayer(obj.marker)
+      }
+    })
+
+    /* polders verbergen */
+    if (map.hasLayer(allPolygons)) {
+      map.removeLayer(allPolygons)
+    }
+
+    /* amstelland verbergen */
+    if (map.hasLayer(amstellandGroup)) {
+      map.removeLayer(amstellandGroup)
+    }
+
+    /* heatmap tonen */
+    if (!map.hasLayer(heatLayer)) {
+      heatLayer.addTo(map)
+    }
+
   }
 
 })
+
+loadLiveHeatmapData()
+setInterval(loadLiveHeatmapData, LIVE_HEATMAP_REFRESH_MS)
+
+filter.dispatchEvent(new Event('change'))
 
 
 /* -----------------------------

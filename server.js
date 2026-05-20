@@ -25,6 +25,35 @@ app.get("/", async (req, res) => {
   })
 })
 
+app.get("/api/heatmap", async (req, res) => {
+  try {
+    const farms = await Farm.find({
+      lat: { $ne: null },
+      lng: { $ne: null }
+    })
+      .select("lat lng -_id")
+      .lean()
+
+    const points = farms
+      .filter(farm =>
+        Number.isFinite(farm.lat) &&
+        Number.isFinite(farm.lng)
+      )
+      .map(farm => [farm.lat, farm.lng, 1])
+
+    res.json({
+      points,
+      updatedAt: new Date().toISOString()
+    })
+  } catch (err) {
+    console.error("Heatmap API error:", err)
+    res.status(500).json({
+      points: [],
+      error: "Unable to load heatmap data"
+    })
+  }
+})
+
 app.listen(process.env.PORT, () => {
   console.log("Server running")
 })
