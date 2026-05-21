@@ -13,7 +13,7 @@ L.control.zoom({
 /* -----------------------------
    TILE LAYER
 ------------------------------*/
-L.tileLayer(
+const tiles = L.tileLayer(
   'https://{s}.basemaps.cartocdn.com/rastertiles/voyager/{z}/{x}/{y}{r}.png',
   {
     attribution: '&copy; OpenStreetMap & Carto'
@@ -22,7 +22,19 @@ L.tileLayer(
 
 
 /* -----------------------------
-   DARK OVERLAY
+   MAP FILTER
+------------------------------*/
+tiles.getContainer().style.filter = `
+  brightness(1)
+  contrast(0.9)
+  saturate(2)
+  sepia(0.2)
+  hue-rotate(-10deg)
+`
+
+
+/* -----------------------------
+   SOFT GREEN OVERLAY
 ------------------------------*/
 L.rectangle(
   [
@@ -31,8 +43,8 @@ L.rectangle(
   ],
   {
     color: 'transparent',
-    fillColor: 'green',
-    fillOpacity: 0.1,
+    fillColor: '#6f8f5f',
+    fillOpacity: 0.12,
     interactive: false
   }
 ).addTo(map)
