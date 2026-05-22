@@ -25,11 +25,10 @@ const tiles = L.tileLayer(
    MAP FILTER
 ------------------------------*/
 tiles.getContainer().style.filter = `
-  brightness(1)
-  contrast(0.9)
-  saturate(2)
-  sepia(0.2)
-  hue-rotate(-10deg)
+  brightness(0.95)
+  contrast(1.2)
+  saturate(1.4)
+  hue-rotate(-6deg)
 `
 
 
@@ -281,21 +280,31 @@ window.FARMS.forEach(farm => {
 
 
 /* -----------------------------
-   FILTER
+   FILTER LAGEN
 ------------------------------*/
-const filter =
-  document.getElementById('filter')
 
-filter.addEventListener('change', e => {
-  
-  const value = e.target.value
+const layerBoerderij =
+  document.getElementById('layerBoerderij')
+
+const layerPolder =
+  document.getElementById('layerPolder')
+
+const layerAmstelland =
+  document.getElementById('layerAmstelland')
+
+const layerHeatmap =
+  document.getElementById('layerHeatmap')
+
+/* -----------------------------
+   UPDATE MAP
+------------------------------*/
+function updateLayers() {
 
   /* -----------------------------
-     ALLE
+     BOERDERIJEN
   ------------------------------*/
-  if (value === 'all') {
+  if (layerBoerderij.checked) {
 
-    /* markers tonen */
     markers.forEach(obj => {
 
       if (!map.hasLayer(obj.marker)) {
@@ -304,150 +313,87 @@ filter.addEventListener('change', e => {
 
     })
 
-    /* polders tonen */
+  } else {
+
+    markers.forEach(obj => {
+
+      if (map.hasLayer(obj.marker)) {
+        map.removeLayer(obj.marker)
+      }
+
+    })
+
+  }
+
+  /* -----------------------------
+     POLDERS
+  ------------------------------*/
+  if (layerPolder.checked) {
+
     if (!map.hasLayer(allPolygons)) {
       allPolygons.addTo(map)
     }
 
-    /* amstelland tonen */
+  } else {
+
+    if (map.hasLayer(allPolygons)) {
+      map.removeLayer(allPolygons)
+    }
+
+  }
+
+  /* -----------------------------
+     AMSTELLAND
+  ------------------------------*/
+  if (layerAmstelland.checked) {
+
     if (!map.hasLayer(amstellandGroup)) {
       amstellandGroup.addTo(map)
     }
 
-    /* heatmap tonen */
+  } else {
+
+    if (map.hasLayer(amstellandGroup)) {
+      map.removeLayer(amstellandGroup)
+    }
+
+  }
+
+  /* -----------------------------
+     HEATMAP
+  ------------------------------*/
+  if (layerHeatmap.checked) {
+
     if (!map.hasLayer(heatLayer)) {
       heatLayer.addTo(map)
     }
 
-  }
+  } else {
 
-  /* -----------------------------
-     ALLEEN BOERDERIJEN
-  ------------------------------*/
-  if (value === 'boerderij') {
-
-    /* markers tonen */
-    markers.forEach(obj => {
-
-      if (!map.hasLayer(obj.marker)) {
-        obj.marker.addTo(map)
-      }
-
-    })
-
-    /* polygons verbergen */
-    if (map.hasLayer(allPolygons)) {
-      map.removeLayer(allPolygons)
-    }
-
-    if (map.hasLayer(amstellandGroup)) {
-      map.removeLayer(amstellandGroup)
-    }
-
-    /* heatmap verbergen */
     if (map.hasLayer(heatLayer)) {
       map.removeLayer(heatLayer)
     }
 
   }
 
-  /* -----------------------------
-     ALLEEN POLDERS
-  ------------------------------*/
-  if (value === 'polder') {
+}
 
-    /* markers verbergen */
-    markers.forEach(obj => {
+/* -----------------------------
+   EVENT LISTENERS
+------------------------------*/
+layerBoerderij.addEventListener('change', updateLayers)
+layerPolder.addEventListener('change', updateLayers)
+layerAmstelland.addEventListener('change', updateLayers)
+layerHeatmap.addEventListener('change', updateLayers)
 
-      if (map.hasLayer(obj.marker)) {
-        map.removeLayer(obj.marker)
-      }
-
-    })
-
-    /* alleen polders tonen */
-    if (!map.hasLayer(allPolygons)) {
-      allPolygons.addTo(map)
-    }
-
-    /* amstelland verbergen */
-    if (map.hasLayer(amstellandGroup)) {
-      map.removeLayer(amstellandGroup)
-    }
-
-    /* heatmap verbergen */
-    if (map.hasLayer(heatLayer)) {
-      map.removeLayer(heatLayer)
-    }
-
-  }
-
-  /* -----------------------------
-     ALLEEN AMSTELLAND
-  ------------------------------*/
-  if (value === 'amstelland') {
-
-    /* markers verbergen */
-    markers.forEach(obj => {
-
-      if (map.hasLayer(obj.marker)) {
-        map.removeLayer(obj.marker)
-      }
-
-    })
-
-    /* polders verbergen */
-    if (map.hasLayer(allPolygons)) {
-      map.removeLayer(allPolygons)
-    }
-
-    /* amstelland tonen */
-    if (!map.hasLayer(amstellandGroup)) {
-      amstellandGroup.addTo(map)
-    }
-
-    /* heatmap verbergen */
-    if (map.hasLayer(heatLayer)) {
-      map.removeLayer(heatLayer)
-    }
-
-  }
-
-  /* -----------------------------
-     ALLEEN HEATMAP
-  ------------------------------*/
-  if (value === 'heatmap') {
-
-    /* markers verbergen */
-    markers.forEach(obj => {
-      if (map.hasLayer(obj.marker)) {
-        map.removeLayer(obj.marker)
-      }
-    })
-
-    /* polders verbergen */
-    if (map.hasLayer(allPolygons)) {
-      map.removeLayer(allPolygons)
-    }
-
-    /* amstelland verbergen */
-    if (map.hasLayer(amstellandGroup)) {
-      map.removeLayer(amstellandGroup)
-    }
-
-    /* heatmap tonen */
-    if (!map.hasLayer(heatLayer)) {
-      heatLayer.addTo(map)
-    }
-
-  }
-
-})
-
+/* -----------------------------
+   LIVE HEATMAP
+------------------------------*/
 loadLiveHeatmapData()
 setInterval(loadLiveHeatmapData, LIVE_HEATMAP_REFRESH_MS)
 
-filter.dispatchEvent(new Event('change'))
+/* eerste keer laden */
+updateLayers()
 
 
 /* -----------------------------

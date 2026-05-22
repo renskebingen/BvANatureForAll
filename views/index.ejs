@@ -1,7 +1,10 @@
 <!DOCTYPE html>
-<html>
+<html lang="nl">
 
 <head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
   <title>Farm Map</title>
 
   <!-- Leaflet -->
@@ -12,43 +15,82 @@
 
   <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
 
-<!-- Heatmap -->
+  <!-- Heatmap -->
   <script src="https://unpkg.com/leaflet.heat/dist/leaflet-heat.js"></script>
 
+  <!-- CSS -->
   <link rel="stylesheet" href="/css/style.css">
 </head>
 
 <body class="map">
 
-  <!-- FILTER (boven links) -->
-  <div id="uiTopLeft">
-    <select id="filter">
-      <option value="all">Alle</option>
-      <option value="boerderij">Boerderijen</option>
-      <option value="polder">Poldergebieden</option>
-      <option value="amstelland">Amstelland</option>
-      <option value="heatmap">Heatmap</option>
-    </select>
+  <!-- =========================
+       FILTER OVERLAY
+  ========================== -->
+  <div id="uiTopLeft" class="mapFilters">
+
+    <label class="filterItem">
+      <input type="checkbox" id="layerBoerderij" checked>
+      <span>🚜 Boeren</span>
+    </label>
+
+    <label class="filterItem">
+      <input type="checkbox" id="layerPolder" checked>
+      <span>🏡 Polders</span>
+    </label>
+
+    <label class="filterItem">
+      <input type="checkbox" id="layerAmstelland" checked>
+      <span>🌾 Amstelland</span>
+    </label>
+
+    <label class="filterItem">
+      <input type="checkbox" id="layerHeatmap" checked>
+      <span>🌱 Biodiversiteit</span>
+    </label>
+
   </div>
 
-  <!-- OVERLAY PANEL -->
+
+  <!-- =========================
+       OVERLAY PANEL
+  ========================== -->
   <div id="panel" class="panel">
-    <button id="closePanel">✕</button>
 
-    <h2 id="farmTitle">Klik op een boerderij</h2>
-    <p id="farmDesc">Selecteer een marker.</p>
+    <button id="closePanel">
+      ✕
+    </button>
+
+    <h2 id="farmTitle">
+      Klik op een boerderij
+    </h2>
+
+    <p id="farmDesc">
+      Selecteer een marker.
+    </p>
+
   </div>
 
-  <!-- MAP -->
+
+  <!-- =========================
+       MAP
+  ========================== -->
   <div id="map"></div>
 
-  <!-- DATA -->
+
+  <!-- =========================
+       DATA
+  ========================== -->
   <script>
     window.FARMS = <%- JSON.stringify(farms) %>;
   </script>
 
-  <!-- APP -->
+
+  <!-- =========================
+       APP
+  ========================== -->
   <script src="/js/app.js"></script>
 
 </body>
+
 </html>
