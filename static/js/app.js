@@ -301,10 +301,85 @@ const layerData =
 const dataDashboard =
   document.querySelector('.dataDashboard')
 
+const paginaLink =
+  document.querySelector('.paginaLink')
+
+  
+/* -----------------------------
+   Data flyTo
+------------------------------*/
+
+let wasDataChecked = layerData.checked
+let previousLayerState = null
+
+const mapLayerInputs = {
+  boerderij: layerBoerderij,
+  polder: layerPolder,
+  amstelland: layerAmstelland,
+  heatmap: layerHeatmap
+}
+
+function saveLayerState() {
+  return Object.fromEntries(
+    Object.entries(mapLayerInputs)
+      .map(([key, input]) => [key, input.checked])
+  )
+}
+
+function applyLayerState(state) {
+  Object.entries(mapLayerInputs).forEach(([key, input]) => {
+    if (typeof state[key] === 'boolean') {
+      input.checked = state[key]
+    }
+  })
+}
+
+function onMapLayerChange(layerKey) {
+  if (layerData.checked && previousLayerState) {
+    previousLayerState[layerKey] = mapLayerInputs[layerKey].checked
+  }
+
+  updateLayers()
+}
+
+function flyToDataArea() {
+  const bounds = L.latLngBounds([])
+
+  markers.forEach(obj => {
+    bounds.extend(obj.marker.getLatLng())
+  })
+
+  if (allPolygons.getLayers().length > 0) {
+    const polderBounds = allPolygons.getBounds()
+
+    if (polderBounds.isValid()) {
+      bounds.extend(polderBounds)
+    }
+  }
+
+  if (amstellandGroup.getLayers().length > 0) {
+    const amstellandBounds = amstellandGroup.getBounds()
+
+    if (amstellandBounds.isValid()) {
+      bounds.extend(amstellandBounds)
+    }
+  }
+
+  if (bounds.isValid()) {
+    map.flyToBounds(bounds, {
+      paddingTopLeft: [40, 40],
+      paddingBottomRight: [420, 260],
+      duration: 1.2
+    })
+  }
+}
+
 /* -----------------------------
    UPDATE MAP
 ------------------------------*/
 function updateLayers() {
+  const shouldFlyToDataArea =
+    layerData.checked && !wasDataChecked
 
   /* -----------------------------
      BOERDERIJEN
@@ -392,16 +467,42 @@ function updateLayers() {
       layerData.checked ? 'block' : 'none'
   }
 
+  if (paginaLink) {
+    paginaLink.style.display =
+      layerData.checked ? 'none' : 'flex'
+  }
+
+  if (shouldFlyToDataArea) {
+    flyToDataArea()
+  }
+
+  wasDataChecked = layerData.checked
+
 }
 
 /* -----------------------------
    EVENT LISTENERS
 ------------------------------*/
-layerBoerderij.addEventListener('change', updateLayers)
-layerPolder.addEventListener('change', updateLayers)
-layerAmstelland.addEventListener('change', updateLayers)
-layerHeatmap.addEventListener('change', updateLayers)
-layerData.addEventListener('change', updateLayers)
+layerBoerderij.addEventListener('change', () => onMapLayerChange('boerderij'))
+layerPolder.addEventListener('change', () => onMapLayerChange('polder'))
+layerAmstelland.addEventListener('change', () => onMapLayerChange('amstelland'))
+layerHeatmap.addEventListener('change', () => onMapLayerChange('heatmap'))
+layerData.addEventListener('change', () => {
+  if (layerData.checked) {
+    previousLayerState = saveLayerState()
+    applyLayerState({
+      boerderij: false,
+      polder: true,
+      amstelland: true,
+      heatmap: false
+    })
+  } else if (previousLayerState) {
+    applyLayerState(previousLayerState)
+    previousLayerState = null
+  }
+
+  updateLayers()
+})
 
 /* -----------------------------
    LIVE HEATMAP

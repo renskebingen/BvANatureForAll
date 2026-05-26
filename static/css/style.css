@@ -101,16 +101,67 @@ body {
 
 /* actieve knop */
 .filterItem:has(input:checked) {
-  background: #eef7ee;
+  background: #CFD9F7;
 
   border:
-    0.08em solid #8bc48b;
+    0.08em solid #1E3881
 }
 
 
 /* actieve tekst */
 .filterItem input:checked + span {
   font-weight: 600;
+}
+
+
+/* =============================
+   PAGINA LINK
+============================= */
+.paginaLink {
+  position: absolute;
+  right: 2em;
+  bottom: 2em;
+  z-index: 2000;
+
+  display: flex;
+  flex-direction: column;
+  gap: 0.5em;
+}
+
+.paginaLink a {
+  display: flex;
+  align-items: center;
+
+  background: linear-gradient(to right, #2128B8, #3554D6);
+
+  padding:
+    0.65em 0.95em;
+
+  border-radius: 2em;
+
+  box-shadow:
+    0 0.15em 0.6em rgba(0,0,0,0.15);
+
+  transition:
+    transform 0.2s ease,
+    background 0.2s ease,
+    box-shadow 0.2s ease;
+
+  user-select: none;
+
+  min-width: 11.5em;
+
+  text-decoration: none;
+  color: white;
+  font-size: 0.9em;
+  font-weight: 700;
+}
+
+.paginaLink a:hover {
+  transform: translateY(-0.08em);
+
+  box-shadow:
+    0 0.4em 1em rgba(0,0,0,0.2);
 }
 
 
