@@ -12,6 +12,7 @@ body {
   overflow: hidden;
 
   font-family: Arial, sans-serif;
+  
 }
 
 .map {
@@ -421,7 +422,7 @@ body {
   display: flex;
   flex-direction: column;
   align-items: flex-end;
-  gap: 1.25em;
+  gap: 1em;
 }
 
 .sdg-card {
@@ -442,6 +443,30 @@ body {
   overflow-y: auto;
 }
 
+.rapport {
+  width: 22.5em;
+  padding-top: 0;
+}
+
+.rapport a {
+  display: block;
+  pointer-events: auto;
+  text-decoration: none;
+}
+
+.rapport button {
+  font-size: 1.5em;
+  font-weight: 700;
+  line-height: 1.2;
+  width: 100%;
+  display: block;
+  border: none;
+  background: transparent;
+  padding: 0;
+  margin-block-start: 0.83em;
+  text-align: left;
+}
+
 /* =========================
    ONDERKAARTEN
 ========================= */
@@ -458,6 +483,7 @@ body {
 .smallCard {
   width: 16.25em;
   min-height: 11.25em;
+  padding-top: 0;
 }
 
 /* =========================
