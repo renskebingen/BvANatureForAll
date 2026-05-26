@@ -295,6 +295,12 @@ const layerAmstelland =
 const layerHeatmap =
   document.getElementById('layerHeatmap')
 
+const layerData =
+  document.getElementById('layerData')
+
+const dataDashboard =
+  document.querySelector('.dataDashboard')
+
 /* -----------------------------
    UPDATE MAP
 ------------------------------*/
@@ -376,6 +382,16 @@ function updateLayers() {
 
   }
 
+
+
+  /* -----------------------------
+     Data
+  ------------------------------*/
+  if (dataDashboard) {
+    dataDashboard.style.display =
+      layerData.checked ? 'block' : 'none'
+  }
+
 }
 
 /* -----------------------------
@@ -385,6 +401,7 @@ layerBoerderij.addEventListener('change', updateLayers)
 layerPolder.addEventListener('change', updateLayers)
 layerAmstelland.addEventListener('change', updateLayers)
 layerHeatmap.addEventListener('change', updateLayers)
+layerData.addEventListener('change', updateLayers)
 
 /* -----------------------------
    LIVE HEATMAP

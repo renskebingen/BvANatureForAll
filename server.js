@@ -11,6 +11,10 @@ app.set("view engine", "ejs")
 
 app.use(express.static("static"))
 
+
+///////////////////////
+// Database connect //
+/////////////////////
 mongoose.connect(process.env.MONGO_URI)
   .then(() => {
     console.log("MongoDB connected")
@@ -25,6 +29,10 @@ app.get("/", async (req, res) => {
   })
 })
 
+
+///////////////////////////
+// Heatmap data ophalen //
+/////////////////////////
 app.get("/api/heatmap", async (req, res) => {
   try {
     const farms = await Farm.find({
