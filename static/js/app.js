@@ -402,6 +402,9 @@ const layerData =
 const dataDashboard =
   document.querySelector('.dataDashboard')
 
+const algemeneDataWidget =
+  document.querySelector('.algemeneData')
+
 const paginaLink =
   document.querySelector('.paginaLink')
 
@@ -412,6 +415,7 @@ const paginaLink =
 
 let wasDataChecked = layerData.checked
 let previousLayerState = null
+let previousMapView = null
 
 const mapLayerInputs = {
   boerderij: layerBoerderij,
@@ -594,6 +598,11 @@ function updateLayers() {
       layerData.checked ? 'block' : 'none'
   }
 
+  if (algemeneDataWidget) {
+    algemeneDataWidget.style.display =
+      layerData.checked ? 'none' : ''
+  }
+
   if (paginaLink) {
     paginaLink.style.display =
       layerData.checked ? 'none' : 'flex'
@@ -617,6 +626,11 @@ layerAmstelland.addEventListener('change', () => onMapLayerChange('amstelland'))
 layerHeatmap.addEventListener('change', () => onMapLayerChange('heatmap'))
 layerData.addEventListener('change', () => {
   if (layerData.checked) {
+    previousMapView = {
+      center: map.getCenter(),
+      zoom: map.getZoom()
+    }
+
     previousLayerState = saveLayerState()
     applyLayerState({
       boerderij: false,
@@ -628,6 +642,14 @@ layerData.addEventListener('change', () => {
   } else if (previousLayerState) {
     applyLayerState(previousLayerState)
     previousLayerState = null
+
+    if (previousMapView) {
+      map.flyTo(previousMapView.center, previousMapView.zoom, {
+        duration: 1.2
+      })
+
+      previousMapView = null
+    }
   }
 
   updateLayers()

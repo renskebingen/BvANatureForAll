@@ -35,8 +35,8 @@ body {
 .mapFilters {
   position: absolute;
 
-  top: 1em;
-  left: 1em;
+  top: 1.5em;
+  left: 1.5em;
 
   z-index: 2000;
 
@@ -112,6 +112,38 @@ body {
 .filterItem input:checked + span {
   font-weight: 600;
 }
+
+
+/* =============================
+   Algemene data widget
+============================= */
+.algemeneData {
+  position:absolute;
+  z-index: 2000;
+  display: flex;
+  flex-direction: row;
+  gap: 0.5em;
+
+  left: 2em;
+  bottom: 1.18em;
+}
+
+.dataWidget {
+  background-color: white;
+  text-align: center;
+
+  border-radius: 1.125em;
+  padding: 0.40em 1.5em;
+  box-shadow: 0 0.5em 1.5em rgba(0,0,0,0.12);
+
+  
+}
+
+.dataWidget p:first-of-type {
+  color: #1E3881;
+  font-weight: 900;
+}
+
 
 
 /* =============================
