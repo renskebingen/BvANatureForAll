@@ -215,12 +215,25 @@ closeBtn.addEventListener('click', () => {
 ------------------------------*/
 const markers = []
 
+const customMarkerIcon = new L.Icon({
+  iconUrl:
+    "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 25 41'%3E%3Cpath d='M12.5 0C6 0 .7 5.3 .7 11.8c0 8.9 11.8 29.2 11.8 29.2s11.8-20.3 11.8-29.2C24.3 5.3 19 0 12.5 0z' fill='%232128B8'/%3E%3Ccircle cx='12.5' cy='12' r='4.5' fill='white'/%3E%3C/svg%3E",
+  shadowUrl:
+    'https://cdnjs.cloudflare.com/ajax/libs/leaflet/0.7.7/images/marker-shadow.png',
+  iconSize: [25, 41],
+  iconAnchor: [12, 41],
+  popupAnchor: [1, -34],
+  shadowSize: [41, 41]
+})
+
 window.FARMS.forEach(farm => {
 
   const marker = L.marker([
     farm.lat,
     farm.lng
-  ]).addTo(map)
+  ], {
+    icon: customMarkerIcon
+  }).addTo(map)
 
   const popupContent =
     document.createElement('div')
