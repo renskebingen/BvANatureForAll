@@ -214,10 +214,22 @@ closeBtn.addEventListener('click', () => {
    MARKERS
 ------------------------------*/
 const markers = []
+const verkoopMarkers = []
 
-const customMarkerIcon = new L.Icon({
+const farmMarkerIcon = new L.Icon({
   iconUrl:
     "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 25 41'%3E%3Cpath d='M12.5 0C6 0 .7 5.3 .7 11.8c0 8.9 11.8 29.2 11.8 29.2s11.8-20.3 11.8-29.2C24.3 5.3 19 0 12.5 0z' fill='%232128B8'/%3E%3Ccircle cx='12.5' cy='12' r='4.5' fill='white'/%3E%3C/svg%3E",
+  shadowUrl:
+    'https://cdnjs.cloudflare.com/ajax/libs/leaflet/0.7.7/images/marker-shadow.png',
+  iconSize: [25, 41],
+  iconAnchor: [12, 41],
+  popupAnchor: [1, -34],
+  shadowSize: [41, 41]
+})
+
+const verkooppuntMarkerIcon = new L.Icon({
+  iconUrl:
+    "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 25 41'%3E%3Cpath d='M12.5 0C6 0 .7 5.3 .7 11.8c0 8.9 11.8 29.2 11.8 29.2s11.8-20.3 11.8-29.2C24.3 5.3 19 0 12.5 0z' fill='%234E92B3'/%3E%3Ccircle cx='12.5' cy='12' r='4.5' fill='white'/%3E%3C/svg%3E",
   shadowUrl:
     'https://cdnjs.cloudflare.com/ajax/libs/leaflet/0.7.7/images/marker-shadow.png',
   iconSize: [25, 41],
@@ -232,7 +244,7 @@ window.FARMS.forEach(farm => {
     farm.lat,
     farm.lng
   ], {
-    icon: customMarkerIcon
+    icon: farmMarkerIcon
   }).addTo(map)
 
   const popupContent =
@@ -291,6 +303,71 @@ window.FARMS.forEach(farm => {
 
 })
 
+window.VERKOOPPUNTEN.forEach(verkooppunt => {
+
+  const marker = L.marker([
+    verkooppunt.lat,
+    verkooppunt.lng
+  ], {
+    icon: verkooppuntMarkerIcon
+  }).addTo(map)
+
+  const popupContent =
+    document.createElement('div')
+
+  popupContent.innerHTML = `
+    <div class="popup-content">
+
+      <h3>${verkooppunt.name}</h3>
+
+      <p>
+        ${verkooppunt.description || ''}
+      </p>
+
+      <button class="read-more-btn">
+        Lees meer
+      </button>
+
+    </div>
+  `
+
+  popupContent
+    .querySelector('.read-more-btn')
+    .addEventListener('click', () => {
+
+      openPanel(verkooppunt)
+
+      map.flyTo(
+        [verkooppunt.lat, verkooppunt.lng],
+        14,
+        {
+          duration: 1.2
+        }
+      )
+
+    })
+
+  marker.bindPopup(popupContent)
+
+  marker.on('click', () => {
+
+    map.flyTo(
+      [verkooppunt.lat, verkooppunt.lng],
+      14,
+      {
+        duration: 1.2
+      }
+    )
+
+  })
+
+  verkoopMarkers.push({
+    marker,
+    verkooppunt
+  })
+
+})
+
 
 /* -----------------------------
    FILTER LAGEN
@@ -298,6 +375,9 @@ window.FARMS.forEach(farm => {
 
 const layerBoerderij =
   document.getElementById('layerBoerderij')
+
+const layerVerkooppunten =
+  document.getElementById('layerVerkooppunten')
 
 const layerPolder =
   document.getElementById('layerPolder')
@@ -327,6 +407,7 @@ let previousLayerState = null
 
 const mapLayerInputs = {
   boerderij: layerBoerderij,
+  verkooppunten: layerVerkooppunten,
   polder: layerPolder,
   amstelland: layerAmstelland,
   heatmap: layerHeatmap
@@ -420,6 +501,31 @@ function updateLayers() {
   }
 
   /* -----------------------------
+     VERKOOPPUNTEN
+  ------------------------------*/
+  if (layerVerkooppunten.checked) {
+
+    verkoopMarkers.forEach(obj => {
+
+      if (!map.hasLayer(obj.marker)) {
+        obj.marker.addTo(map)
+      }
+
+    })
+
+  } else {
+
+    verkoopMarkers.forEach(obj => {
+
+      if (map.hasLayer(obj.marker)) {
+        map.removeLayer(obj.marker)
+      }
+
+    })
+
+  }
+
+  /* -----------------------------
      POLDERS
   ------------------------------*/
   if (layerPolder.checked) {
@@ -497,6 +603,7 @@ function updateLayers() {
    EVENT LISTENERS
 ------------------------------*/
 layerBoerderij.addEventListener('change', () => onMapLayerChange('boerderij'))
+layerVerkooppunten.addEventListener('change', () => onMapLayerChange('verkooppunten'))
 layerPolder.addEventListener('change', () => onMapLayerChange('polder'))
 layerAmstelland.addEventListener('change', () => onMapLayerChange('amstelland'))
 layerHeatmap.addEventListener('change', () => onMapLayerChange('heatmap'))
@@ -505,6 +612,7 @@ layerData.addEventListener('change', () => {
     previousLayerState = saveLayerState()
     applyLayerState({
       boerderij: false,
+      verkooppunten: false,
       polder: true,
       amstelland: true,
       heatmap: false

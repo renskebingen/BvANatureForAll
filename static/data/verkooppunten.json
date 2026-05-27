@@ -1,0 +1,674 @@
+[
+  {
+    "id": 1,
+    "name": "Albert Heijn (AMSTELVEEN)",
+    "description": "Rembrandthof 49, 1181 ZL, AMSTELVEEN",
+    "type": "verkooppunt",
+    "lat": 52.30232,
+    "lng": 4.86015
+  },
+  {
+    "id": 2,
+    "name": "Albert Heijn (AMSTELVEEN)",
+    "description": "Amsterdamseweg 73, 1182 GP, AMSTELVEEN",
+    "type": "verkooppunt",
+    "lat": 52.31215,
+    "lng": 4.85108
+  },
+  {
+    "id": 3,
+    "name": "Albert Heijn (AMSTELVEEN)",
+    "description": "Westelijk Halfrond 70, 1183 HV, AMSTELVEEN",
+    "type": "verkooppunt",
+    "lat": 52.31952,
+    "lng": 4.88714
+  },
+  {
+    "id": 4,
+    "name": "Albert Heijn (AMSTELVEEN)",
+    "description": "Maalderij 31, 1185 ZC, AMSTELVEEN",
+    "type": "verkooppunt",
+    "lat": 52.28921,
+    "lng": 4.85211
+  },
+  {
+    "id": 5,
+    "name": "Albert Heijn (AMSTELVEEN)",
+    "description": "Groenhof 144, 1186 EX, AMSTELVEEN",
+    "type": "verkooppunt",
+    "lat": 52.29294,
+    "lng": 4.87785
+  },
+  {
+    "id": 6,
+    "name": "Albert Heijn (AMSTELVEEN)",
+    "description": "Westwijkplein 7, 1187 LS, AMSTELVEEN",
+    "type": "verkooppunt",
+    "lat": 52.27891,
+    "lng": 4.85123
+  },
+  {
+    "id": 7,
+    "name": "Albert Heijn (AALSMEER)",
+    "description": "Praamplein 4, 1431 CV, AALSMEER",
+    "type": "verkooppunt",
+    "lat": 52.26388,
+    "lng": 4.75134
+  },
+  {
+    "id": 8,
+    "name": "Albert Heijn (AALSMEER)",
+    "description": "Poldermeesterplein 1, 1432 JZ, AALSMEER",
+    "type": "verkooppunt",
+    "lat": 52.27455,
+    "lng": 4.76812
+  },
+  {
+    "id": 9,
+    "name": "Albert Heijn (ABCOUDE)",
+    "description": "Dokter Van Doornplein 2, 1391 VE, ABCOUDE",
+    "type": "verkooppunt",
+    "lat": 52.27134,
+    "lng": 4.97521
+  },
+  {
+    "id": 10,
+    "name": "Albert Heijn (AMERSFOORT)",
+    "description": "Emiclaerhof 142, 3823 EN, AMERSFOORT",
+    "type": "verkooppunt",
+    "lat": 52.18956,
+    "lng": 5.39982
+  },
+  {
+    "id": 11,
+    "name": "Albert Heijn (AMSTERDAM)",
+    "description": "Van Baerlestraat 33, 1071 AP, AMSTERDAM",
+    "type": "verkooppunt",
+    "lat": 52.35821,
+    "lng": 4.87891
+  },
+  {
+    "id": 12,
+    "name": "Albert Heijn (AMSTERDAM)",
+    "description": "Cornelis Troostplein 11, 1072 JJ, AMSTERDAM",
+    "type": "verkooppunt",
+    "lat": 52.35243,
+    "lng": 4.89012
+  },
+  {
+    "id": 13,
+    "name": "Albert Heijn (AMSTERDAM)",
+    "description": "Stadhouderskade 101, 1073 AX, AMSTERDAM",
+    "type": "verkooppunt",
+    "lat": 52.35411,
+    "lng": 4.89765
+  },
+  {
+    "id": 14,
+    "name": "Albert Heijn (AMSTERDAM)",
+    "description": "Van Woustraat 150, 1073 LW, AMSTERDAM",
+    "type": "verkooppunt",
+    "lat": 52.35102,
+    "lng": 4.90123
+  },
+  {
+    "id": 15,
+    "name": "Albert Heijn (AMSTERDAM)",
+    "description": "Johannes Verhulststraat 149, 1075 GX, AMSTERDAM",
+    "type": "verkooppunt",
+    "lat": 52.35456,
+    "lng": 4.86877
+  },
+  {
+    "id": 16,
+    "name": "Albert Heijn (AMSTERDAM)",
+    "description": "Zeilstraat 47, 1075 SB, AMSTERDAM",
+    "type": "verkooppunt",
+    "lat": 52.35123,
+    "lng": 4.85678
+  },
+  {
+    "id": 17,
+    "name": "Albert Heijn (AMSTERDAM)",
+    "description": "Amstelveenseweg 186, 1075 XS, AMSTERDAM",
+    "type": "verkooppunt",
+    "lat": 52.34988,
+    "lng": 4.85412
+  },
+  {
+    "id": 18,
+    "name": "Albert Heijn (AMSTERDAM)",
+    "description": "Stadionplein 115, 1076 CK, AMSTERDAM",
+    "type": "verkooppunt",
+    "lat": 52.34311,
+    "lng": 4.86123
+  },
+  {
+    "id": 19,
+    "name": "Albert Heijn (AMSTERDAM)",
+    "description": "Stadionweg 159, 1076 NN, AMSTERDAM",
+    "type": "verkooppunt",
+    "lat": 52.34678,
+    "lng": 4.87123
+  },
+  {
+    "id": 20,
+    "name": "Albert Heijn (AMSTERDAM)",
+    "description": "Gerrit Van Der Veenstr 57, 1077 DN, AMSTERDAM",
+    "type": "verkooppunt",
+    "lat": 52.34891,
+    "lng": 4.87822
+  },
+  {
+    "id": 21,
+    "name": "Albert Heijn (AMSTERDAM)",
+    "description": "Oosterdokskade 65, 1011 DL, AMSTERDAM",
+    "type": "verkooppunt",
+    "lat": 52.37612,
+    "lng": 4.90455
+  },
+  {
+    "id": 22,
+    "name": "Albert Heijn (AMSTERDAM)",
+    "description": "Jodenbreestraat 21, 1011 NH, AMSTERDAM",
+    "type": "verkooppunt",
+    "lat": 52.36988,
+    "lng": 4.90123
+  },
+  {
+    "id": 23,
+    "name": "Albert Heijn (AMSTERDAM)",
+    "description": "Nieuwezijds Voorburgwal 226, 1012 RR, AMSTERDAM",
+    "type": "verkooppunt",
+    "lat": 52.37123,
+    "lng": 4.89122
+  },
+  {
+    "id": 24,
+    "name": "Albert Heijn (AMSTERDAM)",
+    "description": "Prins Hendrikkade 20, 1012 TL, AMSTERDAM",
+    "type": "verkooppunt",
+    "lat": 52.37789,
+    "lng": 4.89876
+  },
+  {
+    "id": 25,
+    "name": "Albert Heijn (AMSTERDAM)",
+    "description": "Nieuwmarkt 18, 1012 CR, AMSTERDAM",
+    "type": "verkooppunt",
+    "lat": 52.37211,
+    "lng": 4.90012
+  },
+  {
+    "id": 26,
+    "name": "Albert Heijn (AMSTERDAM)",
+    "description": "Haarlemmerplein 34, 1013 HS, AMSTERDAM",
+    "type": "verkooppunt",
+    "lat": 52.38456,
+    "lng": 4.88678
+  },
+  {
+    "id": 27,
+    "name": "Albert Heijn (AMSTERDAM)",
+    "description": "Haarlemmerdijk 1, 1013 JH, AMSTERDAM",
+    "type": "verkooppunt",
+    "lat": 52.38012,
+    "lng": 4.89345
+  },
+  {
+    "id": 28,
+    "name": "Albert Heijn (AMSTERDAM)",
+    "description": "Spaarndammerdijk 3, 1013 ZM, AMSTERDAM",
+    "type": "verkooppunt",
+    "lat": 52.39012,
+    "lng": 4.87567
+  },
+  {
+    "id": 29,
+    "name": "Albert Heijn (AMSTERDAM)",
+    "description": "Westerstraat 79, 1015 LV, AMSTERDAM",
+    "type": "verkooppunt",
+    "lat": 52.37891,
+    "lng": 4.88234
+  },
+  {
+    "id": 30,
+    "name": "Albert Heijn (AMSTERDAM)",
+    "description": "Westermarkt 21, 1016 DJ, AMSTERDAM",
+    "type": "verkooppunt",
+    "lat": 52.37456,
+    "lng": 4.88456
+  },
+  {
+    "id": 31,
+    "name": "Albert Heijn (AMSTERDAM)",
+    "description": "Elandsgracht 13, 1016 TM, AMSTERDAM",
+    "type": "verkooppunt",
+    "lat": 52.36988,
+    "lng": 4.88212
+  },
+  {
+    "id": 32,
+    "name": "Albert Heijn (AMSTERDAM)",
+    "description": "Vijzelstraat 113, 1017 HJ, AMSTERDAM",
+    "type": "verkooppunt",
+    "lat": 52.36456,
+    "lng": 4.89123
+  },
+  {
+    "id": 33,
+    "name": "Albert Heijn (AMSTERDAM)",
+    "description": "Leidseplein 31, 1017 PS, AMSTERDAM",
+    "type": "verkooppunt",
+    "lat": 52.36345,
+    "lng": 4.88345
+  },
+  {
+    "id": 34,
+    "name": "Albert Heijn (AMSTERDAM)",
+    "description": "Utrechtsestraat 17, 1017 VH, AMSTERDAM",
+    "type": "verkooppunt",
+    "lat": 52.36567,
+    "lng": 4.89789
+  },
+  {
+    "id": 35,
+    "name": "Albert Heijn (AMSTERDAM)",
+    "description": "Weteringschans 165, 1017 XD, AMSTERDAM",
+    "type": "verkooppunt",
+    "lat": 52.35988,
+    "lng": 4.89456
+  },
+  {
+    "id": 36,
+    "name": "Albert Heijn (AMSTERDAM)",
+    "description": "Frederiksplein 3, 1017 XK, AMSTERDAM",
+    "type": "verkooppunt",
+    "lat": 52.36012,
+    "lng": 4.89876
+  },
+  {
+    "id": 37,
+    "name": "Albert Heijn (AMSTERDAM)",
+    "description": "Sarphatistraat 670, 1018 AV, AMSTERDAM",
+    "type": "verkooppunt",
+    "lat": 52.36789,
+    "lng": 4.92123
+  },
+  {
+    "id": 38,
+    "name": "Albert Heijn (AMSTERDAM)",
+    "description": "Sarphatistraat 141, 1018 GD, AMSTERDAM",
+    "type": "verkooppunt",
+    "lat": 52.36345,
+    "lng": 4.90876
+  },
+  {
+    "id": 39,
+    "name": "Albert Heijn (AMSTERDAM)",
+    "description": "Cruquiusweg 79, 1019 AT, AMSTERDAM",
+    "type": "verkooppunt",
+    "lat": 52.36988,
+    "lng": 4.94123
+  },
+  {
+    "id": 40,
+    "name": "Albert Heijn (AMSTERDAM)",
+    "description": "Oostelijke Handelskade 1065, 1019 BM, AMSTERDAM",
+    "type": "verkooppunt",
+    "lat": 52.37678,
+    "lng": 4.93123
+  },
+  {
+    "id": 41,
+    "name": "Albert Heijn (AMSTERDAM)",
+    "description": "Waterlandplein 255, 1024 LP, AMSTERDAM",
+    "type": "verkooppunt",
+    "lat": 52.39891,
+    "lng": 4.95456
+  },
+  {
+    "id": 42,
+    "name": "Albert Heijn (AMSTERDAM)",
+    "description": "Buikslotermeerplein 310, 1025 GA, AMSTERDAM",
+    "type": "verkooppunt",
+    "lat": 52.40123,
+    "lng": 4.93678
+  },
+  {
+    "id": 43,
+    "name": "Albert Heijn (AMSTERDAM)",
+    "description": "Mosveld 129, 1031 AD, AMSTERDAM",
+    "type": "verkooppunt",
+    "lat": 52.39123,
+    "lng": 4.91234
+  },
+  {
+    "id": 44,
+    "name": "Albert Heijn (AMSTERDAM)",
+    "description": "Bercylaan 5, 1031 KP, AMSTERDAM",
+    "type": "verkooppunt",
+    "lat": 52.38789,
+    "lng": 4.90345
+  },
+  {
+    "id": 45,
+    "name": "Albert Heijn (AMSTERDAM)",
+    "description": "Ms Van Riemsdijkweg 186, 1033 RD, AMSTERDAM",
+    "type": "verkooppunt",
+    "lat": 52.40123,
+    "lng": 4.89234
+  },
+  {
+    "id": 46,
+    "name": "Albert Heijn (AMSTERDAM)",
+    "description": "Molenwijk 35, 1035 EJ, AMSTERDAM",
+    "type": "verkooppunt",
+    "lat": 52.41678,
+    "lng": 4.88678
+  },
+  {
+    "id": 47,
+    "name": "Albert Heijn (AMSTERDAM)",
+    "description": "Van Limburg Stirumstraat 44, 1051 BE, AMSTERDAM",
+    "type": "verkooppunt",
+    "lat": 52.37891,
+    "lng": 4.87456
+  },
+  {
+    "id": 48,
+    "name": "Albert Heijn (AMSTERDAM)",
+    "description": "Frederik Hendrikstraat 81, 1052 HM, AMSTERDAM",
+    "type": "verkooppunt",
+    "lat": 52.37678,
+    "lng": 4.87678
+  },
+  {
+    "id": 49,
+    "name": "Albert Heijn (AMSTERDAM)",
+    "description": "Bilderdijkstraat 37, 1053 KP, AMSTERDAM",
+    "type": "verkooppunt",
+    "lat": 52.36988,
+    "lng": 4.87234
+  },
+  {
+    "id": 50,
+    "name": "Albert Heijn (AMSTERDAM)",
+    "description": "Overtoom 21, 1054 HA, AMSTERDAM",
+    "type": "verkooppunt",
+    "lat": 52.36345,
+    "lng": 4.87891
+  },
+  {
+    "id": 51,
+    "name": "Albert Heijn (AMSTERDAM)",
+    "description": "Overtoom 116, 1054 HN, AMSTERDAM",
+    "type": "verkooppunt",
+    "lat": 52.36123,
+    "lng": 4.87123
+  },
+  {
+    "id": 52,
+    "name": "Albert Heijn (AMSTERDAM)",
+    "description": "Jan Pieter Heijestraat 132, 1054 MK, AMSTERDAM",
+    "type": "verkooppunt",
+    "lat": 52.35891,
+    "lng": 4.86567
+  },
+  {
+    "id": 53,
+    "name": "Albert Heijn (AMSTERDAM)",
+    "description": "Bos En Lommerweg 117, 1055 EC, AMSTERDAM",
+    "type": "verkooppunt",
+    "lat": 52.37891,
+    "lng": 4.85123
+  },
+  {
+    "id": 54,
+    "name": "Albert Heijn (AMSTERDAM)",
+    "description": "Nieuwpoortstraat 100, 1055 RZ, AMSTERDAM",
+    "type": "verkooppunt",
+    "lat": 52.38567,
+    "lng": 4.85678
+  },
+  {
+    "id": 55,
+    "name": "Albert Heijn (AMSTERDAM)",
+    "description": "Jan Van Galenstraat 87, 1056 BJ, AMSTERDAM",
+    "type": "verkooppunt",
+    "lat": 52.37567,
+    "lng": 4.85891
+  },
+  {
+    "id": 56,
+    "name": "Albert Heijn (AMSTERDAM)",
+    "description": "Jan Evertsenstraat 24, 1056 EC, AMSTERDAM",
+    "type": "verkooppunt",
+    "lat": 52.37123,
+    "lng": 4.85456
+  },
+  {
+    "id": 57,
+    "name": "Albert Heijn (AMSTERDAM)",
+    "description": "Postjesweg 65, 1057 DW, AMSTERDAM",
+    "type": "verkooppunt",
+    "lat": 52.36456,
+    "lng": 4.85123
+  },
+  {
+    "id": 58,
+    "name": "Albert Heijn (AMSTERDAM)",
+    "description": "Rietwijkerstraat 22, 1059 VZ, AMSTERDAM",
+    "type": "verkooppunt",
+    "lat": 52.34891,
+    "lng": 4.84891
+  },
+  {
+    "id": 59,
+    "name": "Albert Heijn (AMSTERDAM)",
+    "description": "August Allebeplein 12, 1062 AB, AMSTERDAM",
+    "type": "verkooppunt",
+    "lat": 52.35891,
+    "lng": 4.83123
+  },
+  {
+    "id": 60,
+    "name": "Albert Heijn (AMSTERDAM)",
+    "description": "Delflandplein 31, 1062 EA, AMSTERDAM",
+    "type": "verkooppunt",
+    "lat": 52.35123,
+    "lng": 4.83456
+  },
+  {
+    "id": 61,
+    "name": "Albert Heijn (AMSTERDAM)",
+    "description": "Sierplein 78, 1065 LN, AMSTERDAM",
+    "type": "verkooppunt",
+    "lat": 52.35678,
+    "lng": 4.82123
+  },
+  {
+    "id": 62,
+    "name": "Albert Heijn (AMSTERDAM)",
+    "description": "Belgieplein 107, 1066 SC, AMSTERDAM",
+    "type": "verkooppunt",
+    "lat": 52.34345,
+    "lng": 4.81123
+  },
+  {
+    "id": 63,
+    "name": "Albert Heijn (AMSTERDAM)",
+    "description": "Lambertus Zijlplein 8, 1067 JR, AMSTERDAM",
+    "type": "verkooppunt",
+    "lat": 52.38123,
+    "lng": 4.80123
+  },
+  {
+    "id": 64,
+    "name": "Albert Heijn (AMSTERDAM)",
+    "description": "Osdorpplein 469, 1068 ER, AMSTERDAM",
+    "type": "verkooppunt",
+    "lat": 52.35891,
+    "lng": 4.80456
+  },
+  {
+    "id": 65,
+    "name": "Albert Heijn (AMSTERDAM)",
+    "description": "Pieter Calandlaan 212, 1068 NN, AMSTERDAM",
+    "type": "verkooppunt",
+    "lat": 52.35456,
+    "lng": 4.79123
+  },
+  {
+    "id": 66,
+    "name": "Albert Heijn (AMSTERDAM)",
+    "description": "Gelderlandplein 47, 1082 KZ, AMSTERDAM",
+    "type": "verkooppunt",
+    "lat": 52.33234,
+    "lng": 4.87678
+  },
+  {
+    "id": 67,
+    "name": "Albert Heijn (AMSTERDAM)",
+    "description": "Peter Schatstraat 65, 1082 MX, AMSTERDAM",
+    "type": "verkooppunt",
+    "lat": 52.33891,
+    "lng": 4.87123
+  },
+  {
+    "id": 68,
+    "name": "Albert Heijn (AMSTERDAM)",
+    "description": "Ijburglaan 719, 1087 CH, AMSTERDAM",
+    "type": "verkooppunt",
+    "lat": 52.35456,
+    "lng": 4.99876
+  },
+  {
+    "id": 69,
+    "name": "Albert Heijn (AMSTERDAM)",
+    "description": "Krugerplein 3, 1091 AT, AMSTERDAM",
+    "type": "verkooppunt",
+    "lat": 52.35456,
+    "lng": 4.91891
+  },
+  {
+    "id": 70,
+    "name": "Albert Heijn (AMSTERDAM)",
+    "description": "Wibautstraat 80, 1091 GP, AMSTERDAM",
+    "type": "verkooppunt",
+    "lat": 52.35678,
+    "lng": 4.91123
+  },
+  {
+    "id": 71,
+    "name": "Albert Heijn (AMSTERDAM)",
+    "description": "Eerste Oosterparkstraat 100, 1091 GW, AMSTERDAM",
+    "type": "verkooppunt",
+    "lat": 52.35891,
+    "lng": 4.91456
+  },
+  {
+    "id": 72,
+    "name": "Albert Heijn (AMSTERDAM)",
+    "description": "Eerste Van Swindenstraat 91, 1093 EZ, AMSTERDAM",
+    "type": "verkooppunt",
+    "lat": 52.36123,
+    "lng": 4.92891
+  },
+  {
+    "id": 73,
+    "name": "Albert Heijn (AMSTERDAM)",
+    "description": "Land Van Cocagneplein 3, 1093 NB, AMSTERDAM",
+    "type": "verkooppunt",
+    "lat": 52.35891,
+    "lng": 4.92678
+  },
+  {
+    "id": 74,
+    "name": "Albert Heijn (AMSTERDAM)",
+    "description": "Celebesstraat 43, 1094 ES, AMSTERDAM",
+    "type": "verkooppunt",
+    "lat": 52.36345,
+    "lng": 4.93456
+  },
+  {
+    "id": 75,
+    "name": "Albert Heijn (AMSTERDAM)",
+    "description": "Molukkenstraat 101, 1095 AX, AMSTERDAM",
+    "type": "verkooppunt",
+    "lat": 52.36123,
+    "lng": 4.94456
+  },
+  {
+    "id": 76,
+    "name": "Albert Heijn (AMSTERDAM)",
+    "description": "Helmholtzstraat 63, 1098 LE, AMSTERDAM",
+    "type": "verkooppunt",
+    "lat": 52.35123,
+    "lng": 4.94123
+  },
+  {
+    "id": 77,
+    "name": "Albert Heijn (AMSTERDAM)",
+    "description": "Molukkenstraat 308, 1098 TW, AMSTERDAM",
+    "type": "verkooppunt",
+    "lat": 52.35456,
+    "lng": 4.94678
+  },
+  {
+    "id": 78,
+    "name": "Albert Heijn (AMSTERDAM ZUIDOOST)",
+    "description": "Bijlmerplein 526, 1102 DP, AMSTERDAM ZUIDOOST",
+    "type": "verkooppunt",
+    "lat": 52.31234,
+    "lng": 4.95123
+  },
+  {
+    "id": 79,
+    "name": "Albert Heijn (AMSTERDAM ZUIDOOST)",
+    "description": "Harriet Freezerstraat 96, 1103 JP, AMSTERDAM ZUIDOOST",
+    "type": "verkooppunt",
+    "lat": 52.32123,
+    "lng": 4.96456
+  },
+  {
+    "id": 80,
+    "name": "Albert Heijn (AMSTERDAM ZUIDOOST)",
+    "description": "Karspeldreef 1389, 1104 SE, AMSTERDAM ZUIDOOST",
+    "type": "verkooppunt",
+    "lat": 52.31891,
+    "lng": 4.97891
+  },
+  {
+    "id": 81,
+    "name": "Jumbo (OUDERKERK A/D AMSTEL)",
+    "description": "Sluisplein 15, 1191 EB, OUDERKERK A/D AMSTEL",
+    "type": "verkooppunt",
+    "lat": 52.29653,
+    "lng": 4.90482
+  },
+  {
+    "id": 82,
+    "name": "PLUS (OUDERKERK A/D AMSTEL)",
+    "description": "Dorpsplein 1, 1191 AX, OUDERKERK A/D AMSTEL",
+    "type": "verkooppunt",
+    "lat": 52.29631,
+    "lng": 4.90225
+  },
+  {
+    "id": 83,
+    "name": "PLUS (ABCOUDE)",
+    "description": "Hoogstraat 32, 1391 BR, ABCOUDE",
+    "type": "verkooppunt",
+    "lat": 52.27218,
+    "lng": 4.97298
+  },
+  {
+    "id": 84,
+    "name": "PLUS (DUIVENDRECHT)",
+    "description": "Dorpsplein 26, 1115 CX, DUIVENDRECHT",
+    "type": "verkooppunt",
+    "lat": 52.33641,
+    "lng": 4.93514
+  }
+]

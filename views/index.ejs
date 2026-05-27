@@ -35,6 +35,11 @@
     </label>
 
     <label class="filterItem">
+      <input type="checkbox" id="layerVerkooppunten" checked>
+      <span>🛒 Verkooppunten</span>
+    </label>
+
+    <label class="filterItem">
       <input type="checkbox" id="layerPolder" checked>
       <span>🏡 Polders</span>
     </label>
@@ -196,6 +201,7 @@
   ========================== -->
   <script>
     window.FARMS = <%- JSON.stringify(farms) %>;
+    window.VERKOOPPUNTEN = <%- JSON.stringify(verkooppunten || []) %>;
   </script>
 
 
