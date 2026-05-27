@@ -2,10 +2,9 @@ require("dotenv").config()
 
 const express = require("express")
 const mongoose = require("mongoose")
-const fs = require("fs")
-const path = require("path")
 
 const Farm = require("./models/Farm")
+const Verkooppunt = require("./models/Verkooppunt")
 
 const app = express()
 
@@ -25,22 +24,7 @@ mongoose.connect(process.env.MONGO_URI)
 app.get("/", async (req, res) => {
 
   const farms = await Farm.find()
-  let verkooppunten = []
-
-  try {
-    const verkooppuntenPath = path.join(
-      __dirname,
-      "static",
-      "data",
-      "verkooppunten.json"
-    )
-
-    verkooppunten = JSON.parse(
-      fs.readFileSync(verkooppuntenPath, "utf8")
-    )
-  } catch (error) {
-    console.error("Kon verkooppunten niet laden:", error)
-  }
+  const verkooppunten = await Verkooppunt.find()
 
   res.render("index", {
     farms,
