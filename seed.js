@@ -11,145 +11,131 @@ mongoose.connect(process.env.MONGO_URI)
 
     await Farm.create([
       {
-      name: "Mts. Langelaan",
-      description: "Melkveehouderij aan de Drechtdijk in De Kwakel",
-      type: "boerderij",
-
-      lat: 52.229213,
-      lng: 4.784314
-    },
-    {
-      name: "A.P. Blommestijn",
-      description: "Boerderij aan de Boterdijk in De Kwakel",
-      type: "boerderij",
-
-      lat: 52.239498,
-      lng: 4.806452
-    },
-    {
-      name: "Koster C.J.",
-      description: "Boerderij aan de Bovenkerkerweg in Amstelveen",
-      type: "boerderij",
-
-      lat: 52.255992,
-      lng: 4.838549
-    },
-    {
-      name: "Lambalk C.J.M.",
-      description: "Boerderij aan de Ringdijk Bovenkerker Polder in Amstelveen",
-      type: "boerderij",
-
-      lat: 52.255465,
-      lng: 4.865615
-    },
-    {
-      name: "VOF Snelderwaard-Van Oostveen",
-      description: "Boerderij aan de Bovenkerkerweg in Amstelveen",
-      type: "boerderij",
-
-      lat: 52.262213,
-      lng: 4.841000
-    },
-    {
-      name: "Spengen Burggraaf Meijer",
-      description: "Boerderij aan de Waver in Ouderkerk ad Amstel",
-      type: "boerderij",
-
-      lat: 52.25524020470693,
-      lng: 4.913440000331805
-    },
-    {
-      name: "Timmer G.J.M.",
-      description: "Boerderij aan de Ronde Hoep Oost in Ouderkerk ad Amstel",
-      type: "boerderij",
-
-      lat: 52.28490864494316,
-      lng: 4.919702890734106
-    },
-    {
-      name: "Mts. Korrel",
-      description: "Boerderij aan de Polderweg in Ouderkerk aan de Amstel",
-      type: "boerderij",
-
-      lat: 52.29097907200209,
-      lng: 4.898930955152533
-    },
-    {
-      name: "Boeren van Amstel",
-      description: "Lokale boerenorganisatie in Ouderkerk aan de Amstel",
-      type: "boerderij",
-
-      lat: 52.32130040328525,
-      lng: 4.8788275839903426
-    },
-    {
-      name: "C. Hogenhout",
-      description: "Boerderij aan de Korte Dwarsweg in Ouderkerk aan de Amstel",
-      type: "boerderij",
-      lat: 52.30372815149948,
-      lng: 4.92555698425045
-    },
-    {
-      name: "Stam G.",
-      description: "Boerderij aan de Binnenweg in Ouderkerk aan de Amstel",
-      type: "boerderij",
-      lat: 52.31455426610347,
-      lng: 4.906752853301086
-    },
-    {
-      name: "VOF J.C. van Blaaderen",
-      description: "Boerderij aan de Ringdijk in Amstelveen",
-      type: "boerderij",
-      lat: 52.251408362988485,
-      lng: 4.8586447646752715
-    },
-    {
-      name: "H. Langeveld",
-      description: "Boerderij aan de Bovenkerkerweg in Amstelveen",
-      type: "boerderij",
-      lat: 52.26290693906177,
-      lng: 4.8408213263147815
-    },
-    {
-      name: "Firma Roos",
-      description: "Boerderij aan de Waver in Ouderkerk aan de Amstel",
-      type: "boerderij",
-      lat: 52.268638459491335,
-      lng: 4.927673155151215
-    },
-    {
-      name: "Schaik H. van",
-      description: "Boerderij aan de Ringdijk Bovenkerker Polder in Amstelveen",
-      type: "boerderij",
-      lat: 52.28014244417149,
-      lng: 4.877623683988012
-    },
-    {
-      name: "VOF Korrel van Beek",
-      description: "Boerderij aan de Ronde Hoep West in Ouderkerk aan de Amstel",
-      type: "boerderij",
-
-      lat: 52.2792112282182,
-      lng: 4.879741110971277
-    },
-    {
-      name: "T. Pouw",
-      description: "Boerderij aan de Holendrechterweg in Ouderkerk aan de Amstel",
-      type: "boerderij",
-
-      lat: 52.27915793606025,
-      lng: 4.942882428168524
-    },
-    {
-      name: "Worners G.",
-      description: "Boerderij aan de Amstelweg in Ouderkerk aan de Amstel",
-      type: "boerderij",
-
-      lat: 52.28379323706609,
-      lng: 4.932879753299283
-    }
-
-
+        name: "Mts. Van Blaaderen",
+        description: "Boerderij van Remco van Blaaderen aan de Ringdijk BP 28 in Amstelveen",
+        type: "boerderij",
+        lat: 52.251477,
+        lng: 4.858878
+      },
+      {
+        name: "Boerderij Cornelly",
+        description: "Boerderij van Cor Koster aan de Bovenkerkerweg 130 in Amstelveen",
+        type: "boerderij",
+        lat: 52.256064,
+        lng: 4.83816
+      },
+      {
+        name: "Weidevogelboerderij",
+        description: "Boerderij van Kees Lambalk aan de Ringdijk BP 26 in Amstelveen",
+        type: "boerderij",
+        lat: 52.255657,
+        lng: 4.864706
+      },
+      {
+        name: "Boerderij Strandvliet",
+        description: "Boerderij van Hugo den Boer aan de Binnenweg 18 in Ouderkerk a/d Amstel",
+        type: "boerderij",
+        lat: 52.316582,
+        lng: 4.907987
+      },
+      {
+        name: "Boerderij Polderzicht",
+        description: "Boerderij van Richard Korrel aan de Polderweg 24 in Ouderkerk a/d Amstel",
+        type: "boerderij",
+        lat: 52.291012,
+        lng: 4.89892
+      },
+      {
+        name: "Zuivelboerderij Vrouwenakker",
+        description: "Boerderij van Koos Langelaan aan de Drechtdijk 90 in De Kwakel",
+        type: "boerderij",
+        lat: 52.229217,
+        lng: 4.783886
+      },
+      {
+        name: "Mts. Van Schaik",
+        description: "Boerderij van Henk van Schaik aan de Ringdijk BP 8 in Amstelveen",
+        type: "boerderij",
+        lat: 52.275476,
+        lng: 4.878561
+      },
+      {
+        name: "Melkveebedrijf Stam",
+        description: "Boerderij van Gerard Stam aan de Binnenweg 16 in Ouderkerk a/d Amstel",
+        type: "boerderij",
+        lat: 52.313678,
+        lng: 4.906846
+      },
+      {
+        name: "Mts. Timmer",
+        description: "Boerderij van Gerard en Bas Timmer aan de Rondehoep Oost 7 in Ouderkerk a/d Amstel",
+        type: "boerderij",
+        lat: 52.284903,
+        lng: 4.919695
+      },
+      {
+        name: "Mts. Snelderwaard",
+        description: "Boerderij van John Snelderwaard aan de Bovenkerkerweg 114 in Amstelveen",
+        type: "boerderij",
+        lat: 52.261705,
+        lng: 4.840875
+      },
+      {
+        name: "Worners (Amstelpracht)",
+        description: "Boerderij van Gerrit Worners aan de Amstelweg 1 in Ouderkerk a/d Amstel",
+        type: "boerderij",
+        lat: 52.283636,
+        lng: 4.932934
+      },
+      {
+        name: "Boerderij Hoeksjan",
+        description: "Boerderij van Henk Langeveld aan de Bovenkerkerweg 112 in Amstelveen",
+        type: "boerderij",
+        lat: 52.262924,
+        lng: 4.840938
+      },
+      {
+        name: "Mts. Pouw",
+        description: "Boerderij van Ton Pouw aan de Holendrechterweg 64 in Ouderkerk a/d Amstel",
+        type: "boerderij",
+        lat: 52.278696,
+        lng: 4.95508
+      },
+      {
+        name: "Mts. Hogenhout",
+        description: "Boerderij van Cees Hogenhout aan de Korte Dwarsweg 8 in Ouderkerk a/d Amstel",
+        type: "boerderij",
+        lat: 52.303733,
+        lng: 4.925852
+      },
+      {
+        name: "Melkveebedrijf Roos",
+        description: "Boerderij van Peter Roos aan de Waver 40 in Ouderkerk a/d Amstel",
+        type: "boerderij",
+        lat: 52.259035,
+        lng: 4.918333
+      },
+      {
+        name: "Poldersport",
+        description: "Boerderij van Albert Blommestijn aan de Boterdijk 91 in De Kwakel",
+        type: "boerderij",
+        lat: 52.239487,
+        lng: 4.80655
+      },
+      {
+        name: "De Grazige Weide",
+        description: "Boerderij van Vincent Post aan de Rondehoep West 70 in Ouderkerk a/d Amstel",
+        type: "boerderij",
+        lat: 52.256012,
+        lng: 4.872754
+      },
+      {
+        name: "Mts. Korrel",
+        description: "Boerderij van Wes Korrel aan de Rondehoep West 46A in Ouderker a/d Amstel",
+        type: "boerderij",
+        lat: 52.27909,
+        lng: 4.880113
+      }
     ]);
 
     console.log("Seed complete");
