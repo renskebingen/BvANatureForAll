@@ -192,6 +192,26 @@ async function loadLiveHeatmapData() {
 ------------------------------*/
 const panel = document.getElementById('panel')
 const closeBtn = document.getElementById('closePanel')
+let previousPanelMapView = null
+
+function rememberMapViewBeforePanelFly() {
+  if (!previousPanelMapView) {
+    previousPanelMapView = {
+      center: map.getCenter(),
+      zoom: map.getZoom()
+    }
+  }
+}
+
+function restorePreviousPanelMapView() {
+  if (previousPanelMapView) {
+    map.flyTo(previousPanelMapView.center, previousPanelMapView.zoom, {
+      duration: 1.2
+    })
+
+    previousPanelMapView = null
+  }
+}
 
 function openPanel(farm) {
 
@@ -207,7 +227,10 @@ function openPanel(farm) {
 
 closeBtn.addEventListener('click', () => {
   panel.classList.remove('open')
+  restorePreviousPanelMapView()
 })
+
+map.on('popupclose', restorePreviousPanelMapView)
 
 
 /* -----------------------------
@@ -277,6 +300,7 @@ farmsData.forEach(farm => {
   popupContent
     .querySelector('.read-more-btn')
     .addEventListener('click', () => {
+      rememberMapViewBeforePanelFly()
 
       openPanel(farm)
 
@@ -293,6 +317,7 @@ farmsData.forEach(farm => {
   marker.bindPopup(popupContent)
 
   marker.on('click', () => {
+    rememberMapViewBeforePanelFly()
 
     map.flyTo(
       [farm.lat, farm.lng],
