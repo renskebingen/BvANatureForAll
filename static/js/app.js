@@ -213,6 +213,14 @@ closeBtn.addEventListener('click', () => {
 /* -----------------------------
    MARKERS
 ------------------------------*/
+const farmsData = JSON.parse(
+  document.getElementById('farms-data')?.textContent || '[]'
+)
+
+const verkooppuntenData = JSON.parse(
+  document.getElementById('verkooppunten-data')?.textContent || '[]'
+)
+
 const markers = []
 const verkoopMarkers = []
 
@@ -238,7 +246,7 @@ const verkooppuntMarkerIcon = new L.Icon({
   shadowSize: [41, 41]
 })
 
-window.FARMS.forEach(farm => {
+farmsData.forEach(farm => {
 
   const marker = L.marker([
     farm.lat,
@@ -303,7 +311,7 @@ window.FARMS.forEach(farm => {
 
 })
 
-window.VERKOOPPUNTEN.forEach(verkooppunt => {
+verkooppuntenData.forEach(verkooppunt => {
 
   const marker = L.marker([
     verkooppunt.lat,

@@ -199,10 +199,8 @@
   <!-- =========================
        DATA
   ========================== -->
-  <script>
-    window.FARMS = <%- JSON.stringify(farms) %>;
-    window.VERKOOPPUNTEN = <%- JSON.stringify(verkooppunten || []) %>;
-  </script>
+  <script id="farms-data" type="application/json"><%- JSON.stringify(farms || []) %></script>
+  <script id="verkooppunten-data" type="application/json"><%- JSON.stringify(verkooppunten || []) %></script>
 
 
   <!-- =========================
