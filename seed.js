@@ -29,6 +29,10 @@ mongoose.connect(process.env.MONGO_URI)
         name: boer.name,
         description: boer.description,
         type: boer.type || "boerderij",
+        address: boer.address || boer.adres || boer.location || boer.locatie,
+        website: boer.website || boer.url || boer.link,
+        storyUrl: boer.storyUrl || boer.verhaalUrl || boer.fullStoryUrl,
+        media: boer.media || boer.images || boer.afbeeldingen,
         lat: boer.lat,
         lng: boer.lng
       }))

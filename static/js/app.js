@@ -194,6 +194,10 @@ const panel = document.getElementById('panel')
 const closeBtn = document.getElementById('closePanel')
 let previousPanelMapView = null
 
+const defaultFarmMedia = [
+  '/images/oevertje.jpg'
+]
+
 function rememberMapViewBeforePanelFly() {
   if (!previousPanelMapView) {
     previousPanelMapView = {
@@ -213,16 +217,154 @@ function restorePreviousPanelMapView() {
   }
 }
 
+function getFarmValue(farm, keys) {
+  return keys
+    .map(key => farm[key])
+    .find(value => typeof value === 'string' && value.trim())
+    ?.trim()
+}
+
+function normalizeLinkUrl(url) {
+  if (/^(https?:)?\/\//i.test(url) || url.startsWith('/') || url.startsWith('#')) {
+    return url
+  }
+
+  return `https://${url}`
+}
+
+function getFarmAddress(farm) {
+  const directAddress = getFarmValue(farm, [
+    'address',
+    'adres',
+    'location',
+    'locatie'
+  ])
+
+  if (directAddress) {
+    return directAddress
+  }
+
+  const description = farm.description || ''
+  const addressMatch = description.match(/\saan de\s(.+)$/i)
+
+  return addressMatch ? addressMatch[1] : ''
+}
+
+function getFarmUrl(farm) {
+  return getFarmValue(farm, [
+    'website',
+    'url',
+    'link'
+  ])
+}
+
+function getFarmStoryUrl(farm) {
+  return getFarmValue(farm, [
+    'storyUrl',
+    'verhaalUrl',
+    'fullStoryUrl'
+  ])
+}
+
+function getFarmMedia(farm) {
+  const media = farm.media || farm.images || farm.afbeeldingen
+
+  if (Array.isArray(media) && media.length) {
+    return media
+      .map(item => typeof item === 'string' ? { src: item } : item)
+      .filter(item => item?.src)
+  }
+
+  const image = getFarmValue(farm, [
+    'image',
+    'afbeelding',
+    'photo',
+    'foto'
+  ])
+
+  if (image) {
+    return [
+      { src: image }
+    ]
+  }
+
+  return []
+}
+
+function renderPanelLink(linkElement, url, label) {
+  if (!url) {
+    linkElement.hidden = true
+    linkElement.textContent = ''
+    linkElement.removeAttribute('href')
+    return
+  }
+
+  linkElement.hidden = false
+  linkElement.href = normalizeLinkUrl(url)
+  linkElement.textContent = label || url
+  linkElement.target = '_blank'
+  linkElement.rel = 'noopener noreferrer'
+}
+
 function openPanel(farm) {
 
   panel.classList.add('open')
 
-  document.getElementById('farmTitle').innerText =
-    farm.name
+  const farmTitle = document.getElementById('farmTitle')
+  const farmDesc = document.getElementById('farmDesc')
+  const farmLoc = document.getElementById('farmLoc')
+  const farmLink = document.getElementById('farmLink')
+  const farmStoryLink = document.getElementById('farmStoryLink')
+  const farmMedia = document.getElementById('farmMedia')
+  const farmMediaSection = document.getElementById('farmMediaSection')
+  const farmUrl = getFarmUrl(farm)
+  const storyUrl = getFarmStoryUrl(farm)
+  const mediaItems = getFarmMedia(farm)
 
-  document.getElementById('farmDesc').innerHTML = `
-    <p>${farm.description}</p>
-  `
+  farmTitle.textContent = farm.name || 'Onbekende boer'
+  farmDesc.textContent =
+    farm.about ||
+    farm.over ||
+    farm.description ||
+    'Meer informatie over deze boer volgt binnenkort.'
+
+  farmLoc.textContent =
+    getFarmAddress(farm) ||
+    'Adres volgt binnenkort'
+
+  renderPanelLink(
+    farmStoryLink,
+    storyUrl,
+    'Lees het hele verhaal hier'
+  )
+
+  if (farmUrl) {
+    farmLink.hidden = false
+    farmLink.textContent = ''
+
+    const websiteLink = document.createElement('a')
+    websiteLink.href = normalizeLinkUrl(farmUrl)
+    websiteLink.textContent = farmUrl
+    websiteLink.target = '_blank'
+    websiteLink.rel = 'noopener noreferrer'
+
+    farmLink.appendChild(websiteLink)
+  } else {
+    farmLink.hidden = true
+    farmLink.textContent = ''
+  }
+
+  farmMedia.textContent = ''
+  farmMediaSection.hidden = !mediaItems.length
+
+  mediaItems.forEach((item, index) => {
+    const image = document.createElement('img')
+    image.src = item.src
+    image.alt = item.alt || `${farm.name || 'Boerderij'} media ${index + 1}`
+    image.loading = 'lazy'
+
+    farmMedia.appendChild(image)
+  })
 }
 
 closeBtn.addEventListener('click', () => {
@@ -281,8 +423,15 @@ farmsData.forEach(farm => {
   const popupContent =
     document.createElement('div')
 
+  const popupImageSrc = getFarmMedia(farm)[0]?.src || ''
+  const popupImageHtml = popupImageSrc
+    ? `<img src="${popupImageSrc}" alt="${farm.name || 'Boerderij'}" loading="lazy" />`
+    : ''
+
   popupContent.innerHTML = `
     <div class="popup-content">
+
+      ${popupImageHtml}
 
       <h3>${farm.name}</h3>
 

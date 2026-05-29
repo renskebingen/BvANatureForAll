@@ -202,23 +202,23 @@ body {
 ============================= */
 .panel {
   position: absolute;
-
   top: 1em;
-  left: 15em;
+  left: 1em;
 
-  width: 22em;
-  max-height: 80vh;
+  width: 25em;
+  min-height: 100vh;
+  max-height: 100vh;
+
+  box-sizing: border-box;
 
   background: white;
 
   border-radius: 1em;
 
-  padding: 1.2em;
-
   box-shadow:
-    0 0.6em 1.8em rgba(0,0,0,0.2);
+    0 0.7em 2em rgba(0,0,0,0.28);
 
-  z-index: 1500;
+  z-index: 3000;
 
   overflow-y: auto;
 
@@ -227,11 +227,161 @@ body {
 
   pointer-events: none;
 
-  transform: translateX(-2em);
+  transform: translateY(2em);
 
   transition:
-    opacity 0.3s ease,
-    transform 0.3s ease;
+    transform 0.2s ease;
+}
+
+.panelHeader {
+  position: relative;
+
+  padding:
+    2em 4.2em 1.6em;
+
+  background-color: #1E3881;
+}
+
+.panel h2 {
+  margin: 0;
+
+  color: white;
+
+  font-size: 1.2em;
+  line-height: 1.1;
+  text-align: center;
+  text-transform: uppercase;
+  letter-spacing: 0;
+}
+
+.panel h2::after {
+  content: "";
+
+  display: block;
+
+  width: min(15em, 100%);
+  height: 0.12em;
+
+  margin:
+    0.35em auto 0;
+
+  background: white;
+  border-radius: 999em;
+}
+
+.panelContent {
+  padding:
+    2.5em 2em 1em;
+}
+
+.panelSection {
+  padding-bottom: 1.8em;
+  margin-bottom: 1.6em;
+
+  border-bottom:
+    0.08em solid #e9e9e9;
+}
+
+.panelSection:last-child {
+  margin-bottom: 0;
+  border-bottom: none;
+}
+
+.panel h3 {
+  margin:
+    0 0 0.9em;
+
+  color: #2128B8;
+
+  font-size: 1em;
+  line-height: 1.15;
+  text-transform: uppercase;
+  letter-spacing: 0;
+}
+
+.panel p {
+  margin:
+    0 0 1em;
+
+  color: #111;
+
+  font-size: 1em;
+  line-height: 1.6;
+}
+
+.panelTextLink,
+.panelInfoItem a {
+  color: #078be8;
+  text-decoration: underline;
+  text-underline-offset: 0.12em;
+}
+
+.panelInfoList {
+  display: grid;
+  gap: 0.8em;
+}
+
+.panelInfoItem {
+  position: relative;
+
+  min-height: 1.5em;
+
+  padding-left: 2.6em;
+}
+
+.panelInfoItem::before {
+  position: absolute;
+  top: 0;
+  left: 0.5em;
+
+  color: #159bed;
+
+  font-size: 1.35em;
+  line-height: 1;
+}
+
+.panelInfoItemLocation::before {
+  content: "●";
+}
+
+.panelInfoItemLink::before {
+  content: "↗";
+}
+
+.panelMediaGrid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 0.45em;
+}
+
+.panelMediaGrid img {
+  width: 50%;
+  aspect-ratio: 4 / 3;
+
+  display: block;
+
+  object-fit: cover;
+
+  border-radius: 0.35em;
+}
+
+.panelMediaGrid img:only-child {
+  grid-column: 1 / -1;
+  max-height: 15em;
+}
+
+.panel > svg {
+  position: absolute;
+  bottom: 0;  
+  left: 0;
+  display: block;
+
+  width: 100%;
+  height: 5.5em;
+
+  margin-top: 1em;
+
+  pointer-events: none;
 }
 
 
@@ -251,32 +401,23 @@ body {
    CLOSE BUTTON
 ============================= */
 #closePanel {
-  float: right;
+  position: absolute;
+  top: 0.75em;
+  right: 0.8em;
+
+  z-index: 1;
+
+  width: 1em;
+  height: 1em;
 
   border: none;
   background: none;
 
-  font-size: 1.2em;
+  color: white;
 
+  font-size: 2em;
+  line-height: 1;
   cursor: pointer;
-}
-
-
-/* =============================
-   PANEL TITLES
-============================= */
-.panel h2 {
-  margin-top: 0;
-
-  font-size: 1.4em;
-}
-
-
-/* =============================
-   PANEL TEXT
-============================= */
-.panel p {
-  line-height: 1.6;
 }
 
 
@@ -449,13 +590,26 @@ body {
   }
 
   .panel {
+    top: 1em;
+    right: 1em;
     left: 1em;
 
-    top: 12em;
+    width: auto;
+    max-height: calc(100vh - 2em);
+  }
 
-    width: calc(100% - 4em);
+  .panelHeader {
+    padding:
+      1.6em 3.2em 1.2em;
+  }
 
-    max-width: 24em;
+  .panelContent {
+    padding:
+      2em 1.5em 1em;
+  }
+
+  .panelMediaGrid {
+    grid-template-columns: 1fr;
   }
 
   .oevertjekopen {

@@ -6,6 +6,21 @@ const FarmSchema = new mongoose.Schema({
 
   description: String,
 
+  type: String,
+
+  address: String,
+
+  website: String,
+
+  storyUrl: String,
+
+  media: [
+    {
+      src: String,
+      alt: String
+    }
+  ],
+
   lat: Number,
 
   lng: Number
