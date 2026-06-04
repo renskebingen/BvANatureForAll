@@ -232,6 +232,14 @@ function normalizeLinkUrl(url) {
   return `https://${url}`
 }
 
+function normalizeImageUrl(url) {
+  if (!url || /^(https?:)?\/\//i.test(url) || url.startsWith('/')) {
+    return url
+  }
+
+  return `/${url.replace(/^\.\//, '').replace(/^\.\.\//, '')}`
+}
+
 function getFarmAddress(farm) {
   const directAddress = getFarmValue(farm, [
     'address',
@@ -272,6 +280,7 @@ function getFarmMedia(farm) {
   if (Array.isArray(media) && media.length) {
     return media
       .map(item => typeof item === 'string' ? { src: item } : item)
+      .map(item => ({ ...item, src: normalizeImageUrl(item.src) }))
       .filter(item => item?.src)
   }
 
@@ -284,7 +293,7 @@ function getFarmMedia(farm) {
 
   if (image) {
     return [
-      { src: image }
+      { src: normalizeImageUrl(image) }
     ]
   }
 
@@ -359,7 +368,7 @@ function openPanel(farm) {
 
   mediaItems.forEach((item, index) => {
     const image = document.createElement('img')
-    image.src = item.src
+    image.src = normalizeImageUrl(item.src)
     image.alt = item.alt || `${farm.name || 'Boerderij'} media ${index + 1}`
     image.loading = 'lazy'
 
