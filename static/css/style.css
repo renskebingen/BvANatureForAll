@@ -201,23 +201,22 @@ body {
 ============================= */
 .panel {
   position: absolute;
-  top: 1em;
-  left: 1em;
+  inset: 1.45em;
 
-  width: 25em;
-  min-height: 100vh;
-  max-height: 100vh;
+  width: auto;
+  height: auto;
+  max-height: none;
 
   box-sizing: border-box;
 
   background: white;
 
-  border-radius: 1em;
+  border-radius: 1.2em;
 
   box-shadow:
-    0 0.7em 2em rgba(0,0,0,0.28);
+    0 0.45em 1em rgba(0,0,0,0.22);
 
-  z-index: 3000;
+  z-index: 1;
 
   overflow-y: auto;
 
@@ -234,17 +233,36 @@ body {
 
 .stylingborderpanel {
   position: absolute;
-  top: 2em;
-  left: 2em;
+  top: 1.5em;
+  bottom: 0;
+  left: 1.5em;
 
   color: #2128B8;
 
-  width: 100%;
-  height: 100%;
+  width: 27em;
+  height: auto;
+  max-height: none;
 
   pointer-events: none;
 
-  z-index: 2500;
+  background: #244b9f;
+
+  border-radius: 1.9em;
+
+  box-shadow:
+    0 0.75em 2em rgba(0,0,0,0.3),
+    0 0 1.6em rgba(33,40,184,0.35);
+
+  z-index: 3000;
+}
+
+.stylingborderpanel::before {
+  content: none;
+}
+
+.stylingborderpanel:not(:has(.panel.open)) {
+  background: transparent;
+  box-shadow: none;
 }
 
 .panelHeader {
@@ -445,6 +463,15 @@ body {
   border-top-left-radius: 7em;
   border-bottom-left-radius: 7em;
   padding: 1.5em;
+  min-width: 40em;
+  max-height: 15em;
+
+}
+
+.popup-content {
+  display: flex;
+  align-items: flex-start;
+  gap: 1em;
 }
 
 .popup-content h3 {
@@ -452,8 +479,28 @@ body {
   margin-bottom: 0.5em;
 }
 
+.popup-content img {
+  display: block;
+  align-self: center;
+
+  width: 13em;
+  
+  aspect-ratio: 4 / 3;
+
+  margin: 0;
+
+  object-fit: cover;
+
+  border-radius: 20%;
+}
+
 .popup-content p {
   margin-bottom: 0.8em;
+}
+
+.popup-info {
+  flex: 1;
+  min-width: 0;
 }
 
 
@@ -612,13 +659,23 @@ body {
       0.6em 0.9em;
   }
 
-  .panel {
+  .stylingborderpanel {
     top: 1em;
+    bottom: 0;
     right: 1em;
     left: 1em;
 
     width: auto;
-    max-height: calc(100vh - 2em);
+    height: auto;
+    max-height: none;
+  }
+
+  .panel {
+    inset: 1em;
+
+    width: auto;
+    height: auto;
+    max-height: none;
   }
 
   .panelHeader {

@@ -198,6 +198,15 @@ const defaultFarmMedia = [
   '/images/oevertje.jpg'
 ]
 
+const fallbackFarmImages = [
+  {
+    name: 'Mts. Korrel',
+    lat: 52.27909,
+    lng: 4.880113,
+    src: '/images/richardkorrel.png'
+  }
+]
+
 function rememberMapViewBeforePanelFly() {
   if (!previousPanelMapView) {
     previousPanelMapView = {
@@ -297,7 +306,38 @@ function getFarmMedia(farm) {
     ]
   }
 
+  const fallbackImage = fallbackFarmImages.find(item =>
+    item.name === farm.name ||
+    (
+      Math.abs(Number(item.lat) - Number(farm.lat)) < 0.00001 &&
+      Math.abs(Number(item.lng) - Number(farm.lng)) < 0.00001
+    )
+  )
+
+  if (fallbackImage) {
+    return [
+      { src: normalizeImageUrl(fallbackImage.src) }
+    ]
+  }
+
   return []
+}
+
+function getPopupImageSrc(farm) {
+  const mediaSrc = getFarmMedia(farm)[0]?.src
+
+  if (mediaSrc) {
+    return normalizeImageUrl(mediaSrc)
+  }
+
+  const image = getFarmValue(farm, [
+    'image',
+    'afbeelding',
+    'photo',
+    'foto'
+  ])
+
+  return image ? normalizeImageUrl(image) : ''
 }
 
 function renderPanelLink(linkElement, url, label) {
@@ -432,25 +472,28 @@ farmsData.forEach(farm => {
   const popupContent =
     document.createElement('div')
 
-  const popupImageSrc = getFarmMedia(farm)[0]?.src || ''
+  const popupImageSrc = getPopupImageSrc(farm)
   const popupImageHtml = popupImageSrc
     ? `<img src="${popupImageSrc}" alt="${farm.name || 'Boerderij'}" loading="lazy" />`
     : ''
 
   popupContent.innerHTML = `
     <div class="popup-content">
-
       ${popupImageHtml}
 
-      <h3>${farm.name}</h3>
+      <div class="popup-info">
+        <h3>${farm.name}</h3>
 
-      <p>
-        ${farm.description || ''}
-      </p>
+        <p>
+          ${farm.description || ''}
+        </p>
 
-      <button class="read-more-btn">
-        Lees meer
-      </button>
+        <button class="read-more-btn">
+          Lees meer
+        </button>
+
+        <p>${getFarmAddress(farm) || ''}</p>
+      </div>
 
     </div>
   `

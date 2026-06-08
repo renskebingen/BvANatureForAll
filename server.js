@@ -5,8 +5,18 @@ const mongoose = require("mongoose")
 
 const Farm = require("./models/Farm")
 const Verkooppunt = require("./models/Verkooppunt")
+const boerenData = require("./static/data/boeren.json")
 
 const app = express()
+function normalizeFarmName(name) {
+  return String(name || "")
+    .toLowerCase()
+    .replace(/[^a-z0-9]/g, "")
+}
+
+const boerenDataByName = new Map(
+  boerenData.map(boer => [normalizeFarmName(boer.name), boer])
+)
 
 app.set("view engine", "ejs")
 
@@ -23,7 +33,35 @@ mongoose.connect(process.env.MONGO_URI)
 
 app.get("/", async (req, res) => {
 
-  const farms = await Farm.find()
+  const farms = (await Farm.find().lean()).map(farm => {
+    const jsonFarm =
+      boerenDataByName.get(normalizeFarmName(farm.name)) ||
+      boerenData.find(boer =>
+        Math.abs(Number(boer.lat) - Number(farm.lat)) < 0.00001 &&
+        Math.abs(Number(boer.lng) - Number(farm.lng)) < 0.00001
+      )
+    const hasMedia =
+      Array.isArray(farm.media) &&
+      farm.media.some(item =>
+        typeof item?.src === "string" && item.src.trim()
+      )
+
+    const jsonMedia =
+      jsonFarm?.media ||
+      jsonFarm?.images ||
+      jsonFarm?.afbeeldingen ||
+      (jsonFarm?.image ? [{ src: jsonFarm.image }] : undefined)
+
+    if (!hasMedia && jsonMedia) {
+      return {
+        ...farm,
+        media: jsonMedia
+      }
+    }
+
+    return farm
+  })
+
   const verkooppunten = await Verkooppunt.find()
 
   res.render("index", {
