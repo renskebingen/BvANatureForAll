@@ -460,23 +460,29 @@ body {
    POPUP CONTENT
 ============================= */
 .leaflet-popup-content-wrapper {
+  display: flex;
+  align-items: center;
   border-top-left-radius: 7em;
   border-bottom-left-radius: 7em;
-  padding: 1.5em;
+  border-top-right-radius: 1.7em;
+  border-bottom-right-radius: 1.7em;
   min-width: 40em;
   max-height: 15em;
+
+  border: 8px solid #1E3881;
 }
 
 .popup-content {
   display: flex;
   align-items: center;
-  gap: 1em;
   width: 35em;
+  transform: translateX(-1.8em);
+  max-height: 10em;
 }
 
 .popup-content h3 {
   margin-top: 0;
-  margin-bottom: 0.5em;
+  margin-bottom: 0.2em;
 }
 
 .popup-content img {
@@ -487,46 +493,101 @@ body {
   margin: 0;
 
   object-fit: cover;
-
 }
 
 .popup-content p {
-  margin-bottom: 0.8em;
+  margin-bottom: 0.1em;
+}
+
+.leaflet-popup-content p {
+  margin-top: 0.5em;
+  margin-bottom: 0.5em;
 }
 
 .popup-info {
   flex: 1;
   min-width: 0;
+
+  display: flex;
+  flex-direction: column;
 }
 
+.popup-info h3 {
+  color: #1E3881;
+  align-self: center;
+  text-align: center;
+}
+
+.popup-info h3::after {
+  content: "";
+
+  display: block;
+  align-self: center;
+
+  width: 12em;
+  height: 0.12em;
+
+  background: #2128B8;
+  border-radius: 999em;
+}
+
+.read-more-btn {
+  align-self: flex-end;
+}
+
+.leaflet-popup-tip {
+  background: #1E3881;
+}
+
+.leaflet-popup-close-button {
+  padding-top: 0.5em;
+  padding-right: 0.5em;
+}
 
 /* =============================
    BUTTONS
 ============================= */
-.read-more-btn,
-.kopen-btn {
+.read-more-btn {
+  align-self: flex-end;
+
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4em;
+
   border: none;
+  background: transparent;
 
-  background: #2e7d32;
+  color: #00BBFF;
 
-  color: white;
+  text-decoration: underline;
+  text-underline-offset: 0.14em;
 
-  padding:
-    0.7em 1.1em;
-
-  border-radius: 0.5em;
-
+  padding: 0;
   cursor: pointer;
 
-  transition:
-    background 0.2s ease;
+  transition: color 0.2s ease;
 }
 
+.read-more-btn::after {
+  content: "";
+  display: inline-block;
 
-/* hover */
-.read-more-btn:hover,
-.kopen-btn:hover {
-  background: #256428;
+  width: 0.6em;
+  height: 0.6em;
+
+  background: currentColor;
+
+  clip-path: polygon(0 0, 100% 50%, 0 100%);
+
+  transition: transform 0.2s ease;
+}
+
+.read-more-btn:hover {
+  color: #101a8e;
+}
+
+.read-more-btn:hover::after {
+  transform: translateX(0.2em);
 }
 
 
