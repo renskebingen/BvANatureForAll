@@ -465,13 +465,13 @@ body {
   padding: 1.5em;
   min-width: 40em;
   max-height: 15em;
-
 }
 
 .popup-content {
   display: flex;
-  align-items: flex-start;
+  align-items: center;
   gap: 1em;
+  width: 35em;
 }
 
 .popup-content h3 {
