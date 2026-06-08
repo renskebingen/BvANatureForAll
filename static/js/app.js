@@ -203,7 +203,7 @@ const fallbackFarmImages = [
     name: 'Mts. Korrel',
     lat: 52.27909,
     lng: 4.880113,
-    src: '/images/richardkorrel.png'
+    src: '/images/richardkorrel1.png'
   }
 ]
 

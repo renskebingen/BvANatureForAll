@@ -481,17 +481,13 @@ body {
 
 .popup-content img {
   display: block;
-  align-self: center;
 
   width: 13em;
-  
-  aspect-ratio: 4 / 3;
 
   margin: 0;
 
   object-fit: cover;
 
-  border-radius: 20%;
 }
 
 .popup-content p {
