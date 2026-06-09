@@ -1,3 +1,36 @@
+@font-face {
+  font-family: "Bjorn Halftone";
+  src: url("/fonts/bjornhalftone.otf") format("opentype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Bjorn Light";
+  src: url("/fonts/bjornlight.otf") format("opentype");
+  font-weight: 300;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Bjorn Regular";
+  src: url("/fonts/bjornregular.otf") format("opentype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+
+p {
+  font-family: "Roboto", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+  font-variation-settings:
+    "wdth" 100;
+}
+
+
 /* =============================
    BASIC LAYOUT
 ============================= */
@@ -9,9 +42,15 @@ body {
   height: 100%;
 
   overflow: hidden;
-
-  font-family: arial, sans-serif;
   
+}
+
+h2, h3 {
+  font-family: "Bjorn Halftone", sans-serif;
+}
+
+button, a, span {
+  font-family: "Bjorn Regular", sans-serif;
 }
 
 .map {
@@ -107,12 +146,6 @@ body {
 }
 
 
-/* actieve tekst */
-.filterItem input:checked + span {
-  font-weight: 600;
-}
-
-
 /* =============================
    Algemene data widget
 ============================= */
@@ -140,7 +173,6 @@ body {
 
 .dataWidget p:first-of-type {
   color: #1E3881;
-  font-weight: 900;
 }
 
 
@@ -185,7 +217,6 @@ body {
   text-decoration: none;
   color: white;
   font-size: 0.9em;
-  font-weight: 700;
 }
 
 .paginaLink a:hover {
@@ -866,7 +897,6 @@ body {
 
 .rapport button {
   font-size: 1.25em;
-  font-weight: 700;
   line-height: 1.2;
   width: 100%;
   display: block;
@@ -932,7 +962,6 @@ body {
 }
 
 .circleInner {
-  font-weight: bold;
   font-size: 1.05em;
 }
 
