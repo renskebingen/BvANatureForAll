@@ -6,7 +6,7 @@
     "type": "boerderij",
     "lat": 52.251477,
     "lng": 4.858878,
-    "image": ""
+    "image": "/images/profielfoto.png"
   },
   {
     "name": "Boerderij Cornelly",
@@ -15,7 +15,7 @@
     "type": "boerderij",
     "lat": 52.256064,
     "lng": 4.83816,
-    "image": ""
+    "image": "/images/corkoster.png"
   },
   {
     "name": "Weidevogelboerderij",
@@ -24,7 +24,7 @@
     "type": "boerderij",
     "lat": 52.255657,
     "lng": 4.864706,
-    "image": ""
+    "image": "/images/profielfoto.png"
   },
   {
     "name": "Boerderij Strandvliet",
@@ -33,7 +33,7 @@
     "type": "boerderij",
     "lat": 52.316582,
     "lng": 4.907987,
-    "image": ""
+    "image": "/images/denboer.png"
   },
   {
     "name": "Boerderij Polderzicht",
@@ -51,7 +51,7 @@
     "type": "boerderij",
     "lat": 52.229217,
     "lng": 4.783886,
-    "image": ""
+    "image": "/images/profielfoto.png"
   },
   {
     "name": "Mts. Van Schaik",
@@ -60,7 +60,7 @@
     "type": "boerderij",
     "lat": 52.275476,
     "lng": 4.878561,
-    "image": ""
+    "image": "/images/profielfoto.png"
   },
   {
     "name": "Melkveebedrijf Stam",
@@ -69,7 +69,7 @@
     "type": "boerderij",
     "lat": 52.313678,
     "lng": 4.906846,
-    "image": ""
+    "image": "/images/profielfoto.png"
   },
   {
     "name": "Mts. Timmer",
@@ -78,7 +78,7 @@
     "type": "boerderij",
     "lat": 52.284903,
     "lng": 4.919695,
-    "image": ""
+    "image": "/images/famtimmer.png"
   },
   {
     "name": "Mts. Snelderwaard",
@@ -87,7 +87,7 @@
     "type": "boerderij",
     "lat": 52.261705,
     "lng": 4.840875,
-    "image": ""
+    "image": "/images/profielfoto.png"
   },
   {
     "name": "Worners (Amstelpracht)",
@@ -96,7 +96,7 @@
     "type": "boerderij",
     "lat": 52.283636,
     "lng": 4.932934,
-    "image": ""
+    "image": "/images/profielfoto.png"
   },
   {
     "name": "Boerderij Hoeksjan",
@@ -105,7 +105,7 @@
     "type": "boerderij",
     "lat": 52.262924,
     "lng": 4.840938,
-    "image": ""
+    "image": "/images/profielfoto.png"
   },
   {
     "name": "Mts. Pouw",
@@ -114,7 +114,7 @@
     "type": "boerderij",
     "lat": 52.278696,
     "lng": 4.95508,
-    "image": ""
+    "image": "/images/profielfoto.png"
   },
   {
     "name": "Mts. Hogenhout",
@@ -123,7 +123,7 @@
     "type": "boerderij",
     "lat": 52.303733,
     "lng": 4.925852,
-    "image": ""
+    "image": "/images/profielfoto.png"
   },
   {
     "name": "Melkveebedrijf Roos",
@@ -132,7 +132,7 @@
     "type": "boerderij",
     "lat": 52.259035,
     "lng": 4.918333,
-    "image": ""
+    "image": "/images/roos.png"
   },
   {
     "name": "Poldersport",
@@ -141,7 +141,7 @@
     "type": "boerderij",
     "lat": 52.239487,
     "lng": 4.80655,
-    "image": ""
+    "image": "/images/famblommestijn.png"
   },
   {
     "name": "De Grazige Weide",
@@ -150,7 +150,7 @@
     "type": "boerderij",
     "lat": 52.256012,
     "lng": 4.872754,
-    "image": ""
+    "image": "/images/vincentpost.png"
   },
   {
     "name": "Mts. Korrel",
@@ -159,6 +159,6 @@
     "type": "boerderij",
     "lat": 52.27909,
     "lng": 4.880113,
-    "image": "/images/richardkorrel1.png"
+    "image": "/images/weskorrel.png"
   }
 ]
