@@ -1,674 +1,758 @@
 [
   {
     "id": 1,
-    "name": "Albert Heijn (AMSTELVEEN)",
+    "name": "Albert Heijn",
     "description": "Rembrandthof 49, 1181 ZL, AMSTELVEEN",
     "type": "verkooppunt",
     "lat": 52.30232,
-    "lng": 4.86015
+    "lng": 4.86015,
+    "image": "/images/profielfotowinkels.png"
   },
   {
     "id": 2,
-    "name": "Albert Heijn (AMSTELVEEN)",
+    "name": "Albert Heijn",
     "description": "Amsterdamseweg 73, 1182 GP, AMSTELVEEN",
     "type": "verkooppunt",
     "lat": 52.31215,
-    "lng": 4.85108
+    "lng": 4.85108,
+    "image": "/images/profielfotowinkels.png"
   },
   {
     "id": 3,
-    "name": "Albert Heijn (AMSTELVEEN)",
+    "name": "Albert Heijn",
     "description": "Westelijk Halfrond 70, 1183 HV, AMSTELVEEN",
     "type": "verkooppunt",
     "lat": 52.31952,
-    "lng": 4.88714
+    "lng": 4.88714,
+    "image": "/images/profielfotowinkels.png"
   },
   {
     "id": 4,
-    "name": "Albert Heijn (AMSTELVEEN)",
+    "name": "Albert Heijn",
     "description": "Maalderij 31, 1185 ZC, AMSTELVEEN",
     "type": "verkooppunt",
     "lat": 52.28921,
-    "lng": 4.85211
+    "lng": 4.85211,
+    "image": "/images/profielfotowinkels.png"
   },
   {
     "id": 5,
-    "name": "Albert Heijn (AMSTELVEEN)",
+    "name": "Albert Heijn",
     "description": "Groenhof 144, 1186 EX, AMSTELVEEN",
     "type": "verkooppunt",
     "lat": 52.29294,
-    "lng": 4.87785
+    "lng": 4.87785,
+    "image": "/images/profielfotowinkels.png"
   },
   {
     "id": 6,
-    "name": "Albert Heijn (AMSTELVEEN)",
+    "name": "Albert Heijn",
     "description": "Westwijkplein 7, 1187 LS, AMSTELVEEN",
     "type": "verkooppunt",
     "lat": 52.27891,
-    "lng": 4.85123
+    "lng": 4.85123,
+    "image": "/images/profielfotowinkels.png"
   },
   {
     "id": 7,
-    "name": "Albert Heijn (AALSMEER)",
+    "name": "Albert Heijn",
     "description": "Praamplein 4, 1431 CV, AALSMEER",
     "type": "verkooppunt",
     "lat": 52.26388,
-    "lng": 4.75134
+    "lng": 4.75134,
+    "image": "/images/profielfotowinkels.png"
   },
   {
     "id": 8,
-    "name": "Albert Heijn (AALSMEER)",
+    "name": "Albert Heijn",
     "description": "Poldermeesterplein 1, 1432 JZ, AALSMEER",
     "type": "verkooppunt",
     "lat": 52.27455,
-    "lng": 4.76812
+    "lng": 4.76812,
+    "image": "/images/profielfotowinkels.png"
   },
   {
     "id": 9,
-    "name": "Albert Heijn (ABCOUDE)",
+    "name": "Albert Heijn",
     "description": "Dokter Van Doornplein 2, 1391 VE, ABCOUDE",
     "type": "verkooppunt",
     "lat": 52.27134,
-    "lng": 4.97521
+    "lng": 4.97521,
+    "image": "/images/profielfotowinkels.png"
   },
   {
     "id": 10,
-    "name": "Albert Heijn (AMERSFOORT)",
+    "name": "Albert Heijn",
     "description": "Emiclaerhof 142, 3823 EN, AMERSFOORT",
     "type": "verkooppunt",
     "lat": 52.18956,
-    "lng": 5.39982
+    "lng": 5.39982,
+    "image": "/images/profielfotowinkels.png"
   },
   {
     "id": 11,
-    "name": "Albert Heijn (AMSTERDAM)",
+    "name": "Albert Heijn",
     "description": "Van Baerlestraat 33, 1071 AP, AMSTERDAM",
     "type": "verkooppunt",
     "lat": 52.35821,
-    "lng": 4.87891
+    "lng": 4.87891,
+    "image": "/images/profielfotowinkels.png"
   },
   {
     "id": 12,
-    "name": "Albert Heijn (AMSTERDAM)",
+    "name": "Albert Heijn",
     "description": "Cornelis Troostplein 11, 1072 JJ, AMSTERDAM",
     "type": "verkooppunt",
     "lat": 52.35243,
-    "lng": 4.89012
+    "lng": 4.89012,
+    "image": "/images/profielfotowinkels.png"
   },
   {
     "id": 13,
-    "name": "Albert Heijn (AMSTERDAM)",
+    "name": "Albert Heijn",
     "description": "Stadhouderskade 101, 1073 AX, AMSTERDAM",
     "type": "verkooppunt",
     "lat": 52.35411,
-    "lng": 4.89765
+    "lng": 4.89765,
+    "image": "/images/profielfotowinkels.png"
   },
   {
     "id": 14,
-    "name": "Albert Heijn (AMSTERDAM)",
+    "name": "Albert Heijn",
     "description": "Van Woustraat 150, 1073 LW, AMSTERDAM",
     "type": "verkooppunt",
     "lat": 52.35102,
-    "lng": 4.90123
+    "lng": 4.90123,
+    "image": "/images/profielfotowinkels.png"
   },
   {
     "id": 15,
-    "name": "Albert Heijn (AMSTERDAM)",
+    "name": "Albert Heijn",
     "description": "Johannes Verhulststraat 149, 1075 GX, AMSTERDAM",
     "type": "verkooppunt",
     "lat": 52.35456,
-    "lng": 4.86877
+    "lng": 4.86877,
+    "image": "/images/profielfotowinkels.png"
   },
   {
     "id": 16,
-    "name": "Albert Heijn (AMSTERDAM)",
+    "name": "Albert Heijn",
     "description": "Zeilstraat 47, 1075 SB, AMSTERDAM",
     "type": "verkooppunt",
     "lat": 52.35123,
-    "lng": 4.85678
+    "lng": 4.85678,
+    "image": "/images/profielfotowinkels.png"
   },
   {
     "id": 17,
-    "name": "Albert Heijn (AMSTERDAM)",
+    "name": "Albert Heijn",
     "description": "Amstelveenseweg 186, 1075 XS, AMSTERDAM",
     "type": "verkooppunt",
     "lat": 52.34988,
-    "lng": 4.85412
+    "lng": 4.85412,
+    "image": "/images/profielfotowinkels.png"
   },
   {
     "id": 18,
-    "name": "Albert Heijn (AMSTERDAM)",
+    "name": "Albert Heijn",
     "description": "Stadionplein 115, 1076 CK, AMSTERDAM",
     "type": "verkooppunt",
     "lat": 52.34311,
-    "lng": 4.86123
+    "lng": 4.86123,
+    "image": "/images/profielfotowinkels.png"
   },
   {
     "id": 19,
-    "name": "Albert Heijn (AMSTERDAM)",
+    "name": "Albert Heijn",
     "description": "Stadionweg 159, 1076 NN, AMSTERDAM",
     "type": "verkooppunt",
     "lat": 52.34678,
-    "lng": 4.87123
+    "lng": 4.87123,
+    "image": "/images/profielfotowinkels.png"
   },
   {
     "id": 20,
-    "name": "Albert Heijn (AMSTERDAM)",
+    "name": "Albert Heijn",
     "description": "Gerrit Van Der Veenstr 57, 1077 DN, AMSTERDAM",
     "type": "verkooppunt",
     "lat": 52.34891,
-    "lng": 4.87822
+    "lng": 4.87822,
+    "image": "/images/profielfotowinkels.png"
   },
   {
     "id": 21,
-    "name": "Albert Heijn (AMSTERDAM)",
+    "name": "Albert Heijn",
     "description": "Oosterdokskade 65, 1011 DL, AMSTERDAM",
     "type": "verkooppunt",
     "lat": 52.37612,
-    "lng": 4.90455
+    "lng": 4.90455,
+    "image": "/images/profielfotowinkels.png"
   },
   {
     "id": 22,
-    "name": "Albert Heijn (AMSTERDAM)",
+    "name": "Albert Heijn",
     "description": "Jodenbreestraat 21, 1011 NH, AMSTERDAM",
     "type": "verkooppunt",
     "lat": 52.36988,
-    "lng": 4.90123
+    "lng": 4.90123,
+    "image": "/images/profielfotowinkels.png"
   },
   {
     "id": 23,
-    "name": "Albert Heijn (AMSTERDAM)",
+    "name": "Albert Heijn",
     "description": "Nieuwezijds Voorburgwal 226, 1012 RR, AMSTERDAM",
     "type": "verkooppunt",
     "lat": 52.37123,
-    "lng": 4.89122
+    "lng": 4.89122,
+    "image": "/images/profielfotowinkels.png"
   },
   {
     "id": 24,
-    "name": "Albert Heijn (AMSTERDAM)",
+    "name": "Albert Heijn",
     "description": "Prins Hendrikkade 20, 1012 TL, AMSTERDAM",
     "type": "verkooppunt",
     "lat": 52.37789,
-    "lng": 4.89876
+    "lng": 4.89876,
+    "image": "/images/profielfotowinkels.png"
   },
   {
     "id": 25,
-    "name": "Albert Heijn (AMSTERDAM)",
+    "name": "Albert Heijn",
     "description": "Nieuwmarkt 18, 1012 CR, AMSTERDAM",
     "type": "verkooppunt",
     "lat": 52.37211,
-    "lng": 4.90012
+    "lng": 4.90012,
+    "image": "/images/profielfotowinkels.png"
   },
   {
     "id": 26,
-    "name": "Albert Heijn (AMSTERDAM)",
+    "name": "Albert Heijn",
     "description": "Haarlemmerplein 34, 1013 HS, AMSTERDAM",
     "type": "verkooppunt",
     "lat": 52.38456,
-    "lng": 4.88678
+    "lng": 4.88678,
+    "image": "/images/profielfotowinkels.png"
   },
   {
     "id": 27,
-    "name": "Albert Heijn (AMSTERDAM)",
+    "name": "Albert Heijn",
     "description": "Haarlemmerdijk 1, 1013 JH, AMSTERDAM",
     "type": "verkooppunt",
     "lat": 52.38012,
-    "lng": 4.89345
+    "lng": 4.89345,
+    "image": "/images/profielfotowinkels.png"
   },
   {
     "id": 28,
-    "name": "Albert Heijn (AMSTERDAM)",
+    "name": "Albert Heijn",
     "description": "Spaarndammerdijk 3, 1013 ZM, AMSTERDAM",
     "type": "verkooppunt",
     "lat": 52.39012,
-    "lng": 4.87567
+    "lng": 4.87567,
+    "image": "/images/profielfotowinkels.png"
   },
   {
     "id": 29,
-    "name": "Albert Heijn (AMSTERDAM)",
+    "name": "Albert Heijn",
     "description": "Westerstraat 79, 1015 LV, AMSTERDAM",
     "type": "verkooppunt",
     "lat": 52.37891,
-    "lng": 4.88234
+    "lng": 4.88234,
+    "image": "/images/profielfotowinkels.png"
   },
   {
     "id": 30,
-    "name": "Albert Heijn (AMSTERDAM)",
+    "name": "Albert Heijn",
     "description": "Westermarkt 21, 1016 DJ, AMSTERDAM",
     "type": "verkooppunt",
     "lat": 52.37456,
-    "lng": 4.88456
+    "lng": 4.88456,
+    "image": "/images/profielfotowinkels.png"
   },
   {
     "id": 31,
-    "name": "Albert Heijn (AMSTERDAM)",
+    "name": "Albert Heijn",
     "description": "Elandsgracht 13, 1016 TM, AMSTERDAM",
     "type": "verkooppunt",
     "lat": 52.36988,
-    "lng": 4.88212
+    "lng": 4.88212,
+    "image": "/images/profielfotowinkels.png"
   },
   {
     "id": 32,
-    "name": "Albert Heijn (AMSTERDAM)",
+    "name": "Albert Heijn",
     "description": "Vijzelstraat 113, 1017 HJ, AMSTERDAM",
     "type": "verkooppunt",
     "lat": 52.36456,
-    "lng": 4.89123
+    "lng": 4.89123,
+    "image": "/images/profielfotowinkels.png"
   },
   {
     "id": 33,
-    "name": "Albert Heijn (AMSTERDAM)",
+    "name": "Albert Heijn",
     "description": "Leidseplein 31, 1017 PS, AMSTERDAM",
     "type": "verkooppunt",
     "lat": 52.36345,
-    "lng": 4.88345
+    "lng": 4.88345,
+    "image": "/images/profielfotowinkels.png"
   },
   {
     "id": 34,
-    "name": "Albert Heijn (AMSTERDAM)",
+    "name": "Albert Heijn",
     "description": "Utrechtsestraat 17, 1017 VH, AMSTERDAM",
     "type": "verkooppunt",
     "lat": 52.36567,
-    "lng": 4.89789
+    "lng": 4.89789,
+    "image": "/images/profielfotowinkels.png"
   },
   {
     "id": 35,
-    "name": "Albert Heijn (AMSTERDAM)",
+    "name": "Albert Heijn",
     "description": "Weteringschans 165, 1017 XD, AMSTERDAM",
     "type": "verkooppunt",
     "lat": 52.35988,
-    "lng": 4.89456
+    "lng": 4.89456,
+    "image": "/images/profielfotowinkels.png"
   },
   {
     "id": 36,
-    "name": "Albert Heijn (AMSTERDAM)",
+    "name": "Albert Heijn",
     "description": "Frederiksplein 3, 1017 XK, AMSTERDAM",
     "type": "verkooppunt",
     "lat": 52.36012,
-    "lng": 4.89876
+    "lng": 4.89876,
+    "image": "/images/profielfotowinkels.png"
   },
   {
     "id": 37,
-    "name": "Albert Heijn (AMSTERDAM)",
+    "name": "Albert Heijn",
     "description": "Sarphatistraat 670, 1018 AV, AMSTERDAM",
     "type": "verkooppunt",
     "lat": 52.36789,
-    "lng": 4.92123
+    "lng": 4.92123,
+    "image": "/images/profielfotowinkels.png"
   },
   {
     "id": 38,
-    "name": "Albert Heijn (AMSTERDAM)",
+    "name": "Albert Heijn",
     "description": "Sarphatistraat 141, 1018 GD, AMSTERDAM",
     "type": "verkooppunt",
     "lat": 52.36345,
-    "lng": 4.90876
+    "lng": 4.90876,
+    "image": "/images/profielfotowinkels.png"
   },
   {
     "id": 39,
-    "name": "Albert Heijn (AMSTERDAM)",
+    "name": "Albert Heijn",
     "description": "Cruquiusweg 79, 1019 AT, AMSTERDAM",
     "type": "verkooppunt",
     "lat": 52.36988,
-    "lng": 4.94123
+    "lng": 4.94123,
+    "image": "/images/profielfotowinkels.png"
   },
   {
     "id": 40,
-    "name": "Albert Heijn (AMSTERDAM)",
+    "name": "Albert Heijn",
     "description": "Oostelijke Handelskade 1065, 1019 BM, AMSTERDAM",
     "type": "verkooppunt",
     "lat": 52.37678,
-    "lng": 4.93123
+    "lng": 4.93123,
+    "image": "/images/profielfotowinkels.png"
   },
   {
     "id": 41,
-    "name": "Albert Heijn (AMSTERDAM)",
+    "name": "Albert Heijn",
     "description": "Waterlandplein 255, 1024 LP, AMSTERDAM",
     "type": "verkooppunt",
     "lat": 52.39891,
-    "lng": 4.95456
+    "lng": 4.95456,
+    "image": "/images/profielfotowinkels.png"
   },
   {
     "id": 42,
-    "name": "Albert Heijn (AMSTERDAM)",
+    "name": "Albert Heijn",
     "description": "Buikslotermeerplein 310, 1025 GA, AMSTERDAM",
     "type": "verkooppunt",
     "lat": 52.40123,
-    "lng": 4.93678
+    "lng": 4.93678,
+    "image": "/images/profielfotowinkels.png"
   },
   {
     "id": 43,
-    "name": "Albert Heijn (AMSTERDAM)",
+    "name": "Albert Heijn",
     "description": "Mosveld 129, 1031 AD, AMSTERDAM",
     "type": "verkooppunt",
     "lat": 52.39123,
-    "lng": 4.91234
+    "lng": 4.91234,
+    "image": "/images/profielfotowinkels.png"
   },
   {
     "id": 44,
-    "name": "Albert Heijn (AMSTERDAM)",
+    "name": "Albert Heijn",
     "description": "Bercylaan 5, 1031 KP, AMSTERDAM",
     "type": "verkooppunt",
     "lat": 52.38789,
-    "lng": 4.90345
+    "lng": 4.90345,
+    "image": "/images/profielfotowinkels.png"
   },
   {
     "id": 45,
-    "name": "Albert Heijn (AMSTERDAM)",
+    "name": "Albert Heijn",
     "description": "Ms Van Riemsdijkweg 186, 1033 RD, AMSTERDAM",
     "type": "verkooppunt",
     "lat": 52.40123,
-    "lng": 4.89234
+    "lng": 4.89234,
+    "image": "/images/profielfotowinkels.png"
   },
   {
     "id": 46,
-    "name": "Albert Heijn (AMSTERDAM)",
+    "name": "Albert Heijn",
     "description": "Molenwijk 35, 1035 EJ, AMSTERDAM",
     "type": "verkooppunt",
     "lat": 52.41678,
-    "lng": 4.88678
+    "lng": 4.88678,
+    "image": "/images/profielfotowinkels.png"
   },
   {
     "id": 47,
-    "name": "Albert Heijn (AMSTERDAM)",
+    "name": "Albert Heijn",
     "description": "Van Limburg Stirumstraat 44, 1051 BE, AMSTERDAM",
     "type": "verkooppunt",
     "lat": 52.37891,
-    "lng": 4.87456
+    "lng": 4.87456,
+    "image": "/images/profielfotowinkels.png"
   },
   {
     "id": 48,
-    "name": "Albert Heijn (AMSTERDAM)",
+    "name": "Albert Heijn",
     "description": "Frederik Hendrikstraat 81, 1052 HM, AMSTERDAM",
     "type": "verkooppunt",
     "lat": 52.37678,
-    "lng": 4.87678
+    "lng": 4.87678,
+    "image": "/images/profielfotowinkels.png"
   },
   {
     "id": 49,
-    "name": "Albert Heijn (AMSTERDAM)",
+    "name": "Albert Heijn",
     "description": "Bilderdijkstraat 37, 1053 KP, AMSTERDAM",
     "type": "verkooppunt",
     "lat": 52.36988,
-    "lng": 4.87234
+    "lng": 4.87234,
+    "image": "/images/profielfotowinkels.png"
   },
   {
     "id": 50,
-    "name": "Albert Heijn (AMSTERDAM)",
+    "name": "Albert Heijn",
     "description": "Overtoom 21, 1054 HA, AMSTERDAM",
     "type": "verkooppunt",
     "lat": 52.36345,
-    "lng": 4.87891
+    "lng": 4.87891,
+    "image": "/images/profielfotowinkels.png"
   },
   {
     "id": 51,
-    "name": "Albert Heijn (AMSTERDAM)",
+    "name": "Albert Heijn",
     "description": "Overtoom 116, 1054 HN, AMSTERDAM",
     "type": "verkooppunt",
     "lat": 52.36123,
-    "lng": 4.87123
+    "lng": 4.87123,
+    "image": "/images/profielfotowinkels.png"
   },
   {
     "id": 52,
-    "name": "Albert Heijn (AMSTERDAM)",
+    "name": "Albert Heijn",
     "description": "Jan Pieter Heijestraat 132, 1054 MK, AMSTERDAM",
     "type": "verkooppunt",
     "lat": 52.35891,
-    "lng": 4.86567
+    "lng": 4.86567,
+    "image": "/images/profielfotowinkels.png"
   },
   {
     "id": 53,
-    "name": "Albert Heijn (AMSTERDAM)",
+    "name": "Albert Heijn",
     "description": "Bos En Lommerweg 117, 1055 EC, AMSTERDAM",
     "type": "verkooppunt",
     "lat": 52.37891,
-    "lng": 4.85123
+    "lng": 4.85123,
+    "image": "/images/profielfotowinkels.png"
   },
   {
     "id": 54,
-    "name": "Albert Heijn (AMSTERDAM)",
+    "name": "Albert Heijn",
     "description": "Nieuwpoortstraat 100, 1055 RZ, AMSTERDAM",
     "type": "verkooppunt",
     "lat": 52.38567,
-    "lng": 4.85678
+    "lng": 4.85678,
+    "image": "/images/profielfotowinkels.png"
   },
   {
     "id": 55,
-    "name": "Albert Heijn (AMSTERDAM)",
+    "name": "Albert Heijn",
     "description": "Jan Van Galenstraat 87, 1056 BJ, AMSTERDAM",
     "type": "verkooppunt",
     "lat": 52.37567,
-    "lng": 4.85891
+    "lng": 4.85891,
+    "image": "/images/profielfotowinkels.png"
   },
   {
     "id": 56,
-    "name": "Albert Heijn (AMSTERDAM)",
+    "name": "Albert Heijn",
     "description": "Jan Evertsenstraat 24, 1056 EC, AMSTERDAM",
     "type": "verkooppunt",
     "lat": 52.37123,
-    "lng": 4.85456
+    "lng": 4.85456,
+    "image": "/images/profielfotowinkels.png"
   },
   {
     "id": 57,
-    "name": "Albert Heijn (AMSTERDAM)",
+    "name": "Albert Heijn",
     "description": "Postjesweg 65, 1057 DW, AMSTERDAM",
     "type": "verkooppunt",
     "lat": 52.36456,
-    "lng": 4.85123
+    "lng": 4.85123,
+    "image": "/images/profielfotowinkels.png"
   },
   {
     "id": 58,
-    "name": "Albert Heijn (AMSTERDAM)",
+    "name": "Albert Heijn",
     "description": "Rietwijkerstraat 22, 1059 VZ, AMSTERDAM",
     "type": "verkooppunt",
     "lat": 52.34891,
-    "lng": 4.84891
+    "lng": 4.84891,
+    "image": "/images/profielfotowinkels.png"
   },
   {
     "id": 59,
-    "name": "Albert Heijn (AMSTERDAM)",
+    "name": "Albert Heijn",
     "description": "August Allebeplein 12, 1062 AB, AMSTERDAM",
     "type": "verkooppunt",
     "lat": 52.35891,
-    "lng": 4.83123
+    "lng": 4.83123,
+    "image": "/images/profielfotowinkels.png"
   },
   {
     "id": 60,
-    "name": "Albert Heijn (AMSTERDAM)",
+    "name": "Albert Heijn",
     "description": "Delflandplein 31, 1062 EA, AMSTERDAM",
     "type": "verkooppunt",
     "lat": 52.35123,
-    "lng": 4.83456
+    "lng": 4.83456,
+    "image": "/images/profielfotowinkels.png"
   },
   {
     "id": 61,
-    "name": "Albert Heijn (AMSTERDAM)",
+    "name": "Albert Heijn",
     "description": "Sierplein 78, 1065 LN, AMSTERDAM",
     "type": "verkooppunt",
     "lat": 52.35678,
-    "lng": 4.82123
+    "lng": 4.82123,
+    "image": "/images/profielfotowinkels.png"
   },
   {
     "id": 62,
-    "name": "Albert Heijn (AMSTERDAM)",
+    "name": "Albert Heijn",
     "description": "Belgieplein 107, 1066 SC, AMSTERDAM",
     "type": "verkooppunt",
     "lat": 52.34345,
-    "lng": 4.81123
+    "lng": 4.81123,
+    "image": "/images/profielfotowinkels.png"
   },
   {
     "id": 63,
-    "name": "Albert Heijn (AMSTERDAM)",
+    "name": "Albert Heijn",
     "description": "Lambertus Zijlplein 8, 1067 JR, AMSTERDAM",
     "type": "verkooppunt",
     "lat": 52.38123,
-    "lng": 4.80123
+    "lng": 4.80123,
+    "image": "/images/profielfotowinkels.png"
   },
   {
     "id": 64,
-    "name": "Albert Heijn (AMSTERDAM)",
+    "name": "Albert Heijn",
     "description": "Osdorpplein 469, 1068 ER, AMSTERDAM",
     "type": "verkooppunt",
     "lat": 52.35891,
-    "lng": 4.80456
+    "lng": 4.80456,
+    "image": "/images/profielfotowinkels.png"
   },
   {
     "id": 65,
-    "name": "Albert Heijn (AMSTERDAM)",
+    "name": "Albert Heijn",
     "description": "Pieter Calandlaan 212, 1068 NN, AMSTERDAM",
     "type": "verkooppunt",
     "lat": 52.35456,
-    "lng": 4.79123
+    "lng": 4.79123,
+    "image": "/images/profielfotowinkels.png"
   },
   {
     "id": 66,
-    "name": "Albert Heijn (AMSTERDAM)",
+    "name": "Albert Heijn",
     "description": "Gelderlandplein 47, 1082 KZ, AMSTERDAM",
     "type": "verkooppunt",
     "lat": 52.33234,
-    "lng": 4.87678
+    "lng": 4.87678,
+    "image": "/images/profielfotowinkels.png"
   },
   {
     "id": 67,
-    "name": "Albert Heijn (AMSTERDAM)",
+    "name": "Albert Heijn",
     "description": "Peter Schatstraat 65, 1082 MX, AMSTERDAM",
     "type": "verkooppunt",
     "lat": 52.33891,
-    "lng": 4.87123
+    "lng": 4.87123,
+    "image": "/images/profielfotowinkels.png"
   },
   {
     "id": 68,
-    "name": "Albert Heijn (AMSTERDAM)",
+    "name": "Albert Heijn",
     "description": "Ijburglaan 719, 1087 CH, AMSTERDAM",
     "type": "verkooppunt",
     "lat": 52.35456,
-    "lng": 4.99876
+    "lng": 4.99876,
+    "image": "/images/profielfotowinkels.png"
   },
   {
     "id": 69,
-    "name": "Albert Heijn (AMSTERDAM)",
+    "name": "Albert Heijn",
     "description": "Krugerplein 3, 1091 AT, AMSTERDAM",
     "type": "verkooppunt",
     "lat": 52.35456,
-    "lng": 4.91891
+    "lng": 4.91891,
+    "image": "/images/profielfotowinkels.png"
   },
   {
     "id": 70,
-    "name": "Albert Heijn (AMSTERDAM)",
+    "name": "Albert Heijn",
     "description": "Wibautstraat 80, 1091 GP, AMSTERDAM",
     "type": "verkooppunt",
     "lat": 52.35678,
-    "lng": 4.91123
+    "lng": 4.91123,
+    "image": "/images/profielfotowinkels.png"
   },
   {
     "id": 71,
-    "name": "Albert Heijn (AMSTERDAM)",
+    "name": "Albert Heijn",
     "description": "Eerste Oosterparkstraat 100, 1091 GW, AMSTERDAM",
     "type": "verkooppunt",
     "lat": 52.35891,
-    "lng": 4.91456
+    "lng": 4.91456,
+    "image": "/images/profielfotowinkels.png"
   },
   {
     "id": 72,
-    "name": "Albert Heijn (AMSTERDAM)",
+    "name": "Albert Heijn",
     "description": "Eerste Van Swindenstraat 91, 1093 EZ, AMSTERDAM",
     "type": "verkooppunt",
     "lat": 52.36123,
-    "lng": 4.92891
+    "lng": 4.92891,
+    "image": "/images/profielfotowinkels.png"
   },
   {
     "id": 73,
-    "name": "Albert Heijn (AMSTERDAM)",
+    "name": "Albert Heijn",
     "description": "Land Van Cocagneplein 3, 1093 NB, AMSTERDAM",
     "type": "verkooppunt",
     "lat": 52.35891,
-    "lng": 4.92678
+    "lng": 4.92678,
+    "image": "/images/profielfotowinkels.png"
   },
   {
     "id": 74,
-    "name": "Albert Heijn (AMSTERDAM)",
+    "name": "Albert Heijn",
     "description": "Celebesstraat 43, 1094 ES, AMSTERDAM",
     "type": "verkooppunt",
     "lat": 52.36345,
-    "lng": 4.93456
+    "lng": 4.93456,
+    "image": "/images/profielfotowinkels.png"
   },
   {
     "id": 75,
-    "name": "Albert Heijn (AMSTERDAM)",
+    "name": "Albert Heijn",
     "description": "Molukkenstraat 101, 1095 AX, AMSTERDAM",
     "type": "verkooppunt",
     "lat": 52.36123,
-    "lng": 4.94456
+    "lng": 4.94456,
+    "image": "/images/profielfotowinkels.png"
   },
   {
     "id": 76,
-    "name": "Albert Heijn (AMSTERDAM)",
+    "name": "Albert Heijn",
     "description": "Helmholtzstraat 63, 1098 LE, AMSTERDAM",
     "type": "verkooppunt",
     "lat": 52.35123,
-    "lng": 4.94123
+    "lng": 4.94123,
+    "image": "/images/profielfotowinkels.png"
   },
   {
     "id": 77,
-    "name": "Albert Heijn (AMSTERDAM)",
+    "name": "Albert Heijn",
     "description": "Molukkenstraat 308, 1098 TW, AMSTERDAM",
     "type": "verkooppunt",
     "lat": 52.35456,
-    "lng": 4.94678
+    "lng": 4.94678,
+    "image": "/images/profielfotowinkels.png"
   },
   {
     "id": 78,
-    "name": "Albert Heijn (AMSTERDAM ZUIDOOST)",
+    "name": "Albert Heijn",
     "description": "Bijlmerplein 526, 1102 DP, AMSTERDAM ZUIDOOST",
     "type": "verkooppunt",
     "lat": 52.31234,
-    "lng": 4.95123
+    "lng": 4.95123,
+    "image": "/images/profielfotowinkels.png"
   },
   {
     "id": 79,
-    "name": "Albert Heijn (AMSTERDAM ZUIDOOST)",
+    "name": "Albert Heijn",
     "description": "Harriet Freezerstraat 96, 1103 JP, AMSTERDAM ZUIDOOST",
     "type": "verkooppunt",
     "lat": 52.32123,
-    "lng": 4.96456
+    "lng": 4.96456,
+    "image": "/images/profielfotowinkels.png"
   },
   {
     "id": 80,
-    "name": "Albert Heijn (AMSTERDAM ZUIDOOST)",
+    "name": "Albert Heijn",
     "description": "Karspeldreef 1389, 1104 SE, AMSTERDAM ZUIDOOST",
     "type": "verkooppunt",
     "lat": 52.31891,
-    "lng": 4.97891
+    "lng": 4.97891,
+    "image": "/images/profielfotowinkels.png"
   },
   {
     "id": 81,
-    "name": "Jumbo (OUDERKERK A/D AMSTEL)",
+    "name": "Jumbo",
     "description": "Sluisplein 15, 1191 EB, OUDERKERK A/D AMSTEL",
     "type": "verkooppunt",
     "lat": 52.29653,
-    "lng": 4.90482
+    "lng": 4.90482,
+    "image": "/images/profielfotowinkels.png"
   },
   {
     "id": 82,
-    "name": "PLUS (OUDERKERK A/D AMSTEL)",
+    "name": "PLUS",
     "description": "Dorpsplein 1, 1191 AX, OUDERKERK A/D AMSTEL",
     "type": "verkooppunt",
     "lat": 52.29631,
-    "lng": 4.90225
+    "lng": 4.90225,
+    "image": "/images/profielfotowinkels.png"
   },
   {
     "id": 83,
-    "name": "PLUS (ABCOUDE)",
+    "name": "PLUS",
     "description": "Hoogstraat 32, 1391 BR, ABCOUDE",
     "type": "verkooppunt",
     "lat": 52.27218,
-    "lng": 4.97298
+    "lng": 4.97298,
+    "image": "/images/profielfotowinkels.png"
   },
   {
     "id": 84,
-    "name": "PLUS (DUIVENDRECHT)",
+    "name": "PLUS",
     "description": "Dorpsplein 26, 1115 CX, DUIVENDRECHT",
     "type": "verkooppunt",
     "lat": 52.33641,
-    "lng": 4.93514
+    "lng": 4.93514,
+    "image": "/images/profielfotowinkels.png"
   }
 ]

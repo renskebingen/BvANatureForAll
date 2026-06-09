@@ -5,7 +5,8 @@ const VerkooppuntSchema = new mongoose.Schema({
   description: String,
   type: String,
   lat: Number,
-  lng: Number
+  lng: Number,
+  image: String
 })
 
 module.exports =

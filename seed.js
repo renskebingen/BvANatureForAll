@@ -53,15 +53,16 @@ mongoose.connect(process.env.MONGO_URI)
       fs.readFileSync(verkooppuntenPath, "utf8")
     );
 
-    await Verkooppunt.create(
-      verkooppunten.map(verkooppunt => ({
-        name: verkooppunt.name,
-        description: verkooppunt.description,
-        type: "verkooppunt",
-        lat: verkooppunt.lat,
-        lng: verkooppunt.lng
-      }))
-    );
+  await Verkooppunt.create(
+    verkooppunten.map(verkooppunt => ({
+      name: verkooppunt.name,
+      description: verkooppunt.description,
+      type: "verkooppunt",
+      lat: verkooppunt.lat,
+      lng: verkooppunt.lng,
+      image: verkooppunt.image
+    }))
+  )
 
     console.log("Seed complete");
 

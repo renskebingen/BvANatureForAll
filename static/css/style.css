@@ -10,7 +10,7 @@ body {
 
   overflow: hidden;
 
-  font-family: Arial, sans-serif;
+  font-family: arial, sans-serif;
   
 }
 
@@ -462,22 +462,41 @@ body {
 .leaflet-popup-content-wrapper {
   display: flex;
   align-items: center;
+
+  min-width: 40em;
+  max-height: 15em;
+
+  padding: 1px 6px;
+
+  background: linear-gradient(
+    135deg,
+    #1E3881,
+    #213990,
+    #2B3EC7,
+    #3554D6
+  );
+
   border-top-left-radius: 7em;
   border-bottom-left-radius: 7em;
   border-top-right-radius: 1.7em;
   border-bottom-right-radius: 1.7em;
-  min-width: 40em;
-  max-height: 15em;
-
-  border: 8px solid #1E3881;
 }
 
 .popup-content {
   display: flex;
   align-items: center;
-  width: 35em;
-  transform: translateX(-1.8em);
-  max-height: 10em;
+
+  width: 36.5em;
+  max-height: 11.6em;
+
+  transform: translateX(-1.5em);
+
+  background: white;
+
+  border-top-left-radius: 6.5em;
+  border-bottom-left-radius: 6.5em;
+  border-top-right-radius: 1.2em;
+  border-bottom-right-radius: 1.2em;
 }
 
 .popup-content h3 {
@@ -513,7 +532,7 @@ body {
 }
 
 .popup-info h3 {
-  color: #1E3881;
+  color: #2128B8;
   align-self: center;
   text-align: center;
 }
@@ -531,17 +550,13 @@ body {
   border-radius: 999em;
 }
 
-.read-more-btn {
-  align-self: flex-end;
-}
-
 .leaflet-popup-tip {
   background: #1E3881;
 }
 
 .leaflet-popup-close-button {
-  padding-top: 0.5em;
-  padding-right: 0.5em;
+  padding-top: 0.8em;
+  padding-right: 0.7em;
 }
 
 /* =============================
@@ -562,7 +577,7 @@ body {
   text-decoration: underline;
   text-underline-offset: 0.14em;
 
-  padding: 0;
+  padding-right: 0.5em;
   cursor: pointer;
 
   transition: color 0.2s ease;

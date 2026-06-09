@@ -462,37 +462,50 @@ const verkooppuntMarkerIcon = new L.Icon({
 
 farmsData.forEach(farm => {
 
-  const marker = L.marker([
-    farm.lat,
-    farm.lng
-  ], {
-    icon: farmMarkerIcon
-  }).addTo(map)
+  const marker = L.marker(
+    [farm.lat, farm.lng],
+    { icon: farmMarkerIcon }
+  ).addTo(map)
 
-  const popupContent =
-    document.createElement('div')
+  const popupContent = document.createElement('div')
 
   const popupImageSrc = getPopupImageSrc(farm)
+
   const popupImageHtml = popupImageSrc
-    ? `<img src="${popupImageSrc}" alt="${farm.name || 'Boerderij'}" loading="lazy" />`
+    ? `<img src="${popupImageSrc}" alt="${farm.name || 'Boerderij'}" loading="lazy">`
+    : ''
+
+  const address = getFarmAddress(farm)
+
+  const addressHtml = address
+    ? `
+      <a
+        href="https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(address)}"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        ${address}
+      </a>
+    `
     : ''
 
   popupContent.innerHTML = `
     <div class="popup-content">
+
       ${popupImageHtml}
 
       <div class="popup-info">
+
         <h3>${farm.name}</h3>
 
-        <p>
-          ${farm.description || ''}
-        </p>
+        <p>${farm.description || ''}</p>
 
         <button class="read-more-btn">
           Lees meer
         </button>
 
-        <p>${getFarmAddress(farm) || ''}</p>
+        <p>${addressHtml}</p>
+
       </div>
 
     </div>
@@ -501,6 +514,7 @@ farmsData.forEach(farm => {
   popupContent
     .querySelector('.read-more-btn')
     .addEventListener('click', () => {
+
       rememberMapViewBeforePanelFly()
 
       openPanel(farm)
@@ -508,9 +522,7 @@ farmsData.forEach(farm => {
       map.flyTo(
         [farm.lat, farm.lng],
         14,
-        {
-          duration: 1.2
-        }
+        { duration: 1.2 }
       )
 
     })
@@ -518,14 +530,13 @@ farmsData.forEach(farm => {
   marker.bindPopup(popupContent)
 
   marker.on('click', () => {
+
     rememberMapViewBeforePanelFly()
 
     map.flyTo(
       [farm.lat, farm.lng],
       14,
-      {
-        duration: 1.2
-      }
+      { duration: 1.2 }
     )
 
   })
@@ -539,28 +550,52 @@ farmsData.forEach(farm => {
 
 verkooppuntenData.forEach(verkooppunt => {
 
-  const marker = L.marker([
-    verkooppunt.lat,
-    verkooppunt.lng
-  ], {
-    icon: verkooppuntMarkerIcon
-  }).addTo(map)
+  const marker = L.marker(
+    [verkooppunt.lat, verkooppunt.lng],
+    { icon: verkooppuntMarkerIcon }
+  ).addTo(map)
 
-  const popupContent =
-    document.createElement('div')
+  const popupContent = document.createElement('div')
+
+  const popupImageSrc =
+    getPopupImageSrc(verkooppunt)
+
+  const popupImageHtml =
+    popupImageSrc
+      ? `<img src="${popupImageSrc}" alt="${verkooppunt.name}" loading="lazy">`
+      : ''
+
+  const addressHtml =
+    verkooppunt.description
+      ? `
+        <a
+          href="https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(verkooppunt.description)}"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          ${verkooppunt.description}
+        </a>
+      `
+      : ''
 
   popupContent.innerHTML = `
     <div class="popup-content">
 
-      <h3>${verkooppunt.name}</h3>
+      ${popupImageHtml}
 
-      <p>
-        ${verkooppunt.description || ''}
-      </p>
+      <div class="popup-info">
 
-      <button class="read-more-btn">
-        Lees meer
-      </button>
+        <h3>${verkooppunt.name}</h3>
+
+        <p>
+          ${addressHtml}
+        </p>
+
+        <button class="read-more-btn">
+          Lees meer
+        </button>
+
+      </div>
 
     </div>
   `
@@ -574,9 +609,7 @@ verkooppuntenData.forEach(verkooppunt => {
       map.flyTo(
         [verkooppunt.lat, verkooppunt.lng],
         14,
-        {
-          duration: 1.2
-        }
+        { duration: 1.2 }
       )
 
     })
@@ -588,9 +621,7 @@ verkooppuntenData.forEach(verkooppunt => {
     map.flyTo(
       [verkooppunt.lat, verkooppunt.lng],
       14,
-      {
-        duration: 1.2
-      }
+      { duration: 1.2 }
     )
 
   })
@@ -601,7 +632,6 @@ verkooppuntenData.forEach(verkooppunt => {
   })
 
 })
-
 
 /* -----------------------------
    FILTER LAGEN
