@@ -994,6 +994,44 @@ body.oeverpagina {
   min-height: 100vh;
 }
 
+.oeverpagina h1 {
+  font-family: "Bjorn Halftone", sans-serif;
+  font-weight: normal;
+  margin: 0;
+}
+
+.banner-container {
+  position: relative;
+  width: 100%;
+}
+
+.header-image {
+  width: 100%;
+  height: 25vw;
+  object-fit: cover;
+  display: block;
+  margin-bottom: 2em;
+  border-top: 0.4em solid #2128B8;
+}
+
+.h1oevertje {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+
+  transform: translate(-50%, -50%);
+
+  color: white;
+  font-size: clamp(2rem, 5vw, 4rem);
+  text-align: center;
+
+  text-shadow:
+    0 0 10px rgba(0, 0, 0, 0.5),
+    0 0 20px rgba(0, 0, 0, 0.5);
+
+  z-index: 2;
+}
+
 /* =============================
    TIMELINE WRAPPER
 ============================= */
