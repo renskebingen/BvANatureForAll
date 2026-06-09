@@ -1107,3 +1107,25 @@ body.oeverpagina .timeline-event img {
     height: 2.5em;
   }
 }
+
+/* =============================
+   NAVBAR
+============================= */
+
+.navbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  padding: 1em 2em;
+}
+
+.logo img {
+  height: 4.5em;
+}
+
+.nav-links {
+  list-style-type: none;
+  display: flex;
+  gap: 1.5em;
+}
