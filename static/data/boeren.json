@@ -1,7 +1,7 @@
 [
   {
     "name": "Mts. Van Blaaderen",
-    "description": "Remco, Anne, Joost en Els van Blaaderen vormen samen een ondernemende boerenfamilie die actief werkt aan duurzame melkproductie. Op hun bedrijf krijgen natuurbeheer en biodiversiteit veel aandacht. Door maatregelen te nemen voor weidevogels en kruidenrijk grasland leveren zij een belangrijke bijdrage aan het behoud van de natuur rondom Amsterdam.",
+    "description": "De familie Van Blaaderen combineert duurzame melkveehouderij met actief natuur- en weidevogelbeheer.",
     "address": "Ringdijk BP 28, Amstelveen",
     "type": "boerderij",
     "lat": 52.251477,
@@ -10,7 +10,7 @@
   },
   {
     "name": "Boerderij Cornelly",
-    "description": "Cor Koster behoort tot de boeren die zich inzetten voor het behoud van het groene Amstelland. Met veel aandacht voor zijn dieren, het landschap en de natuur werkt hij mee aan de productie van lokale zuivel die direct bijdraagt aan biodiversiteit. Zijn bedrijf laat zien hoe duurzame melkveehouderij en natuurbeheer hand in hand kunnen gaan.",
+    "description": "Cor Koster zet zich in voor duurzame melkveehouderij en het behoud van het Amstelland.",
     "address": "Bovenkerkerweg 130, Amstelveen",
     "type": "boerderij",
     "lat": 52.256064,
@@ -19,7 +19,7 @@
   },
   {
     "name": "Weidevogelboerderij",
-    "description": "Boerderij van Kees Lambalk aan de Ringdijk BP 26 in Amstelveen",
+    "description": "Kees Lambalk beheert zijn boerderij met bijzondere aandacht voor weidevogels en natuur.",
     "address": "Ringdijk BP 26, Amstelveen",
     "type": "boerderij",
     "lat": 52.255657,
@@ -28,7 +28,7 @@
   },
   {
     "name": "Boerderij Strandvliet",
-    "description": "Hugo en Aletta den Boer wonen met hun gezin op boerderij Strandvliet in Ouderkerk aan de Amstel. Hun bedrijf combineert melkveehouderij met natuurbeheer en gastvrijheid. Door hun betrokkenheid bij Boeren van Amstel dragen zij bij aan het behoud van het karakteristieke polderlandschap en de biodiversiteit in de regio. Hun werk laat zien hoe een modern familiebedrijf kan bijdragen aan zowel voedselproductie als natuurbehoud.",
+    "description": "Hugo en Aletta den Boer combineren melkveehouderij, natuurbeheer en gastvrijheid op hun familiebedrijf.",
     "address": "Binnenweg 18, Ouderkerk a/d Amstel",
     "type": "boerderij",
     "lat": 52.316582,
@@ -37,7 +37,7 @@
   },
   {
     "name": "Boerderij Polderzicht",
-    "description": "Richard Korrel is een boer met een grote passie voor natuurbeheer. Op zijn bedrijf worden maatregelen genomen die bijdragen aan de bescherming van weidevogels en het versterken van biodiversiteit. Zijn werk laat zien dat een rendabele landbouw uitstekend gecombineerd kan worden met zorg voor natuur en landschap.",
+    "description": "Richard Korrel zet zich in voor biodiversiteit en de bescherming van weidevogels.",
     "address": "Polderweg 24, Ouderkerk a/d Amstel",
     "type": "boerderij",
     "lat": 52.291012,
@@ -46,7 +46,7 @@
   },
   {
     "name": "Zuivelboerderij Vrouwenakker",
-    "description": "Boerderij van Koos Langelaan aan de Drechtdijk 90 in De Kwakel",
+    "description": "Koos Langelaan runt een melkveebedrijf waar lokale zuivel en natuur samenkomen.",
     "address": "Drechtdijk 90, De Kwakel",
     "type": "boerderij",
     "lat": 52.229217,
@@ -55,7 +55,7 @@
   },
   {
     "name": "Mts. Van Schaik",
-    "description": "Boerderij van Henk van Schaik aan de Ringdijk BP 8 in Amstelveen",
+    "description": "Henk van Schaik draagt met zijn melkveebedrijf bij aan het open landschap van het Amstelland.",
     "address": "Ringdijk BP 8, Amstelveen",
     "type": "boerderij",
     "lat": 52.275476,
@@ -64,7 +64,7 @@
   },
   {
     "name": "Melkveebedrijf Stam",
-    "description": "Boerderij van Gerard Stam aan de Binnenweg 16 in Ouderkerk a/d Amstel",
+    "description": "Gerard Stam beheert zijn melkveebedrijf met aandacht voor kwaliteit en natuur.",
     "address": "Binnenweg 16, Ouderkerk a/d Amstel",
     "type": "boerderij",
     "lat": 52.313678,
@@ -73,7 +73,7 @@
   },
   {
     "name": "Mts. Timmer",
-    "description": "Bas en Gerard Timmer geloven in een manier van boeren waarbij natuur en landbouw elkaar versterken. Op hun bedrijf werken zij aan gezonde bodems, kruidenrijk grasland en een aantrekkelijk leefgebied voor vogels en insecten. Hun inzet draagt bij aan een duurzame toekomst voor zowel de landbouw als het landschap van het Amstelland.",
+    "description": "Bas en Gerard Timmer werken aan een duurzame landbouw met ruimte voor natuur en biodiversiteit.",
     "address": "Rondehoep Oost 7, Ouderkerk a/d Amstel",
     "type": "boerderij",
     "lat": 52.284903,
@@ -82,7 +82,7 @@
   },
   {
     "name": "Mts. Snelderwaard",
-    "description": "Boerderij van John Snelderwaard aan de Bovenkerkerweg 114 in Amstelveen",
+    "description": "John Snelderwaard combineert melkveehouderij met zorg voor het karakteristieke polderlandschap.",
     "address": "Bovenkerkerweg 114, Amstelveen",
     "type": "boerderij",
     "lat": 52.261705,
@@ -91,7 +91,7 @@
   },
   {
     "name": "Worners (Amstelpracht)",
-    "description": "Boerderij van Gerrit Worners aan de Amstelweg 1 in Ouderkerk a/d Amstel",
+    "description": "Gerrit Worners draagt met zijn boerderij bij aan duurzame landbouw in het Amstelland.",
     "address": "Amstelweg 1, Ouderkerk a/d Amstel",
     "type": "boerderij",
     "lat": 52.283636,
@@ -100,7 +100,7 @@
   },
   {
     "name": "Boerderij Hoeksjan",
-    "description": "Boerderij van Henk Langeveld aan de Bovenkerkerweg 112 in Amstelveen",
+    "description": "Henk Langeveld beheert zijn boerderij met oog voor koeien, landschap en natuur.",
     "address": "Bovenkerkerweg 112, Amstelveen",
     "type": "boerderij",
     "lat": 52.262924,
@@ -109,7 +109,7 @@
   },
   {
     "name": "Mts. Pouw",
-    "description": "Boerderij van Ton Pouw aan de Holendrechterweg 64 in Ouderkerk a/d Amstel",
+    "description": "Ton Pouw zet zich in voor een gezonde balans tussen landbouw en natuurbeheer.",
     "address": "Holendrechterweg 64, Ouderkerk a/d Amstel",
     "type": "boerderij",
     "lat": 52.278696,
@@ -118,7 +118,7 @@
   },
   {
     "name": "Mts. Hogenhout",
-    "description": "Boerderij van Cees Hogenhout aan de Korte Dwarsweg 8 in Ouderkerk a/d Amstel",
+    "description": "Cees Hogenhout draagt bij aan een duurzaam en biodivers veenweidelandschap.",
     "address": "Korte Dwarsweg 8, Ouderkerk a/d Amstel",
     "type": "boerderij",
     "lat": 52.303733,
@@ -127,7 +127,7 @@
   },
   {
     "name": "Melkveebedrijf Roos",
-    "description": "De familie Roos heeft een melkveebedrijf in de Ronde Hoep met ongeveer 125 melkkoeien en 45 stuks jongvee. Peter en zijn zoon Arjan beheren samen ruim 65 hectare grasland. Zij houden bij hun werkzaamheden nadrukkelijk rekening met weidevogels zoals de grutto en kievit. Samen met vrijwilligers beschermen zij nesten en kuikens. Hun overtuiging is duidelijk: zonder boeren geen weidevogels.",
+    "description": "De familie Roos combineert melkveehouderij met een sterke inzet voor weidevogelbescherming.",
     "address": "Waver 40, Ouderkerk a/d Amstel",
     "type": "boerderij",
     "lat": 52.259035,
@@ -136,7 +136,7 @@
   },
   {
     "name": "Poldersport",
-    "description": "De familie Blommestijn combineert al generaties lang melkveehouderij met een sterke verbondenheid met het landschap. Hun boerderij vormt een belangrijk onderdeel van het Groene Hart. Naast de dagelijkse zorg voor de dieren zetten zij zich in voor biodiversiteit en het behoud van het karakteristieke veenweidegebied waar zij werken en wonen",
+    "description": "De familie Blommestijn verbindt melkveehouderij, recreatie en natuurbeheer op hun boerderij.",
     "address": "Boterdijk 91, De Kwakel",
     "type": "boerderij",
     "lat": 52.239487,
@@ -145,7 +145,7 @@
   },
   {
     "name": "De Grazige Weide",
-    "description": "Vincent Post staat bekend om zijn betrokkenheid bij een toekomstbestendige landbouw. Op zijn bedrijf staan gezonde koeien, goed bodembeheer en aandacht voor natuur centraal. Door deel te nemen aan Boeren van Amstel draagt hij bij aan de bescherming van weidevogels en het behoud van het open polderlandschap rondom Amsterdam",
+    "description": "Vincent Post werkt aan toekomstbestendige landbouw met aandacht voor natuur en dierenwelzijn.",
     "address": "Rondehoep West 70, Ouderkerk a/d Amstel",
     "type": "boerderij",
     "lat": 52.256012,
@@ -154,7 +154,7 @@
   },
   {
     "name": "Mts. Korrel",
-    "description": "Richard Korrel is een boer met een grote passie voor natuurbeheer. Op zijn bedrijf worden maatregelen genomen die bijdragen aan de bescherming van weidevogels en het versterken van biodiversiteit. Zijn werk laat zien dat een rendabele landbouw uitstekend gecombineerd kan worden met zorg voor natuur en landschap.",
+    "description": "De familie Korrel combineert duurzame melkveehouderij met actief natuurbeheer.",
     "address": "Rondehoep West 46A, Ouderkerk a/d Amstel",
     "type": "boerderij",
     "lat": 52.27909,
