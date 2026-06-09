@@ -21,15 +21,6 @@
 
 @import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
 
-p {
-  font-family: "Roboto", sans-serif;
-  font-optical-sizing: auto;
-  font-weight: 400;
-  font-style: normal;
-  font-variation-settings:
-    "wdth" 100;
-}
-
 
 /* =============================
    BASIC LAYOUT
@@ -45,6 +36,11 @@ body {
   
 }
 
+.map {
+  height: 100%;
+}
+
+/* Fonts */
 h2, h3 {
   font-family: "Bjorn Halftone", sans-serif;
 }
@@ -53,8 +49,22 @@ button, a, span {
   font-family: "Bjorn Regular", sans-serif;
 }
 
-.map {
-  height: 100%;
+p, th, td {
+  font-family: "Roboto", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+  font-variation-settings:
+    "wdth" 100;
+}
+
+.algemeneData p:first-of-type {
+  font-family: "Bjorn Halftone", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 300;
+  font-style: normal;
+  font-variation-settings:
+    "wdth" 100;
 }
 
 
