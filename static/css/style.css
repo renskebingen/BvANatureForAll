@@ -516,6 +516,16 @@ body {
 
 .popup-content p {
   margin-bottom: 0.1em;
+  color: #2128B8;
+}
+
+.popup-content a {
+  color: #2128B8;
+  text-decoration: underline;
+}
+
+.popup-content a::before {
+  content: url("/images/location_on.svg");
 }
 
 .leaflet-popup-content p {
