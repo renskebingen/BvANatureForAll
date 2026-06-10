@@ -334,11 +334,11 @@ p, th, td {
 }
 
 .panelInfoItemLocation::before {
-  content: "src('/images/location2.svg')";
+  content: url("/images/location2.svg");
 }
 
 .panelInfoItemLink::before {
-  content: "src('/images/linkicon.svg')";
+  content: url("/images/linkicon.svg");
 }
 
 .panelMediaGrid {
