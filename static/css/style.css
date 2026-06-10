@@ -417,11 +417,11 @@ p, th, td {
 }
 
 .panelInfoItemLocation::before {
-  content: "●";
+  content: "src('/images/location2.svg')";
 }
 
 .panelInfoItemLink::before {
-  content: "↗";
+  content: "src('/images/linkicon.svg')";
 }
 
 .panelMediaGrid {
