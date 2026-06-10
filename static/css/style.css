@@ -98,14 +98,14 @@ p, th, td {
   background: white;
   padding: 0.4em 0.6em;
   border-radius: 2em;
-  box-shadow: 0 0.15em 0.6em rgba(0,0,0,0.15);
+  box-shadow: 0 0.15em 0.2em rgba(0,0,0,0.3);
   cursor: pointer;
   transition:
     transform 0.2s ease,
     background 0.2s ease,
     box-shadow 0.2s ease;
   user-select: none;
-  min-width: 9em;
+  min-width: 4.5em;
 }
 
 .filterItem:hover {
@@ -118,13 +118,23 @@ p, th, td {
   color: #222;
 }
 
+.filterItem img {
+  width: 1.2em;
+  height: 1.2em;
+  margin-right: 0.4em;
+}
+
 .filterItem input {
   display: none;
 }
 
 .filterItem:has(input:checked) {
-  background: #CFD9F7;
-  border: 0.08em solid #1E3881;
+  background: #BFE5FD;
+}
+
+#layerboerderij span::before {
+  content: url("/images/boerfilter.svg");
+  margin-right: 0.4em;
 }
 
 
