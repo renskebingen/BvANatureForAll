@@ -107,6 +107,10 @@ app.get("/oevertjekopen", (req, res) => {
   res.render("oevertjekopen")
 })
 
+app.get("/evenementen", (req, res) => {
+  res.render("evenementen")
+})
+
 app.listen(process.env.PORT, () => {
   console.log("Server running")
 })
