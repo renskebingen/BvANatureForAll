@@ -111,6 +111,10 @@ app.get("/evenementen", (req, res) => {
   res.render("evenementen")
 })
 
+app.get("/betaalpagina", (req, res) => {
+  res.render("betaalpagina")
+})
+
 app.listen(process.env.PORT, () => {
   console.log("Server running")
 })
