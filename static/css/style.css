@@ -1301,7 +1301,7 @@ body.oeverpagina {
 
 .waarom {
     position: relative; /* nodig voor absolute positioning */
-    margin-top: 2em;
+    margin-top: 6em;
     background-color: #202689;
     padding: 1rem 0rem 4rem 0rem;
     color: white;
@@ -1373,33 +1373,22 @@ body.oeverpagina {
     IMPACT SLIDES
 ============================= */
 
-.impact-slides {
-    position: relative;
-}
-
-.impact-slides .oeverh2 {
-    width: 100%;
-    text-align: center;
-
-    font-family: "Bjorn Halftone", sans-serif;
-    font-size: 3em;
-    font-weight: normal;
-    color: #2128B8;
-
-  margin-top: 3em;
-  margin-bottom: 0.5em;
-}
-
 .slide {
     position: sticky;
     top: 0;
-
     height: 100vh;
     overflow: hidden;
+}
 
-    display: flex;
-    align-items: center;
-    justify-content: center;
+.impact-slides .oeverh2 { 
+  width: 100%; 
+  text-align: center; 
+  font-family: "Bjorn Halftone", sans-serif; 
+  font-size: 3em; 
+  font-weight: normal; 
+  color: #2128B8; 
+  margin-top: 3em; 
+  margin-bottom: 1cm;
 }
 
 .slide img {
@@ -1409,23 +1398,20 @@ body.oeverpagina {
     width: 100%;
     height: 100%;
     object-fit: cover;
-
-    transition: transform 0.1s linear;
 }
 
 .slide-content {
-    position: relative;
-    z-index: 2;
+    position: absolute;
+    bottom: 25%;
+    max-width: 320px;
 
     color: white;
-    text-align: center;
+    z-index: 2;
 
     opacity: 0;
-    transform: translateY(50px);
+    transform: translateY(40px);
 
-    transition:
-        opacity 0.6s ease,
-        transform 0.6s ease;
+    transition: 0.6s ease;
 }
 
 .slide.active .slide-content {
@@ -1433,142 +1419,248 @@ body.oeverpagina {
     transform: translateY(0);
 }
 
+/* Links */
+
+.slide-content.left {
+    left: 8%;
+    text-align: left;
+    max-width: 40em;
+}
+
+/* Rechts */
+
+.slide-content.right {
+    right: 8%;
+    text-align: left;
+    max-width: 40em;
+}
+
+.slide-content h3 {
+    font-size: 2.5rem;
+    font-weight: normal;
+    text-transform: uppercase;
+
+    margin-bottom: 12px;
+    padding-bottom: 8px;
+
+    border-bottom: 2px solid white;
+    display: inline-block;
+}
+
+.slide-content p {
+    font-size: 1.6rem;
+    line-height: 1.4;
+}
+
 
 /* =============================
    TIMELINE
 ============================= */
 
-body.oeverpagina .timeline {
-  container: timeline-container / inline-size;
-  width: 100%;
-  margin-top: 6em;
-  padding-bottom: 6em;
+.timeline {
+    position: relative;
+    width: 100%;
+    margin-top: 6em;
+    padding-bottom: 6em;
 }
 
-body.oeverpagina .timeline-group {
-  display: grid;
-  gap: 1em;
-  grid-template-areas:
-    "point date"
-    "point event";
-  margin-inline: 1em;
+.timeline .oeverh2 {
+    width: 100%;
+    text-align: center;
+    font-family: "Bjorn Halftone", sans-serif;
+    font-size: 3em;
+    font-weight: normal;
+    color: #2128B8;
+    margin-bottom: 2em;
 }
 
-@container timeline-container (min-width: 80em) {
-  body.oeverpagina .timeline-group {
-    grid-template-areas: "date point event";
-    grid-template-columns: 8fr 1fr 8fr;
-  }
+/* Wrapper om nth-child conflict met h2 te voorkomen */
 
-  body.oeverpagina .timeline-group:nth-child(even) {
-    grid-template-areas: "event point date";
-  }
-
-  body.oeverpagina .timeline-group:nth-child(even) .timeline-event {
-    margin-inline-start: auto;
-  }
+.timeline-items {
+    display: block;
 }
 
-body.oeverpagina .timeline-event {
-  grid-area: event;
-  background: white;
-  border-radius: 0.5em;
-  box-shadow:
-    0 0.8em 0.6em rgba(0,0,0,0.04),
-    0 6em 5em rgba(0,0,0,0.08);
-  overflow: hidden;
-  opacity: 0;
-  transform: translateX(4em);
-  transition: opacity 0.7s ease, transform 0.7s ease;
+/* Doorlopende lijn */
+
+.timeline-point {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 350px;
+    grid-column: 2;
 }
 
-body.oeverpagina .timeline-date {
-  grid-area: date;
-  opacity: 0;
-  transform: translateY(2em);
-  transition: opacity 0.7s ease, transform 0.7s ease;
+/* de lijn */
+
+.timeline-point::before {
+    content: "";
+    position: absolute;
+
+    top: -5rem;
+    bottom: -5rem;
+
+    width: 6px;
+    background: #d9d9d9;
+
+    left: 50%;
+    transform: translateX(-50%);
 }
 
-body.oeverpagina .timeline-point {
-  grid-area: point;
-  display: grid;
-  place-content: center;
-  position: relative;
+/* het bolletje */
+
+.timeline-point span {
+    width: 28px;
+    height: 28px;
+
+    border-radius: 50%;
+    background: #2128B8;
+
+    position: relative;
+    z-index: 10;
+
+    opacity: 0;
+    transform: scale(0);
+
+    transition: .6s ease;
 }
 
-body.oeverpagina .timeline-point::after {
-  content: "";
-  position: absolute;
-  left: calc(50% - 0.3em);
-  top: 0;
-  width: 0.6em;
-  height: 100%;
-  background: #7f8c8d;
-  z-index: -1;
+/* Elke stap */
+
+.timeline-group {
+    display: grid;
+    grid-template-columns: 1fr 80px 1fr;
+    align-items: center;
+    gap: 2rem;
+
+    max-width: 1400px;
+    margin: 5rem auto;
+    padding: 0 2rem;
 }
 
-body.oeverpagina .timeline-point span {
-  width: 3em;
-  height: 3em;
-  border-radius: 50%;
-  background: #34495e;
-  opacity: 0;
-  transform: scale(0);
-  transition: opacity 0.7s ease, transform 0.7s ease;
+/* FOTO */
+
+.timeline-event {
+    overflow: hidden;
+    border-radius: 12px;
+
+    opacity: 0;
+    transform: translateX(-60px);
+
+    transition: .7s ease;
+
+    box-shadow:
+        0 10px 30px rgba(0,0,0,.08);
 }
 
-body.oeverpagina .timeline-group.visible .timeline-event {
-  opacity: 1;
-  transform: translateX(0);
+.timeline-event img {
+    width: 100%;
+    height: 350px;
+    object-fit: cover;
+    display: block;
 }
 
-body.oeverpagina .timeline-group.visible .timeline-date {
-  opacity: 1;
-  transform: translateY(0);
+/* TEKST */
+
+.timeline-content {
+    opacity: 0;
+    transform: translateX(60px);
+
+    transition: .7s ease;
 }
 
-body.oeverpagina .timeline-group.visible .timeline-point span {
-  opacity: 1;
-  transform: scale(1);
+.timeline-content h3 {
+    color: #2128B8;
+    font-size: 2rem;
+    margin-bottom: 1rem;
 }
 
-body.oeverpagina .timeline-event figure {
-  margin: 0;
-  aspect-ratio: 16 / 9;
-  overflow: hidden;
+.timeline-content p {
+    line-height: 1.7;
+    margin: 0;
 }
 
-body.oeverpagina .timeline-event img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
+/* Oneven stappen: foto links, tekst rechts */
+
+.timeline-items .timeline-group:nth-child(odd) .timeline-event {
+    grid-column: 1;
 }
 
+.timeline-items .timeline-group:nth-child(odd) .timeline-content {
+    grid-column: 3;
+    text-align: left;
+}
 
-/* =============================
-   OEVERTJEKOPEN — MOBILE
-============================= */
+/* Even stappen: tekst links, foto rechts */
+
+.timeline-items .timeline-group:nth-child(even) .timeline-content {
+    grid-column: 1;
+    text-align: right;
+    transform: translateX(-60px); /* FIX: tekst schuift van de juiste kant in */
+}
+
+.timeline-items .timeline-group:nth-child(even) .timeline-event {
+    grid-column: 3;
+}
+
+/* ANIMATIES */
+
+.timeline-group.visible .timeline-event {
+    opacity: 1;
+    transform: translateX(0);
+}
+
+.timeline-group.visible .timeline-content {
+    opacity: 1;
+    transform: translateX(0);
+}
+
+.timeline-group.visible .timeline-point span {
+    opacity: 1;
+    transform: scale(1);
+}
+
+/* MOBILE */
 
 @media (max-width: 768px) {
-  .oevertjekopen {
-    flex-direction: column;
-    align-items: center;
-  }
 
-  .oevertjekopen article {
-    width: 90%;
-  }
-}
+    .timeline-point {
+        grid-column: 1;
+        grid-row: 1 / span 2;
+        min-height: unset;
+    }
 
-@media (max-width: 48em) {
-  body.oeverpagina .timeline-event {
-    width: 100%;
-  }
+    .timeline-group {
+        grid-template-columns: 60px 1fr;
+        gap: 1rem;
+    }
 
-  body.oeverpagina .timeline-point span {
-    width: 2.5em;
-    height: 2.5em;
-  }
+    .timeline-items .timeline-group:nth-child(odd) .timeline-event,
+    .timeline-items .timeline-group:nth-child(even) .timeline-event {
+        grid-column: 2;
+        grid-row: 1;
+    }
+
+    .timeline-items .timeline-group:nth-child(odd) .timeline-content,
+    .timeline-items .timeline-group:nth-child(even) .timeline-content {
+        grid-column: 2;
+        grid-row: 2;
+        text-align: left !important;
+        transform: translateX(60px); /* reset naar rechts voor mobile animatie */
+    }
+
+    .timeline-event img {
+        height: 250px;
+    }
+
+    .timeline-content h3 {
+        font-size: 1.5rem;
+    }
+
+    .timeline-point::before {
+        left: 50%;
+    }
+
 }
 
 
