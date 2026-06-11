@@ -1575,11 +1575,23 @@ body.oeverpagina .timeline-event img {
 /* =================================
    EVENEMENTEN
 ================================= */
+body.evenementenpagina {
+  overflow-x: hidden;
+  overflow-y: auto;
+  min-height: 100vh;
+}
+
 body.evenementenpagina .closebutton {
   position:absolute;
   top: 1.2em;
   right: 1.2em;
   width: 4.8em;
+  cursor: pointer;
+  pointer-events: auto;
+}
+
+body.evenementenpagina .closebutton:hover {
+  transform: translateY(-0.09em);
 }
 
 body.evenementenpagina h1{
@@ -1615,8 +1627,8 @@ body.evenementenpagina .evenementen article {
 
   border: 0.08em solid #3554D6;
   box-shadow:
-    0 0.8em 0.6em rgba(0,0,0,0.04),
-    0 6em 5em rgba(0,0,0,0.08);
+  0 0.2em 0.3em rgba(0,0,0,0.06),
+  0 0.8em 1.2em rgba(0,0,0,0.10);
 }
 
 body.evenementenpagina .evenementen article p:first-of-type {
@@ -1655,6 +1667,11 @@ body.evenementenpagina .evenementen article button {
 body.evenementenpagina .evenementen article button:hover {
   transform: translateY(-0.08em);
   box-shadow: 0 0.4em 1em rgba(0,0,0,0.2);
+}
+
+body.evenementenpagina footer img{
+  margin-top: 4em;
+  width: 100%;
 }
 
 
