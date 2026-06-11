@@ -941,7 +941,7 @@ body.oeverpagina {
   font-size: 3em;
   font-weight: normal;
   color: #2128B8;
-  margin-top: 0.5em;
+  margin-top: 1.5em;
   margin-bottom: 0.2em;
 }
 
@@ -979,7 +979,7 @@ body.oeverpagina {
 
   width: fit-content;
 
-  margin: 0 auto 5em;
+  margin: 2em auto 2.5em;
 
   padding: 1.2em 2.5em;
 
@@ -1036,6 +1036,53 @@ body.oeverpagina {
    OEVERTJE CARDS
 ============================= */
 
+.card-top {
+  background: #3347e6;
+
+  padding: 1.5rem;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.card-top h3 {
+  color: white;
+
+  text-transform: uppercase;
+
+  margin-bottom: 1rem;
+}
+
+.card-top h3::after {
+  content: "";
+
+  display: block;
+
+  width: 7rem;
+  height: 0.1rem;
+
+  background: white;
+
+  margin: 0.4rem auto 0;
+}
+
+.card-content {
+  background: #ffffff;
+
+  padding: 2rem;
+
+  flex: 1;
+
+  display: flex;
+  flex-direction: column;
+}
+
+.card-content ul {
+  margin: 0 0 2rem;
+  padding-left: 1.2rem;
+}
+
 .oevertjekopen {
   width: 100%;
 }
@@ -1043,7 +1090,7 @@ body.oeverpagina {
 .oevertje-cards {
   display: flex;
   justify-content: center;
-  gap: 2rem;
+  gap: 2.5rem;
   flex-wrap: wrap;
 }
 
@@ -1053,33 +1100,38 @@ body.oeverpagina {
 }
 
 .oevertjekopen article {
-  background: #f3f3f3;
-  border-radius: 1em;
-  padding: 2em;
-  width: 30vw;
-  min-width: 16em;
-  max-width: 24em;
-  min-height: 32em;
+  width: 22rem;
+
+  overflow: hidden;
+
+  border-radius: 1rem;
+
+  background: white;
+
+  box-shadow:
+    0 0.5em 1.5em rgba(0,0,0,0.15);
+
   display: flex;
   flex-direction: column;
-  box-sizing: border-box;
 }
 
 .oevertje-image {
   width: 100%;
-  height: 13vw;
-  min-height: 8em;
-  max-height: 12em;
+
+  height: 10rem;
+
   object-fit: cover;
-  border-radius: 0.7em;
-  margin-top: 0.5em;
-  margin-bottom: 1.5em;
+
+  border-radius: 0.5rem;
+
+  margin: 0;
 }
 
 .oevertjekopen h3 {
   font-size: 1.5em;
   margin-top: 0;
   margin-bottom: 1em;
+  align-self: center;
 }
 
 .oevertjekopen ul {
@@ -1090,12 +1142,151 @@ body.oeverpagina {
   line-height: 1.8;
 }
 
-.kopen-btn {
+.prijs {
   margin-top: auto;
-  align-self: center;
-  margin-bottom: 0.5em;
+
+  text-align: right;
 }
 
+.prijs p {
+  margin: 0;
+
+  color: #777;
+
+  font-weight: 700;
+}
+
+.prijs span {
+  display: block;
+
+  color: #2128B8;
+
+  font-size: 1.5rem;
+
+  font-weight: 700;
+}
+
+.kopen-btn {
+  margin-top: 1rem;
+
+  align-self: center;
+
+  padding: 0.8rem 1.5rem;
+
+  border: none;
+
+  border-radius: 999rem;
+
+  background: #3347e6;
+
+  color: white;
+
+  cursor: pointer;
+}
+
+.card-footer {
+  width: 100%;
+
+  display: block;
+}
+
+/* =============================
+   KOE MET SPREEKWOLKJE EN HOE WERKT HET
+============================== */
+
+.bovenkant {
+  margin-top: 1em;
+  display: flex;
+  align-items: center;
+}
+
+.koespreek {
+  
+  width: 350px;
+  margin: 0;
+}
+
+.tekstblok {
+  flex: 1;
+  text-align: center;
+  padding-right: 350px;
+}
+
+.oeverh2 {
+    margin-bottom: 1rem;
+}
+
+.tekstblok p {
+    font-family: "Roboto", sans-serif;
+}
+
+.stappen {
+    display: flex;
+    justify-content: center;
+    gap: 6rem;
+    flex-wrap: wrap;
+}
+
+.stap {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.stappenplan {
+    width: 250px; /* pas aan naar wens */
+    height: auto;
+}
+
+.stap p {
+    margin-top: 1rem;
+    font-size: 1.1rem;
+    font-weight: 600;
+    width: 8em;
+}
+
+/* =============================
+  WAAROM OEVERTJE KOPEN
+============================== */
+
+.waarom {
+  margin-top: 2em;
+  background-color: #202689;
+  padding: 1rem 0rem 4rem 0rem;
+  color: white;
+}
+
+.waarom .waaromh2 {
+  text-align: center;
+  font-weight: normal;
+  margin-bottom: 1em;
+  font-family: "Bjorn Halftone", sans-serif;
+  font-size: 2em;
+}
+
+.waarom-content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 7em;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.grutto-img {
+    width: 35em;
+    height: auto;
+}
+
+.waarom-tekst {
+    max-width: 60em;
+}
+
+.waarom-tekst p {
+    margin-bottom: 1.5rem;
+    line-height: 1.6;
+}
 
 /* =============================
    TIMELINE
