@@ -1663,6 +1663,143 @@ body.oeverpagina {
 
 }
 
+/* ========================
+ONZE DONATEURS
+============================= */
+
+.donateurs {
+  margin-top: 6em;
+  text-align: center;
+  margin-bottom: 6em;
+}
+
+.donateurs .oeverh2 {
+  font-family: "Bjorn Halftone", sans-serif;
+  font-weight: normal;
+  margin-top: 1.2em;
+  margin-bottom: 0.5em;
+}
+
+.donateurs .donatie-stats {
+  background-color: #3554D6;
+  border-radius: 18px;
+  padding: 1.5rem 2rem;
+
+  max-width: 55em;
+  width: 90%;
+  margin: 2rem auto 0;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.donateurs .stat {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.donateurs .counter,
+.donateurs .stat p {
+  color: white;
+}
+
+.donateurs .counter {
+  font-size: 2.2rem;
+  font-weight: 700;
+}
+
+.donateurs .stat p {
+  margin: 0;
+  font-size: 1rem;
+}
+
+.donateurs .divider {
+  width: 1px;
+  height: 50px;
+  background: rgba(255,255,255,0.4);
+}
+
+/* ========================
+  DONATEURS AVATARS
+============================= */
+
+.avatar-wall {
+    overflow: hidden;
+    padding: 60px 0;
+}
+
+.donateurs-avatars{
+  margin: 2em 0 6em 0;
+}
+
+.row {
+    display: flex;
+    gap: 6em;
+    width: max-content;
+    margin-bottom: 30px;
+}
+
+.row1,
+.row3 {
+    animation: moveLeft 20s linear infinite;
+}
+
+.row2 {
+    animation: moveRight 20s linear infinite;
+}
+
+@keyframes moveLeft {
+    from {
+        transform: translateX(0);
+    }
+    to {
+        transform: translateX(-50%);
+    }
+}
+
+@keyframes moveRight {
+    from {
+        transform: translateX(-50%);
+    }
+    to {
+        transform: translateX(0);
+    }
+}
+
+.avatar {
+    width: 180px;
+    height: 180px;
+    border-radius: 50%;
+    overflow: hidden;
+    flex-shrink: 0;
+}
+
+/* ========================
+  FOOTER OEVERTJE
+============================= */
+
+footer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+}
+
+footer .kopen-btn {
+    margin-bottom: 30px;
+    padding: 15px 30px;
+    font-size: 1.2rem;
+    cursor: pointer;
+}
+
+footer img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
 
 /* =================================
    EVENEMENTEN
