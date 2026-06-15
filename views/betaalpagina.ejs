@@ -6,26 +6,113 @@
     <title>Betalen</title>
     <link rel="stylesheet" href="/css/style.css">
 </head>
-<body>
+<body class="betaalpagina">
     <header>
-        <img src="/images/logobva.png">
-        <img src="/images/progress2.svg">
+        <img src="/images/logobva.png" alt="Logo De Boeren van Amstel" class="logo">
+        <img src="/images/progress2.svg" alt="Progress bar" class="progressbar">
         <h1>Betalen</h1>
     </header>
     <main>
-        <section class="persoonlijkegegevens">
-            <h2>Persoonlijke gegevens</h2>
+        <div class="left">
+            <section class="persoonlijkegegevens">
+                <h2>Persoonlijke gegevens</h2>
+                <form>
+                   
+                        <div class="form-group">
+                            <label for="voornaam">Voornaam</label>
+                            <input type="text" id="voornaam" name="voornaam" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="tussenvoegsel">Tussenvoegsel</label>
+                            <input type="text" id="tussenvoegsel" name="tussenvoegsel">
+                        </div>
+                        <div class="form-group">
+                            <label for="achternaam">Achternaam</label>
+                            <input type="text" id="achternaam" name="achternaam" required>
+                        </div>
+                   
+
+                    <div class="form-group grootveld">
+                        <label for="email">E-mail</label>
+                        <input type="email" id="email" name="email" required>
+                    </div>
+                    <div class="form-group grootveld">
+                        <label for="telefoon">Telefoon nummer</label>
+                        <input type="text" id="telefoon" name="telefoon" required>
+                    </div>
+                </form>
+            </section>
+
+            <section class="adres">
+                <h2>Adres</h2>
+                <form>
+                    <div class="form-group">
+                        <label for="postcode">Postcode</label>
+                        <input type="text" id="postcode" name="postcode" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="huisnummer">Huisnummer</label>
+                        <input type="text" id="huisnummer" name="huisnummer" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="toevoeging">Toevoeging</label>
+                        <input type="text" id="toevoeging" name="toevoeging">
+                    </div>
+                    <div class="form-group grootveld">
+                        <label for="straat">Straatnaam</label>
+                        <input type="text" id="straat" name="straat" required>
+                    </div>
+                    <div class="form-group grootveld">
+                        <label for="woonplaats">Woonplaats</label>
+                        <input type="text" id="woonplaats" name="woonplaats" required>
+                    </div>
+                </form>
+            </section>
+
+            <div class="nieuwsbrief">
+                <input type="checkbox" id="nieuwsbrief" name="nieuwsbrief" checked />
+                <label for="nieuwsbrief">Ik wil graag op de hoogte blijven van eventuele nieuwtjes </label>
+            </div>
+
+            <p>De Boeren van Amstel gebruiken uw gegevens alleen om u op de hoogte houden over uw oever en om u uw
+                certificaat toe te sturen. 
+            </p>
+        </div>
+
+        <section class="betalingsgegevens">
+            <h2>Betaalmethode</h2>
+            <div class="betaalmethode">
+                <input type="radio" id="ideal" name="betalingsmethode" value="ideal">
+                <label for="ideal">iDEAL</label>
+                <input type="radio" id="creditcard" name="betalingsmethode" value="creditcard">
+                <label for="creditcard">Creditcard</label>
+            </div>
             <form>
-                <label for="naam">Naam</label>
-                <input type="text" id="naam" name="naam" required>
-                <label for="email">E-mail</label>
-                <input type="email" id="email" name="email" required>
-                <label for="adres">Adres</label>
-                <input type="text" id="adres" name="adres" required>
+                <div class="form-group">
+                    <label for="cardholder">Naam kaarthouder</label>
+                    <input type="text" id="cardholder" name="cardholder" required>
+                </div>  
+                <div class="form-group">
+                    <label for="cardnumber">Kaartnummer</label>
+                    <input type="text" id="cardnumber" name="cardnumber" required>
+                </div>
+                <div class="form-group">
+                    <label for="expirydate">Vervaldatum</label>
+                    <input type="text" id="expirydate" name="expirydate" placeholder="MM/JJ" required>
+                </div>
+                <div class="form-group">
+                    <label for="cvv">CVV</label>
+                    <input type="text" id="cvv" name="cvv" required>
+                </div>
             </form>
-        </section>
+        </section> 
 
     </main>
+    <footer>
+        <a href="#" class="button">← Terug</a>
+        <a href="#"  class="button">Voltooien →</a>
+
+    </footer>
 
     <script src="/js/app.js"></script>
 </body>
