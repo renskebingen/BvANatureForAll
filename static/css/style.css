@@ -2053,3 +2053,97 @@ body.evenementenpagina footer img{
     grid-template-columns: 1fr;
   }
 }
+
+/* ======================
+   BETAALPAGINA
+============================= */
+
+.betaalpagina {
+  overflow-x: hidden;
+  overflow-y: auto;
+  min-height: 100vh;
+}
+
+.betaalpagina header {
+  margin-top : 1.2em;
+  margin-left: 1.5em;
+}
+
+.betaalpagina main {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  margin: 0 5em 0 5em;
+  gap: 3em;
+}
+
+.betaalpagina .left {
+  flex: 1 1 65%;
+  max-width: 65%;
+}
+
+.betaalpagina .betalingsgegevens {
+  flex: 0 1 30%;
+  max-width: 30%;
+}
+
+.betaalpagina h1 {
+  font-family: "Bjorn Halftone", sans-serif;
+  font-weight: normal;
+  font-size: 2.5em;
+  text-align: center;
+  color: #2128B8;
+}
+
+.betaalpagina h2 {
+  color: #2128B8;
+}
+
+.logo {
+  height: 4em;
+  width: auto;
+}
+
+.progressbar {
+  position: absolute;
+  top: 2em; 
+  right: -0.7em;
+  height: 2em;
+  width: 100%;
+}
+
+.form-group {
+  margin-bottom: 1rem;
+  padding-top: 0;
+  margin-right: 4em;
+}
+
+.betaalpagina form {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+
+}
+
+.form-group label {
+  display: block;
+  font-family: "Roboto", sans-serif;
+  font-weight: 550;
+  color: #2128B8;
+  margin-bottom: 0.5em;
+}
+
+.form-group input {
+  width: 100%;
+  padding: 1em;
+  gap: 0.5em;
+  font-family: "Roboto", sans-serif;
+  font-weight: 400;
+  border: 1px solid #2128B8;
+  border-radius: 0.25em;
+}
+
+.grootveld {
+  display: block;
+  width: 25em;
+}
