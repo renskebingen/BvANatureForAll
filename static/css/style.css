@@ -802,9 +802,13 @@ body.oeverpagina {
   margin: 0;
   padding: 0.8em 1.5em;
 
-  background: #2128B8;
-  color: white;
+  background: linear-gradient(
+    to right,
+    #2128B8 0%,
+    #3554D6 100%
+  );
 
+  color: white;
   font-size: 1em;
 
   border: none;
@@ -815,8 +819,12 @@ body.oeverpagina {
   text-shadow:
     0 0 10px rgba(0, 0, 0, 0.5),
     0 0 20px rgba(0, 0, 0, 0.5);
-}
 
+  box-shadow:
+    inset 0 2px 6px rgba(255, 255, 255, 0.25),
+    inset 0 -3px 8px rgba(0, 0, 0, 0.3),
+    0 8px 20px rgba(33, 40, 184, 0.4);
+}
 .navbar a {
   position: relative;
 
@@ -914,22 +922,43 @@ body.oeverpagina {
   -webkit-text-stroke: 0.4px #203D0D;
 }
 
-.kopenoeverbanner {
+.leesmeerbtn {
   position: absolute;
   top: 100%;
   left: 50%;
   transform: translate(-50%, -50%);
   padding: 0.8em 1.5em;
-  background: #2128B8;
+
+  background: linear-gradient(
+    90deg,
+    #2128B8 12%,
+    #3554D6 93%
+  );
+
   color: white;
   font-size: clamp(1rem, 3vw, 1.25rem);
   border: none;
   border-radius: 2em;
   cursor: pointer;
+
   text-shadow:
     0 0 10px rgba(0, 0, 0, 0.5),
     0 0 20px rgba(0, 0, 0, 0.5);
+
+  /* Inner shadow + drop shadow */
+box-shadow:
+  inset 0 2px 6px rgba(255, 255, 255, 0.25),
+  inset 0 -3px 8px rgba(0, 0, 0, 0.3),
+  0 8px 20px rgba(33, 40, 184, 0.4);
+
   z-index: 2;
+  align-items: center;
+}
+
+.leesmeerbtn img {
+  padding-left: 0.3em;
+  width: 1em;
+  height: 1em;
 }
 
 
@@ -1009,7 +1038,7 @@ body.oeverpagina {
 }
 
 /* =============================
-   DONATIE TABS
+   DONATIE TABS CONTAINER
 ============================= */
 
 .donatie-tabs,
@@ -1029,16 +1058,17 @@ body.oeverpagina {
   width: fit-content;
 
   margin: 2em auto 2.5em;
-
   padding: 1.2em 2.5em;
 
   background: white;
-
   border-radius: 1em;
 
-  box-shadow:
-    0 0.25em 0.8em rgba(0,0,0,0.15);
+  box-shadow: 0 0.25em 0.8em rgba(0,0,0,0.15);
 }
+
+/* =============================
+   TAB TEXT
+============================= */
 
 .donatie-tabs p {
   margin: 0;
@@ -1049,194 +1079,282 @@ body.oeverpagina {
   font-family: "Roboto", sans-serif;
 
   color: black;
+  font-weight: 400;
 
-  transition: color 0.3s ease;
+  display: inline-block;
+
+  transition:
+    color 0.25s ease,
+    font-weight 0.25s ease,
+    transform 0.25s ease;
+
+  will-change: transform;
 }
 
 .donatie-tabs p:hover {
   color: #2128B8;
+  font-weight: 700;
+  transform: translateY(-1px);
 }
 
 .donatie-tabs p.active {
   color: #2128B8;
+  font-weight: 700;
 }
+
+/* =============================
+   INDICATOR (SMOOTH)
+============================= */
 
 .tab-indicator {
   position: absolute;
 
   bottom: 0.9em;
+  left: 0;
 
-  height: 0.08em;
+  height: 0.12em;
 
   background: #2128B8;
-
   border-radius: 999em;
 
-  transition:
-    left 0.3s ease,
-    width 0.3s ease;
-}
+  width: 0;
+  transform: translateX(0);
 
-.donatie-tabs p.temp-inactive {
-  color: black;
+  transition:
+    transform 0.35s cubic-bezier(0.22, 1, 0.36, 1),
+    width 0.35s cubic-bezier(0.22, 1, 0.36, 1);
+
+  will-change: transform, width;
 }
 
 /* =============================
    OEVERTJE CARDS
 ============================= */
 
+.featured-card {
+    position: relative;
+    overflow: visible;
+}
+
+/* “Meest gekozen” badge */
+.meest-gekozen {
+    position: absolute;
+    top: -4rem;
+    left: 100%;
+    transform: translateX(-50%);
+    z-index: 100;
+    width: 18rem;
+}
+
+.meest-gekozen svg,
+.meest-gekozen img {
+    display: block;
+    width: 100%;
+    height: auto;
+}
+
+/* =============================
+   CARDS CONTAINER
+============================= */
+
+.oevertje-cards {
+    display: flex;
+    justify-content: center;
+    gap: 2.5rem;
+    flex-wrap: wrap;
+    align-items: stretch; /* BELANGRIJK */
+    padding-top: 4rem;
+}
+
+/* elke card zelf */
+.oevertje-cards article {
+    flex: 1 1 20rem;
+    max-width: 24em;
+    display: flex;
+    flex-direction: column;
+}
+
+/* =============================
+   CARD STRUCTUUR
+============================= */
+
 .card-top {
-  background: #3347e6;
-
-  padding: 1.5rem;
-
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+    background: #3347e6;
+    padding: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-radius: 1rem 1rem 0 0;
+    flex-shrink: 0;
 }
 
 .card-top h3 {
-  color: white;
-
-  text-transform: uppercase;
-
-  margin-bottom: 1rem;
+    color: white;
+    text-transform: uppercase;
+    margin-top: 0;
+    margin-bottom: 1rem;
+    font-weight: normal;
+    font-size: 1.5em;
 }
 
 .card-top h3::after {
-  content: "";
-
-  display: block;
-
-  width: 7rem;
-  height: 0.1rem;
-
-  background: white;
-
-  margin: 0.4rem auto 0;
+    content: "";
+    display: block;
+    width: 7rem;
+    height: 0.1rem;
+    background: white;
+    margin: 0.4rem auto 0;
 }
 
+/* afbeelding */
+.oevertje-image {
+    width: 100%;
+    height: 10rem;
+    object-fit: cover;
+    border-radius: 0.5rem;
+    margin: 0;
+}
+
+/* =============================
+   CARD CONTENT (BELANGRIJK)
+============================= */
+
 .card-content {
-  background: #ffffff;
-
-  padding: 2rem;
-
-  flex: 1;
-
-  display: flex;
-  flex-direction: column;
+    background: #ffffff;
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    flex: 1; /* vult hoogte */
 }
 
 .card-content ul {
-  margin: 0 0 2rem;
-  padding-left: 1.2rem;
+    margin: 0 0 2rem;
+    padding-left: 1.2rem;
+    font-family: "Roboto", sans-serif;
+    line-height: 1.8;
+    flex: 1; /* zorgt dat lijst ruimte opvult */
 }
 
-.oevertjekopen {
-  width: 100%;
-}
-
-.oevertje-cards {
-  display: flex;
-  justify-content: center;
-  gap: 2.5rem;
-  flex-wrap: wrap;
-}
-
-.oevertje-cards article {
-  flex: 1 1 20rem;
-  max-width: 24em;
-}
-
-.oevertjekopen article {
-  width: 22rem;
-
-  overflow: hidden;
-
-  border-radius: 1rem;
-
-  background: white;
-
-  box-shadow:
-    0 0.5em 1.5em rgba(0,0,0,0.15);
-
-  display: flex;
-  flex-direction: column;
-}
-
-.oevertje-image {
-  width: 100%;
-
-  height: 10rem;
-
-  object-fit: cover;
-
-  border-radius: 0.5rem;
-
-  margin: 0;
-}
-
-.oevertjekopen h3 {
-  font-size: 1.5em;
-  margin-top: 0;
-  margin-bottom: 1em;
-  align-self: center;
-}
-
-.oevertjekopen ul {
-  padding-left: 1.4em;
-  margin-top: 0;
-  margin-bottom: 2em;
-  font-size: 1em;
-  line-height: 1.8;
-}
-
+/* prijs blok onderaan */
 .prijs {
-  margin-top: auto;
-
-  text-align: right;
+    margin-top: auto;
+    text-align: right;
 }
 
 .prijs p {
-  margin: 0;
-
-  color: #777;
-
-  font-weight: 700;
+    margin: 0;
+    color: #777;
+    font-weight: 700;
 }
 
 .prijs span {
-  display: block;
-
-  color: #2128B8;
-
-  font-size: 1.5rem;
-
-  font-weight: 700;
+    display: block;
+    color: #2128B8;
+    font-size: 1.5rem;
+    font-weight: 700;
 }
 
+/* button */
 .kopen-btn {
-  margin-top: 1rem;
-
-  align-self: center;
-
-  padding: 0.8rem 1.5rem;
-
-  border: none;
-
-  border-radius: 999rem;
-
-  background: #3347e6;
-
-  color: white;
-
-  cursor: pointer;
+    margin-top: 1rem;
+    align-self: center;
+    padding: 0.8rem 1.5rem;
+    border: none;
+    border-radius: 999rem;
+    background: linear-gradient(
+        to right,
+        #2128B8 0%,
+        #3554D6 100%
+    );
+    color: white;
+    cursor: pointer;
+    text-shadow:
+        0 0 10px rgba(0, 0, 0, 0.5),
+        0 0 20px rgba(0, 0, 0, 0.5);
+    box-shadow:
+        inset 0 2px 6px rgba(255, 255, 255, 0.25),
+        inset 0 -3px 8px rgba(0, 0, 0, 0.3),
+        0 8px 20px rgba(33, 40, 184, 0.4);
 }
 
+/* footer afbeelding */
 .card-footer {
-  width: 100%;
+    width: 100%;
+    display: block;
+    border-radius: 0 0 1rem 1rem;
+}
 
-  display: block;
+/* =============================
+   OUDE WRAPPERS (veilig laten staan)
+============================= */
+
+.oevertjekopen {
+    width: 100%;
+}
+
+.oevertjekopen article {
+    overflow: visible;
+    border-radius: 1rem;
+    background: white;
+    box-shadow: 0 0.5em 1.5em rgba(0,0,0,0.15);
+    display: flex;
+    flex-direction: column;
+}
+
+/* =============================
+   BASE STATE
+============================= */
+
+.oevertje-cards article {
+    display: flex;
+    flex-direction: column;
+    flex: 1 1 20rem;
+    max-width: 24em;
+
+    transition: all 0.35s ease;
+
+    filter: brightness(0.85);
+    opacity: 0.5;
+    transform: scale(0.98);
+
+    cursor: pointer;
+    position: relative;
+    z-index: 1;
+}
+
+/* =============================
+   HOVER STATE
+============================= */
+
+.oevertje-cards article:hover {
+    filter: brightness(1);
+    opacity: 1;
+    transform: scale(1.05);
+    z-index: 5;
+
+    box-shadow: 0 1.5em 3em rgba(33, 40, 184, 0.25);
+}
+
+/* =============================
+   ACTIVE STATE (JS + DEFAULT MIDDLE)
+============================= */
+
+.oevertje-cards article.active {
+    filter: brightness(1);
+    opacity: 1;
+    transform: scale(1.07);
+    z-index: 10;
+
+    box-shadow: 0 2em 4em rgba(33, 40, 184, 0.35);
+}
+
+/* =============================
+   ACTIVE + HOVER COMBINED
+============================= */
+
+.oevertje-cards article.active:hover {
+    transform: scale(1.1);
+    box-shadow: 0 2.5em 5em rgba(33, 40, 184, 0.4);
 }
 
 /* =============================
@@ -1769,8 +1887,24 @@ ONZE DONATEURS
 }
 
 .avatar {
+    width: 160px;
+    height: 160px;
+    border-radius: 50%;
+    overflow: hidden;
+    flex-shrink: 0;
+}
+
+.row1 .avatar {
     width: 180px;
     height: 180px;
+    border-radius: 50%;
+    overflow: hidden;
+    flex-shrink: 0;
+}
+
+.row3 .avatar {
+    width: 140px;
+    height: 140px;
     border-radius: 50%;
     overflow: hidden;
     flex-shrink: 0;

@@ -1,3 +1,7 @@
+// =============================
+// SCROLL ANIMATIE TIJDLIJN
+// =============================
+
 document.addEventListener("DOMContentLoaded", () => {
 
   const timelineGroups = document.querySelectorAll(".timeline-group");
@@ -29,7 +33,9 @@ document.addEventListener("DOMContentLoaded", () => {
 
 });
 
-// Navigation indicator
+// =============================
+// NAVIGATION HOVER
+// =============================
 
 const links = document.querySelectorAll(".nav-links a");
 const indicator = document.querySelector(".nav-indicator");
@@ -156,37 +162,38 @@ if (tabs.length && tabIndicator) {
 
     let activeTab = document.querySelector(".donatie-tabs p.active");
 
-    function moveTabIndicator(tab) {
-        tabIndicator.style.left = `${tab.offsetLeft}px`;
-        tabIndicator.style.width = `${tab.offsetWidth}px`;
+    // fallback als er geen active staat in HTML
+    if (!activeTab) {
+        activeTab = tabs[0];
+        activeTab.classList.add("active");
     }
 
+    function moveTabIndicator(tab) {
+        const parentRect = tab.parentElement.getBoundingClientRect();
+        const tabRect = tab.getBoundingClientRect();
+
+        const offsetX = tabRect.left - parentRect.left;
+
+        tabIndicator.style.transform = `translateX(${offsetX}px)`;
+        tabIndicator.style.width = `${tabRect.width}px`;
+    }
+
+    // init position
     moveTabIndicator(activeTab);
 
     tabs.forEach(tab => {
 
         tab.addEventListener("mouseenter", () => {
-
-            if (activeTab && tab !== activeTab) {
-                activeTab.classList.add("temp-inactive");
-            }
-
             moveTabIndicator(tab);
         });
 
         tab.addEventListener("mouseleave", () => {
-
-            if (activeTab) {
-                activeTab.classList.remove("temp-inactive");
-            }
-
             moveTabIndicator(activeTab);
         });
 
         tab.addEventListener("click", () => {
 
             activeTab.classList.remove("active");
-
             tab.classList.add("active");
 
             activeTab = tab;
@@ -195,8 +202,16 @@ if (tabs.length && tabIndicator) {
         });
 
     });
+
+    // optional: responsive fix
+    window.addEventListener("resize", () => {
+        moveTabIndicator(activeTab);
+    });
 }
 
+// =============================
+// SCROLL ANIMATIE FOTOS
+// =============================
 
 const slides = document.querySelectorAll(".slide");
 
@@ -234,3 +249,23 @@ function animateSlides() {
 
 window.addEventListener("scroll", animateSlides);
 animateSlides();
+
+// =============================
+// CARDS ANIMATIE HOVER
+// =============================
+
+const cards = document.querySelectorAll(".oevertje-cards article");
+
+// 👉 zet standaard middelste card active
+cards.forEach(c => c.classList.remove("active"));
+if (cards[1]) {
+    cards[1].classList.add("active");
+}
+
+// klik gedrag
+cards.forEach(card => {
+    card.addEventListener("click", () => {
+        cards.forEach(c => c.classList.remove("active"));
+        card.classList.add("active");
+    });
+});
