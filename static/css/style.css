@@ -2131,7 +2131,7 @@ body.evenementenpagina footer img{
   margin-bottom: 7em;
 }
 
-.betaalpagina header {
+.betaalpagina, .kies-oeverpagina header {
   margin-top : 1.2em;
   margin-left: 1.5em;
 }
@@ -2154,7 +2154,7 @@ body.evenementenpagina footer img{
   max-width: 30%;
 }
 
-.betaalpagina h1 {
+.betaalpagina, .kies-oeverpagina h1 {
   font-family: "Bjorn Halftone", sans-serif;
   font-weight: normal;
   font-size: 2.5em;
@@ -2382,3 +2382,9 @@ footer {
 .betaalmethode-option input:checked + .betaalmethode-button img {
   filter: brightness(0) invert(1);
 }
+
+
+/* ======================
+KIES JE OEVER - PAGINA
+========================*/
+
