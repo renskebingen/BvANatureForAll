@@ -180,21 +180,36 @@ p, th, td {
 }
 
 .paginaLink a {
-  display: flex;
-  align-items: center;
-  background: linear-gradient(to right, #2128B8, #3554D6);
-  padding: 0.65em 0.95em;
-  border-radius: 2em;
-  box-shadow: 0 0.15em 0.6em rgba(0,0,0,0.15);
-  transition:
-    transform 0.2s ease,
-    background 0.2s ease,
-    box-shadow 0.2s ease;
-  user-select: none;
-  min-width: 11.5em;
-  text-decoration: none;
-  color: white;
-  font-size: 0.9em;
+    margin-top: 1rem;
+    align-self: right;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    padding: 0.8rem 1.5rem;
+    border: none;
+    border-radius: 999rem;
+
+    background: linear-gradient(
+        to right,
+        #2128B8 0%,
+        #3554D6 100%
+    );
+
+    color: white;
+    text-decoration: none;
+    cursor: pointer;
+
+    text-shadow:
+        0 0 10px rgba(0, 0, 0, 0.5),
+        0 0 20px rgba(0, 0, 0, 0.5);
+
+    box-shadow:
+        inset 0 2px 6px rgba(255, 255, 255, 0.25),
+        inset 0 -3px 8px rgba(0, 0, 0, 0.3),
+        0 8px 20px rgba(33, 40, 184, 0.4);
+
+    transition: transform 0.2s ease;
 }
 
 .paginaLink a:hover {
@@ -824,7 +839,21 @@ body.oeverpagina {
     inset 0 2px 6px rgba(255, 255, 255, 0.25),
     inset 0 -3px 8px rgba(0, 0, 0, 0.3),
     0 8px 20px rgba(33, 40, 184, 0.4);
+
+  transition:
+    transform 0.2s ease,
+    filter 0.2s ease;
 }
+
+.navbar button:hover {
+  transform: translateY(-3px);
+  filter: drop-shadow(0 4px 8px rgba(0,0,0,0.15));
+}
+
+.navbar button:active {
+  transform: translateY(1px);
+}
+
 .navbar a {
   position: relative;
 
@@ -923,42 +952,62 @@ body.oeverpagina {
 }
 
 .leesmeerbtn {
-  position: absolute;
-  top: 100%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  padding: 0.8em 1.5em;
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 0.8em 1.5em;
 
-  background: linear-gradient(
-    90deg,
-    #2128B8 12%,
-    #3554D6 93%
-  );
+    display: flex;
+    align-items: center;
+    gap: 0.4em;
 
-  color: white;
-  font-size: clamp(1rem, 3vw, 1.25rem);
-  border: none;
-  border-radius: 2em;
-  cursor: pointer;
+    background: linear-gradient(
+        90deg,
+        #2128B8 12%,
+        #3554D6 93%
+    );
 
-  text-shadow:
-    0 0 10px rgba(0, 0, 0, 0.5),
-    0 0 20px rgba(0, 0, 0, 0.5);
+    color: white;
+    font-size: clamp(1rem, 3vw, 1.25rem);
+    border: none;
+    border-radius: 2em;
+    cursor: pointer;
 
-  /* Inner shadow + drop shadow */
-box-shadow:
-  inset 0 2px 6px rgba(255, 255, 255, 0.25),
-  inset 0 -3px 8px rgba(0, 0, 0, 0.3),
-  0 8px 20px rgba(33, 40, 184, 0.4);
+    text-shadow:
+        0 0 10px rgba(0, 0, 0, 0.5),
+        0 0 20px rgba(0, 0, 0, 0.5);
 
-  z-index: 2;
-  align-items: center;
+    box-shadow:
+        inset 0 2px 6px rgba(255, 255, 255, 0.25),
+        inset 0 -3px 8px rgba(0, 0, 0, 0.3),
+        0 8px 20px rgba(33, 40, 184, 0.4);
+
+    z-index: 2;
 }
 
-.leesmeerbtn img {
-  padding-left: 0.3em;
-  width: 1em;
-  height: 1em;
+.leesmeerbtn:hover {
+    transform: translate(-50%, calc(-50% - 3px));
+    filter: drop-shadow(0 4px 8px rgba(0,0,0,0.15));
+}
+
+.leesmeerbtn:active {
+    transform: translate(-50%, calc(-50% + 1px));
+}
+
+.leesmeerbtn .pijl {
+    display: inline-block;
+    width: 0.5em;
+    height: 0.5em;
+    border-right: 2.5px solid white;
+    border-bottom: 2.5px solid white;
+    transform: rotate(-45deg);
+    transition: transform 0.3s ease;
+    margin-bottom: -0.1em;
+}
+
+.leesmeerbtn:hover .pijl {
+    transform: rotate(45deg);
 }
 
 
@@ -1179,7 +1228,6 @@ box-shadow:
 ============================= */
 
 .card-top {
-    background: #3347e6;
     padding: 1.5rem;
     display: flex;
     flex-direction: column;
@@ -1254,7 +1302,6 @@ box-shadow:
     font-weight: 700;
 }
 
-/* button */
 .kopen-btn {
     margin-top: 1rem;
     align-self: center;
@@ -1268,13 +1315,28 @@ box-shadow:
     );
     color: white;
     cursor: pointer;
+
     text-shadow:
         0 0 10px rgba(0, 0, 0, 0.5),
         0 0 20px rgba(0, 0, 0, 0.5);
+
     box-shadow:
         inset 0 2px 6px rgba(255, 255, 255, 0.25),
         inset 0 -3px 8px rgba(0, 0, 0, 0.3),
         0 8px 20px rgba(33, 40, 184, 0.4);
+
+    transition:
+        transform 0.2s ease,
+        filter 0.2s ease;
+}
+
+.kopen-btn:hover {
+    transform: translateY(-3px);
+    filter: drop-shadow(0 4px 8px rgba(0,0,0,0.15));
+}
+
+.kopen-btn:active {
+    transform: translateY(1px);
 }
 
 /* footer afbeelding */
@@ -1356,6 +1418,7 @@ box-shadow:
     transform: scale(1.1);
     box-shadow: 0 2.5em 5em rgba(33, 40, 184, 0.4);
 }
+
 
 /* =============================
    KOE MET SPREEKWOLKJE EN HOE WERKT HET
@@ -1707,6 +1770,7 @@ box-shadow:
 .timeline-items .timeline-group:nth-child(odd) .timeline-content {
     grid-column: 3;
     text-align: left;
+    padding-left: 1rem;
 }
 
 /* Even stappen: tekst links, foto rechts */
@@ -1714,21 +1778,23 @@ box-shadow:
 .timeline-items .timeline-group:nth-child(even) .timeline-content {
     grid-column: 1;
     text-align: right;
-    transform: translateX(-60px); /* FIX: tekst schuift van de juiste kant in */
+    transform: translateX(-60px);
+    padding-right: 1rem;
 }
 
 .timeline-items .timeline-group:nth-child(even) .timeline-event {
     grid-column: 3;
+    transform: translateX(60px);
 }
 
 /* ANIMATIES */
 
-.timeline-group.visible .timeline-event {
+.timeline-items .timeline-group.visible .timeline-event {
     opacity: 1;
     transform: translateX(0);
 }
 
-.timeline-group.visible .timeline-content {
+.timeline-items .timeline-group.visible .timeline-content {
     opacity: 1;
     transform: translateX(0);
 }
@@ -1757,6 +1823,7 @@ box-shadow:
     .timeline-items .timeline-group:nth-child(even) .timeline-event {
         grid-column: 2;
         grid-row: 1;
+        transform: translateX(60px);
     }
 
     .timeline-items .timeline-group:nth-child(odd) .timeline-content,
@@ -1764,7 +1831,9 @@ box-shadow:
         grid-column: 2;
         grid-row: 2;
         text-align: left !important;
-        transform: translateX(60px); /* reset naar rechts voor mobile animatie */
+        padding-left: 0 !important;
+        padding-right: 0 !important;
+        transform: translateX(60px);
     }
 
     .timeline-event img {
