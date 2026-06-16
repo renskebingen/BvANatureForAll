@@ -2439,3 +2439,588 @@ footer {
   justify-content: center;
   margin: 0 8em 0 5em;
 }
+
+/* ============================================================
+   BEDRIJVENPAGINA
+============================================================ */
+
+body.bedrijvenpagina {
+  overflow-x: hidden;
+  overflow-y: auto;
+  min-height: 100vh;
+}
+
+.bedrijvenpagina h1 {
+  font-family: "Bjorn Halftone", sans-serif;
+  font-weight: normal;
+  margin: 0;
+}
+
+/* =============================
+   NAVBAR (zelfde als oever)
+============================= */
+
+.bedrijvenpagina .navbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1em 2em;
+}
+
+.bedrijvenpagina .logo img {
+  height: 4.5em;
+}
+
+.bedrijvenpagina .nav-links {
+  position: relative;
+  list-style-type: none;
+  display: flex;
+  align-items: center;
+  gap: 2em;
+  margin: 0;
+  padding: 0;
+}
+
+.bedrijvenpagina .nav-links li {
+  display: flex;
+  align-items: center;
+}
+
+.bedrijvenpagina .navbar button {
+  margin: 0;
+  padding: 0.8em 1.5em;
+  background: linear-gradient(to right, #2128B8 0%, #3554D6 100%);
+  color: white;
+  font-size: 1em;
+  border: none;
+  border-radius: 2em;
+  cursor: pointer;
+  text-shadow:
+    0 0 10px rgba(0,0,0,0.5),
+    0 0 20px rgba(0,0,0,0.5);
+  box-shadow:
+    inset 0 2px 6px rgba(255,255,255,0.25),
+    inset 0 -3px 8px rgba(0,0,0,0.3),
+    0 8px 20px rgba(33,40,184,0.4);
+  transition: transform 0.2s ease, filter 0.2s ease;
+}
+
+.bedrijvenpagina .navbar button:hover {
+  transform: translateY(-3px);
+  filter: drop-shadow(0 4px 8px rgba(0,0,0,0.15));
+}
+
+.bedrijvenpagina .navbar button:active {
+  transform: translateY(1px);
+}
+
+.bedrijvenpagina .navbar a {
+  position: relative;
+  text-decoration: none;
+  color: #000;
+  font-size: 1em;
+  padding-bottom: 0.3em;
+  transition: color 0.3s ease;
+}
+
+.bedrijvenpagina .navbar a:hover { color: #2128B8; }
+.bedrijvenpagina .navbar a.active { color: #2128B8; }
+.bedrijvenpagina .navbar a.temp-inactive { color: #000; }
+
+/* =============================
+   MOVING INDICATOR
+============================= */
+
+.bedrijvenpagina .nav-indicator {
+  position: absolute;
+  bottom: 0;
+  height: 0.15em;
+  background: #2128B8;
+  border-radius: 999em;
+  transition: left 0.3s ease, width 0.3s ease;
+}
+
+/* =============================
+   BANNER
+============================= */
+
+.bedrijvenpagina .banner-container {
+  position: relative;
+  width: 100%;
+}
+
+.bedrijvenpagina .header-image {
+  width: 100%;
+  height: 25vw;
+  object-fit: cover;
+  display: block;
+  margin-bottom: 2em;
+  border-top: 0.4em solid #2128B8;
+}
+
+.h1bedrijven {
+  position: absolute;
+  top: 30%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: white;
+  font-size: clamp(2rem, 5vw, 4rem);
+  text-align: center;
+  text-shadow:
+    0 0 10px rgba(0,0,0,0.5),
+    0 0 20px rgba(0,0,0,0.5);
+  z-index: 2;
+  font-family: "Bjorn Halftone", sans-serif;
+  font-weight: normal;
+}
+
+.bedrijvenpagina .leesmeerbtn {
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  padding: 0.8em 1.5em;
+  display: flex;
+  align-items: center;
+  gap: 0.4em;
+  background: linear-gradient(90deg, #2128B8 12%, #3554D6 93%);
+  color: white;
+  font-size: clamp(1rem, 3vw, 1.25rem);
+  border: none;
+  border-radius: 2em;
+  cursor: pointer;
+  text-shadow:
+    0 0 10px rgba(0,0,0,0.5),
+    0 0 20px rgba(0,0,0,0.5);
+  box-shadow:
+    inset 0 2px 6px rgba(255,255,255,0.25),
+    inset 0 -3px 8px rgba(0,0,0,0.3),
+    0 8px 20px rgba(33,40,184,0.4);
+  z-index: 2;
+}
+
+.bedrijvenpagina .leesmeerbtn:hover {
+  transform: translate(-50%, calc(-50% - 3px));
+  filter: drop-shadow(0 4px 8px rgba(0,0,0,0.15));
+}
+
+.bedrijvenpagina .leesmeerbtn:active {
+  transform: translate(-50%, calc(-50% + 1px));
+}
+
+.bedrijvenpagina .leesmeerbtn .pijl {
+  display: inline-block;
+  width: 0.5em;
+  height: 0.5em;
+  border-right: 2.5px solid white;
+  border-bottom: 2.5px solid white;
+  transform: rotate(-45deg);
+  transition: transform 0.3s ease;
+  margin-bottom: -0.1em;
+}
+
+.bedrijvenpagina .leesmeerbtn:hover .pijl {
+  transform: rotate(45deg);
+}
+
+/* =============================
+   MAAK HET VERSCHIL
+============================= */
+
+.bedrijvenpagina .maakhetverschil {
+  width: 100%;
+  text-align: center;
+  margin-bottom: 1em;
+}
+
+.bedrijvenpagina .maakhetverschil h2,
+.bedrijvenpagina .maakhetverschil p {
+  margin-inline: auto;
+}
+
+.bedrijvenpagina .oeverh2 {
+  font-family: "Bjorn Halftone", sans-serif;
+  font-size: 3em;
+  font-weight: normal;
+  color: #2128B8;
+  margin-top: 1.5em;
+  margin-bottom: 0.2em;
+}
+
+.bedrijvenpagina .maakhetverschil p {
+  font-family: "Roboto", sans-serif;
+  font-size: 1.1em;
+  font-weight: 700;
+}
+
+.bedrijvenpagina .maakhetverschil a {
+  font-family: "Roboto", sans-serif;
+  color: #3554D6;
+  text-decoration: underline;
+  text-underline-offset: 0.12em;
+  font-weight: 200;
+}
+
+/* =============================
+   CARDS CONTAINER
+============================= */
+
+.bedrijvenpagina .oevertjekopen {
+  width: 100%;
+}
+
+.bedrijvenpagina .oevertje-cards {
+  display: flex;
+  justify-content: center;
+  gap: 2.5rem;
+  flex-wrap: wrap;
+  align-items: stretch;
+  padding-top: 6rem;
+}
+
+.bedrijvenpagina .oevertje-cards article {
+  flex: 1 1 20rem;
+  max-width: 24em;
+  display: flex;
+  flex-direction: column;
+  overflow: visible;
+  border-radius: 1rem;
+  background: white;
+  box-shadow: 0 0.5em 1.5em rgba(0,0,0,0.15);
+  transition: all 0.35s ease;
+  filter: brightness(0.85);
+  opacity: 0.5;
+  transform: scale(0.98);
+  cursor: pointer;
+  position: relative;
+  z-index: 1;
+}
+
+.bedrijvenpagina .oevertje-cards article:hover {
+  filter: brightness(1);
+  opacity: 1;
+  transform: scale(1.05);
+  z-index: 5;
+  box-shadow: 0 1.5em 3em rgba(33,40,184,0.25);
+}
+
+.bedrijvenpagina .oevertje-cards article.active {
+  filter: brightness(1);
+  opacity: 1;
+  transform: scale(1.07);
+  z-index: 10;
+  box-shadow: 0 2em 4em rgba(33,40,184,0.35);
+}
+
+.bedrijvenpagina .oevertje-cards article.active:hover {
+  transform: scale(1.1);
+  box-shadow: 0 2.5em 5em rgba(33,40,184,0.4);
+}
+
+/* =============================
+   CARD STRUCTUUR
+============================= */
+
+.bedrijvenpagina .card-top {
+  padding: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border-radius: 1rem 1rem 0 0;
+  flex-shrink: 0;
+  background: linear-gradient(to bottom, #2128B8 0%, #3347e6 100%);
+}
+
+.bedrijvenpagina .card-top h3 {
+  color: white;
+  text-transform: uppercase;
+  margin-top: 0;
+  margin-bottom: 1rem;
+  font-weight: normal;
+  font-size: 1.5em;
+}
+
+.bedrijvenpagina .card-top h3::after {
+  content: "";
+  display: block;
+  width: 7rem;
+  height: 0.1rem;
+  background: white;
+  margin: 0.4rem auto 0;
+}
+
+.bedrijvenpagina .oevertje-image {
+  width: 100%;
+  height: 10rem;
+  object-fit: cover;
+  border-radius: 0.5rem;
+  margin: 0;
+}
+
+.bedrijvenpagina .card-content {
+  background: #ffffff;
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+}
+
+.bedrijvenpagina .card-content ul {
+  margin: 0 0 2rem;
+  padding-left: 1.2rem;
+  font-family: "Roboto", sans-serif;
+  line-height: 1.8;
+  flex: 1;
+}
+
+.bedrijvenpagina .prijs {
+  margin-top: auto;
+  text-align: right;
+}
+
+.bedrijvenpagina .prijs p {
+  margin: 0;
+  color: #777;
+  font-weight: 700;
+}
+
+.bedrijvenpagina .prijs span {
+  display: block;
+  color: #2128B8;
+  font-size: 1.5rem;
+  font-weight: 700;
+}
+
+.bedrijvenpagina .kopen-btn {
+  margin-top: 1rem;
+  align-self: center;
+  padding: 0.8rem 1.5rem;
+  border: none;
+  border-radius: 999rem;
+  background: linear-gradient(to right, #2128B8 0%, #3554D6 100%);
+  color: white;
+  cursor: pointer;
+  text-shadow:
+    0 0 10px rgba(0,0,0,0.5),
+    0 0 20px rgba(0,0,0,0.5);
+  box-shadow:
+    inset 0 2px 6px rgba(255,255,255,0.25),
+    inset 0 -3px 8px rgba(0,0,0,0.3),
+    0 8px 20px rgba(33,40,184,0.4);
+  transition: transform 0.2s ease, filter 0.2s ease;
+}
+
+.bedrijvenpagina .kopen-btn:hover {
+  transform: translateY(-3px);
+  filter: drop-shadow(0 4px 8px rgba(0,0,0,0.15));
+}
+
+.bedrijvenpagina .kopen-btn:active {
+  transform: translateY(1px);
+}
+
+.bedrijvenpagina .card-footer {
+  width: 100%;
+  display: block;
+  border-radius: 0 0 1rem 1rem;
+}
+
+.bedrijvenpagina .featured-card {
+  position: relative;
+  overflow: visible;
+}
+
+.bedrijvenpagina .meest-gekozen {
+  position: absolute;
+  top: -4rem;
+  left: 100%;
+  transform: translateX(-50%);
+  z-index: 100;
+  width: 18rem;
+}
+
+.bedrijvenpagina .meest-gekozen svg,
+.bedrijvenpagina .meest-gekozen img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+/* =============================
+   IMPACT SLIDES
+============================= */
+
+.bedrijvenpagina .slide {
+  position: sticky;
+  top: 0;
+  height: 100vh;
+  overflow: hidden;
+}
+
+.bedrijvenpagina .impact-slides .oeverh2 {
+  width: 100%;
+  text-align: center;
+  font-family: "Bjorn Halftone", sans-serif;
+  font-size: 3em;
+  font-weight: normal;
+  color: #2128B8;
+  margin-top: 3em;
+  margin-bottom: 1cm;
+}
+
+.bedrijvenpagina .slide img {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.bedrijvenpagina .slide-content {
+  position: absolute;
+  bottom: 25%;
+  max-width: 320px;
+  color: white;
+  z-index: 2;
+  opacity: 0;
+  transform: translateY(40px);
+  transition: 0.6s ease;
+}
+
+.bedrijvenpagina .slide.active .slide-content {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.bedrijvenpagina .slide-content.left {
+  left: 8%;
+  text-align: left;
+  max-width: 40em;
+}
+
+.bedrijvenpagina .slide-content.right {
+  right: 8%;
+  text-align: left;
+  max-width: 40em;
+}
+
+.bedrijvenpagina .slide-content h3 {
+  font-size: 2.5rem;
+  font-weight: normal;
+  text-transform: uppercase;
+  margin-bottom: 12px;
+  padding-bottom: 8px;
+  border-bottom: 2px solid white;
+  display: inline-block;
+}
+
+.bedrijvenpagina .slide-content p {
+  font-size: 1.6rem;
+  line-height: 1.4;
+}
+
+/* =============================
+   WAAROM / HORECA SECTIE
+============================= */
+
+.bedrijvenpagina .waarom {
+  position: relative;
+  margin-top: 6em;
+  background-color: #202689;
+  padding: 1rem 0rem 4rem 0rem;
+  color: white;
+}
+
+.bedrijvenpagina .waarom .waaromh2 {
+  text-align: center;
+  font-weight: normal;
+  margin-bottom: 1em;
+  font-family: "Bjorn Halftone", sans-serif;
+  font-size: 2em;
+}
+
+.bedrijvenpagina .waarom-content {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 7em;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 2rem;
+}
+
+.bedrijvenpagina .waarom-tekst {
+  max-width: 60em;
+}
+
+.bedrijvenpagina .waarom-tekst p {
+  margin-bottom: 1.5rem;
+  line-height: 1.6;
+}
+
+.bedrijvenpagina .foto-container {
+  position: relative;
+  display: inline-block;
+  flex-shrink: 0;
+}
+
+.bedrijvenpagina .grutto-img {
+  width: 35em;
+  height: auto;
+  display: block;
+  border-radius: 0.5em;
+}
+
+.bedrijvenpagina .contact-btn {
+  display: inline-block;
+  margin-top: 1.5rem;
+  padding: 0.8em 1.8em;
+  background: linear-gradient(to right, #2128B8 0%, #3554D6 100%);
+  color: white;
+  font-size: 1em;
+  border: none;
+  border-radius: 2em;
+  cursor: pointer;
+  text-decoration: none;
+  text-shadow:
+    0 0 10px rgba(0,0,0,0.5),
+    0 0 20px rgba(0,0,0,0.5);
+  box-shadow:
+    inset 0 2px 6px rgba(255,255,255,0.25),
+    inset 0 -3px 8px rgba(0,0,0,0.3),
+    0 8px 20px rgba(33,40,184,0.4);
+  transition: transform 0.2s ease, filter 0.2s ease;
+}
+
+.bedrijvenpagina .contact-btn:hover {
+  transform: translateY(-3px);
+  filter: drop-shadow(0 4px 8px rgba(0,0,0,0.15));
+}
+
+.bedrijvenpagina .contact-btn:active {
+  transform: translateY(1px);
+}
+
+/* =============================
+   FOOTER
+============================= */
+
+.bedrijvenpagina footer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+}
+
+.bedrijvenpagina footer .kopen-btn {
+  margin-bottom: 30px;
+  padding: 15px 30px;
+  font-size: 1.2rem;
+  cursor: pointer;
+}
+
+.bedrijvenpagina footer img {
+  width: 100%;
+  height: auto;
+  display: block;
+}

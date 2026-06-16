@@ -123,6 +123,10 @@ app.get("/bedankt", (req, res) => {
   res.render("bedankt")
 })
 
+app.get("/bedrijven", (req, res) => {
+  res.render("bedrijven")
+})
+
 app.listen(process.env.PORT, () => {
   console.log("Server running")
 })
