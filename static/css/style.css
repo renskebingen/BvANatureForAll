@@ -2407,9 +2407,35 @@ footer {
    BEDANKT - PAGINA
 ============================= */
 
-.certificaat {
+.bedanktpagina {
   overflow-x: hidden;
   overflow-y: auto;
   min-height: 100vh;
   margin-bottom: 7em;
+}
+
+.bedanktLogo{
+   height: 4em;
+  width: auto;
+}
+
+.bedanktProgressbar{
+   position: absolute;
+  top: 2em; 
+  right: -0.7em;
+  height: 2em;
+  width: 100%;
+}
+
+.bedanktpagina header {
+  margin-top : 1.2em;
+  margin-left: 1.5em;
+}
+
+.bedanktpagina main {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: center;
+  margin: 0 8em 0 5em;
 }
