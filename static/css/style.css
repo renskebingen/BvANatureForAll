@@ -2138,7 +2138,7 @@ body.evenementenpagina footer img{
   margin-bottom: 7em;
 }
 
-.betaalpagina, .kies-oeverpagina, .bedanktpagina header {
+.betaalpagina header {
   margin-top : 1.2em;
   margin-left: 1.5em;
 }
@@ -2161,7 +2161,7 @@ body.evenementenpagina footer img{
   max-width: 30%;
 }
 
-.betaalpagina, .kies-oeverpagina, .bedanktpagina h1 {
+.betaalpagina h1 {
   font-family: "Bjorn Halftone", sans-serif;
   font-weight: normal;
   font-size: 2.5em;
