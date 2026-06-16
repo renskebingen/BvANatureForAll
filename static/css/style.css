@@ -2161,7 +2161,7 @@ body.evenementenpagina footer img{
   max-width: 30%;
 }
 
-.betaalpagina h1 {
+.betaalpagina, .kies-oeverpagina h1 {
   font-family: "Bjorn Halftone", sans-serif;
   font-weight: normal;
   font-size: 2.5em;
@@ -2394,6 +2394,47 @@ footer {
 /* ======================
     KIES JE OEVER - PAGINA
 ========================*/
+.kies-oeverpagina {
+  overflow-x: hidden;
+  overflow-y: auto;
+  min-height: 100vh;
+
+  margin-bottom: 7em;
+}
+
+body.kies-oeverpagina header {
+  margin-top: 1.2em;
+  margin-left: 1.5em;
+  margin-bottom: 3em;
+}
+  
+
+.kies-oeverpagina header p {
+  font-family: "Roboto", sans-serif;
+  text-align: center;
+}
+
+.voorbedrijven p {
+  font-weight: 600;
+  
+}
+
+.voorbedrijven a {
+    font-family: "Roboto", sans-serif;
+    color: #3554D6;
+    text-decoration: underline;
+    text-underline-offset: 0.12em;
+    font-weight: 200;
+}
+
+
+.kiesoeverinfo {
+  margin: 0 22em 0 22em;
+}
+
+.kies-oeverpagina footer {
+  margin-top: 5em;
+}
 
 /* ======================
    BEDANKT - PAGINA
