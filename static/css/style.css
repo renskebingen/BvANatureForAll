@@ -2138,7 +2138,7 @@ body.evenementenpagina footer img{
   margin-bottom: 7em;
 }
 
-.betaalpagina, .kies-oeverpagina header {
+.betaalpagina, .kies-oeverpagina, .bedanktpagina header {
   margin-top : 1.2em;
   margin-left: 1.5em;
 }
@@ -2161,7 +2161,7 @@ body.evenementenpagina footer img{
   max-width: 30%;
 }
 
-.betaalpagina, .kies-oeverpagina h1 {
+.betaalpagina, .kies-oeverpagina, .bedanktpagina h1 {
   font-family: "Bjorn Halftone", sans-serif;
   font-weight: normal;
   font-size: 2.5em;
@@ -2396,15 +2396,12 @@ KIES JE OEVER - PAGINA
 ========================*/
 
 /* ======================
-   BETAALPAGINA BEDANKT
+   BEDANKT - PAGINA
 ============================= */
 
-.bedanktBericht{
-  margin-top : 1.2em;
-  margin-left: 1.5em;
-} 
-
-.bedanktLogo{
-  height: auto;
-  width: 1em;
+.certificaat {
+  overflow-x: hidden;
+  overflow-y: auto;
+  min-height: 100vh;
+  margin-bottom: 7em;
 }
