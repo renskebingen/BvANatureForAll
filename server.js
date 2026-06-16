@@ -115,6 +115,10 @@ app.get("/betaalpagina", (req, res) => {
   res.render("betaalpagina")
 })
 
+app.get("/bedankt", (req, res) => {
+  res.render("bedankt")
+})
+
 app.listen(process.env.PORT, () => {
   console.log("Server running")
 })

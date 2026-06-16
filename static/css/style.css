@@ -2217,3 +2217,17 @@ body.evenementenpagina footer img{
   width: 25em;
 }
 
+/* ======================
+   BETAALPAGINA BEDANKT
+============================= */
+
+.bedanktPagina header{
+  display: flex;
+  flex-direction: column;
+
+}
+
+.bedanktLogo{
+  height: auto;
+  width: 1em;
+}
