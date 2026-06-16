@@ -258,7 +258,13 @@ p, th, td {
   height: auto;
   max-height: none;
   pointer-events: none;
-  background: #244b9f;
+  background: linear-gradient(
+    to bottom,
+    #1E3881,
+    #213990,
+    #2B3EC7,
+    #3554D6
+  );
   border-radius: 1.9em;
   box-shadow:
     0 0.75em 2em rgba(0,0,0,0.3),
