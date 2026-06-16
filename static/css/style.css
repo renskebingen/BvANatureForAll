@@ -2432,10 +2432,111 @@ KIES JE OEVER - PAGINA
   margin-left: 1.5em;
 }
 
-.bedanktpagina main {
+.bedanktMain{
   display: flex;
-  flex-direction: row;
-  align-items: flex-start;
+  flex-direction: column;
+  align-items: center;
   justify-content: center;
   margin: 0 8em 0 5em;
+}
+
+.bedanktpagina h1 {
+  font-family: "Bjorn Halftone", sans-serif;
+  font-weight: normal;
+  font-size: 4em;
+  text-align: center;
+  color: #2128B8;
+  margin-bottom: 0em;
+  margin-top: 1em;
+}
+
+.bedanktpagina p:first-of-type {
+  color: #2128B8;
+  font-family: "Roboto", sans-serif;
+  font-size: 0.8em;
+  font-style: italic;
+  max-width: 50em;
+  text-align: center;
+  margin-bottom: 0em;
+}
+
+.bedanktpagina p:last-of-type {
+  color: #2128B8;
+  font-family: "Roboto", sans-serif;
+  font-size: 0.8em;
+  font-style: italic;
+  max-width: 50em;
+  text-align: center;
+  margin-top: 0em;
+}
+
+.certificaatAfbeeldingen {
+    display: grid;
+    place-items: center;
+    margin-top: 8em;
+}
+
+.certificaatAfbeeldingen img {
+    grid-area: 1 / 1;
+    width: 600px;
+}
+
+.certificaatAfbeeldingen img:first-child {
+    filter: grayscale(100%);
+    transform: translate(80px, 40px);
+    z-index: 1;
+}
+
+.certificaatAfbeeldingen img:last-child {
+    transform: rotate(-10deg);
+    z-index: 2;
+}
+
+.terugNaarMapKnop {
+    position: fixed;
+    right: 2rem;
+    bottom: 2rem;
+    z-index: 1000;
+}
+
+.terugNaarMapKnop button {
+  align-self: flex-end;
+  margin: 0;
+  padding: 0.8em 1.5em;
+
+  background: linear-gradient(
+    to right,
+    #2128B8 0%,
+    #3554D6 100%
+  );
+
+  color: white;
+  font-size: 1em;
+
+  border: none;
+  border-radius: 2em;
+
+  cursor: pointer;
+
+  text-shadow:
+    0 0 10px rgba(0, 0, 0, 0.5),
+    0 0 20px rgba(0, 0, 0, 0.5);
+
+  box-shadow:
+    inset 0 2px 6px rgba(255, 255, 255, 0.25),
+    inset 0 -3px 8px rgba(0, 0, 0, 0.3),
+    0 8px 20px rgba(33, 40, 184, 0.4);
+
+  transition:
+    transform 0.2s ease,
+    filter 0.2s ease;
+}
+
+.terugNaarMapKnop button:hover {
+  transform: translateY(-3px);
+  filter: drop-shadow(0 4px 8px rgba(0,0,0,0.15));
+}
+
+.terugNaarMapKnop button:active {
+  transform: translateY(1px);
 }
