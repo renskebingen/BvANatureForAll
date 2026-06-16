@@ -224,7 +224,7 @@ p, th, td {
 
 .panel {
   position: absolute;
-  inset: 1em 1em 2em 1em;
+  inset: 0.8em 0.8em 0.8em 0.8em;
   width: auto;
   height: auto;
   max-height: none;
@@ -238,6 +238,14 @@ p, th, td {
   pointer-events: none;
   transform: translateY(2em);
   transition: transform 0.2s ease;
+
+  overflow-x: hidden;  /* SVG niet horizontaal scrollen */
+  overflow-y: auto;
+  scrollbar-width: none; 
+}
+
+.panel::-webkit-scrollbar {
+  display: none;              /* Chrome/Safari */
 }
 
 .panel.open {
@@ -249,7 +257,7 @@ p, th, td {
 .stylingborderpanel {
   position: absolute;
   top: 1.2em;
-  bottom: 0;
+  bottom: 1.2em;
   left: 1.2em;
   color: #2128B8;
   width: 27em;
@@ -388,11 +396,10 @@ p, th, td {
 .panel > svg {
   position: absolute;
   bottom: -1px;
-  left: -1px;
-  width: calc(100% + 2px);
+  width: 100%;              /* was: calc(100% + 2px) */
+  left: 0;
   height: 5em;
 }
-
 
 /* =============================
    CLOSE BUTTON
