@@ -111,6 +111,10 @@ app.get("/evenementen", (req, res) => {
   res.render("evenementen")
 })
 
+app.get("/kies-oeverpagina", (req, res) => {
+  res.render("kies-oeverpagina")
+})
+
 app.get("/betaalpagina", (req, res) => {
   res.render("betaalpagina")
 })
