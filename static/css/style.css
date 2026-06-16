@@ -2221,11 +2221,10 @@ body.evenementenpagina footer img{
    BETAALPAGINA BEDANKT
 ============================= */
 
-.bedanktPagina header{
-  display: flex;
-  flex-direction: column;
-
-}
+.bedanktBericht{
+  margin-top : 1.2em;
+  margin-left: 1.5em;
+} 
 
 .bedanktLogo{
   height: auto;
