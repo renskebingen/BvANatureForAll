@@ -11,14 +11,157 @@
         <img src="/images/logobva.png" alt="Logo De Boeren van Amstel" class="logo">
         <img src="/images/progress2.svg" alt="Progress bar" class="progressbar">
         <h1>Kies hier je Oevertje</h1>
-        <p>Controleer of de keuze die je op de vorige pagina hebt gemaakt nog correct staat weergegeven. Heb je nog geen keuze gemaakt? Selecteer dan hieronder de optie die het beste bij jou past.
-        </p>
-        <p>voor bedrijven <a href="/views/bedrijvenpagina">klik hier</a></p>
+        
+            <p class="kiesoeverinfo">Controleer of de keuze die je op de vorige pagina hebt gemaakt nog correct staat weergegeven. Heb je nog geen keuze gemaakt? Selecteer dan hieronder de optie die het beste bij jou past.
+            </p>
+            <div class="voorbedrijven">
+                <p>voor bedrijven <a href="/views/bedrijvenpagina">klik hier</a></p>
+            </div>
+        
     </header>
     <main>
-        
-    </main>
+        <section>
+            <div class="donatie-tabs">
 
+                <p>Jaarlijks</p>
+                <p class="active">Maandelijks</p>
+                <p>Eenmalig</p>
+
+                <span class="tab-indicator"></span>
+
+            </div>
+
+            <div class="oevertje-cards">
+
+                <article>
+
+                    <div class="card-top">
+
+                        <h3>Weide beschermer</h3>
+
+                        <img src="/images/laagstebedrag.png"
+                            alt="Oevertje"
+                            class="oevertje-image">
+
+                    </div>
+
+                    <div class="card-content">
+
+                        <ul>
+                            <li>Zorg voor 5 vierkante meter aan biodiversiteit</li>
+                            <li>Ontvang digitaal jou eigen persoonlijke certificaat en ontvang digitaal jou eigen persoonlijke certificaat</li>
+                            <li>Kom bovenaan te staan op onze donateurs pagina</li>
+                            <li>Ontvang digitaal een update over jouw donatie</li>
+                        </ul>
+
+                        <div class="prijs">
+                            <p>PER MAAND:</p>
+                            <span>€5,-</span>
+                        </div>
+
+                        <button class="kopen-btn">
+                            Oevertje kopen
+                        </button>
+
+                    </div>
+
+                    <img src="/images/footer.png"
+                        alt="footer"
+                        class="card-footer">
+
+                </article>
+
+
+                <article class="featured-card">
+
+                    <div class="meest-gekozen">
+                        <img src="/images/meestgekozen.svg" alt="Meest gekozen">
+                    </div>
+
+                    <div class="card-top">
+
+                        <h3>Veldwachter</h3>
+
+                        <img src="/images/middenbedrag.png"
+                            alt="Oevertje"
+                            class="oevertje-image">
+
+                    </div>
+
+                    <div class="card-content">
+
+                        <ul>
+                            <li>Zorg voor 2 vierkante meter aan biodiversiteit</li>
+                            <li>Ontvang digitaal jou eigen persoonlijke certificaat</li>
+                            <li>Kom tussen onze mede donateurs te staan op onze site</li>
+                            <li>Ontvang digitaal een update over jouw donatie</li>
+                        </ul>
+
+                        <div class="prijs">
+                            <p>PER MAAND:</p>
+                            <span>€10,-</span>
+                        </div>
+
+                        <button class="kopen-btn">
+                            Oevertje kopen
+                        </button>
+
+                    </div>
+
+                    <img src="/images/footer.png"
+                        alt="footer"
+                        class="card-footer">
+
+                </article>
+
+                <article>
+
+                    <div class="card-top">
+
+                        <h3>Supporter</h3>
+
+                        <img src="/images/eigenbedrag.png"
+                            alt="Oevertje"
+                            class="oevertje-image">
+
+                    </div>
+
+                    <div class="card-content">
+
+                        <ul>
+                            <li>Ontvang een digitale supporter badge</li>
+                            <li>Vanaf €50 ontvang je een persoonlijke bedankmail van ons team</li>
+                            <li>Kom tussen onze mede donateurs te staan op onze site</li>
+                            <li>Ontvang digitaal een update over jouw donatie</li>
+                        </ul>
+
+                        <div class="prijs">
+                            <p>PER MAAND:</p>
+                            <span>€-,-</span>
+                        </div>
+
+                        <button class="kopen-btn">
+                            Oevertje kopen
+                        </button>
+
+                    </div>
+
+                    <img src="/images/footer.png"
+                        alt="footer"
+                        class="card-footer">
+
+                </article>
+
+            </div>
+
+        </section>
+    </main>
+    <footer>
+        <a href="/views/oevertjekopen.ejs" class="button-left">← Terug</a>
+        <a href="/views/betaalpagina"  class="button-right">Naar betalen →</a>
+    </footer>
+
+    <script src="/js/tijdlijn.js"></script>
     <script src="/js/app.js"></script>
 </body>
 </html>
