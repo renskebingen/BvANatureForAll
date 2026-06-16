@@ -82,25 +82,33 @@
         <section class="betalingsgegevens">
             <h2>Betaalmethode</h2>
             <div class="betaalmethode">
-                <input type="radio" id="ideal" name="betalingsmethode" value="ideal">
-                <label for="ideal">iDEAL</label>
-                <input type="radio" id="creditcard" name="betalingsmethode" value="creditcard">
-                <label for="creditcard">Creditcard</label>
+                <label class="betaalmethode-option">
+                    <input type="radio" name="betaalmethode" value="ideal" checked>
+                    <span class="betaalmethode-button"><img src="/images/ideal.png" alt="iDEAL">iDEAL</span>
+                </label>
+                <label class="betaalmethode-option">
+                    <input type="radio" name="betaalmethode" value="creditcard">
+                    <span class="betaalmethode-button"><img src="/images/creditcard.svg" alt="Creditcard">Creditcard</span>
+                </label>
+                <label class="betaalmethode-option">
+                    <input type="radio" name="betaalmethode" value="paypal">
+                    <span class="betaalmethode-button"><img src="/images/paypal.png" alt="PayPal">PayPal</span>
+                </label>
             </div>
             <form>
-                <div class="form-group">
+                <div class="form-group grootveld">
                     <label for="cardholder">Naam kaarthouder</label>
                     <input type="text" id="cardholder" name="cardholder" required>
                 </div>  
-                <div class="form-group">
+                <div class="form-group grootveld">
                     <label for="cardnumber">Kaartnummer</label>
                     <input type="text" id="cardnumber" name="cardnumber" required>
                 </div>
-                <div class="form-group">
+                <div class="form-group kleinveld">
                     <label for="expirydate">Vervaldatum</label>
                     <input type="text" id="expirydate" name="expirydate" placeholder="MM/JJ" required>
                 </div>
-                <div class="form-group">
+                <div class="form-group kleinveld">
                     <label for="cvv">CVV</label>
                     <input type="text" id="cvv" name="cvv" required>
                 </div>
@@ -109,8 +117,8 @@
 
     </main>
     <footer>
-        <a href="#" class="button">← Terug</a>
-        <a href="#"  class="button">Voltooien →</a>
+        <a href="#" class="button-left">← Terug</a>
+        <a href="#"  class="button-right">Voltooien →</a>
 
     </footer>
 
