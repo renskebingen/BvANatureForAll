@@ -191,10 +191,10 @@ const cardsData = {
             title: "Weide beschermer",
             img: "/images/laagstebedrag.png",
             items: [
-                "Zorg voor 5 vierkante meter aan biodiversiteit",
+                "Zorg voor 20 vierkante meter aan biodiversiteit",
                 "Ontvang digitaal jou eigen persoonlijke certificaat",
                 "Kom bovenaan te staan op onze donateurs pagina",
-                "Ontvang digitaal een update over jouw donatie"
+                "Ontvang digitaal een update over jouw donatie die te delen is met vrienden"
             ],
             prijsLabel: "PER JAAR:",
             prijs: "€50,-"
@@ -204,10 +204,10 @@ const cardsData = {
             title: "Veldwachter",
             img: "/images/middenbedrag.png",
             items: [
-                "Zorg voor 2 vierkante meter aan biodiversiteit",
+                "Zorg voor 10 vierkante meter aan biodiversiteit",
                 "Ontvang digitaal jou eigen persoonlijke certificaat",
                 "Kom tussen onze mede donateurs te staan op onze site",
-                "Ontvang digitaal een update over jouw donatie"
+                "Ontvang digitaal een update over jouw donatie die te delen is met vrienden"
             ],
             prijsLabel: "PER JAAR:",
             prijs: "€100,-"
@@ -220,7 +220,7 @@ const cardsData = {
                 "Ontvang een digitale supporter badge",
                 "Vanaf €50 ontvang je een persoonlijke bedankmail van ons team",
                 "Kom tussen onze mede donateurs te staan op onze site",
-                "Ontvang digitaal een update over jouw donatie"
+                "Ontvang digitaal een update over jouw donatie die te delen is met vrienden"
             ],
             prijsLabel: "PER JAAR:",
             prijs: "€-,-"
@@ -233,12 +233,12 @@ const cardsData = {
             img: "/images/laagstebedrag.png",
             items: [
                 "Zorg voor 5 vierkante meter aan biodiversiteit",
-                "Ontvang digitaal jou eigen persoonlijke certificaat en ontvang digitaal jou eigen persoonlijke certificaat",
+                "Ontvang digitaal jou eigen persoonlijke certificaat",
                 "Kom bovenaan te staan op onze donateurs pagina",
-                "Ontvang digitaal een update over jouw donatie"
+                "Ontvang digitaal een update over jouw donatie die te delen is met vrienden"
             ],
             prijsLabel: "PER MAAND:",
-            prijs: "€5,-"
+            prijs: "€10,-"
         },
         {
             featured: true,
@@ -248,10 +248,10 @@ const cardsData = {
                 "Zorg voor 2 vierkante meter aan biodiversiteit",
                 "Ontvang digitaal jou eigen persoonlijke certificaat",
                 "Kom tussen onze mede donateurs te staan op onze site",
-                "Ontvang digitaal een update over jouw donatie"
+                "Ontvang digitaal een update over jouw donatie die te delen is met vrienden"
             ],
             prijsLabel: "PER MAAND:",
-            prijs: "€10,-"
+            prijs: "€5,-"
         },
         {
             featured: false,
@@ -259,9 +259,9 @@ const cardsData = {
             img: "/images/eigenbedrag.png",
             items: [
                 "Ontvang een digitale supporter badge",
-                "Vanaf €50 ontvang je een persoonlijke bedankmail van ons team",
+                "Vanaf €250 ontvang je een persoonlijke bedankmail van ons team",
                 "Kom tussen onze mede donateurs te staan op onze site",
-                "Ontvang digitaal een update over jouw donatie"
+                "Ontvang digitaal een update over jouw donatie die te delen is met vrienden"
             ],
             prijsLabel: "PER MAAND:",
             prijs: "€-,-"
@@ -276,10 +276,10 @@ const cardsData = {
                 "Zorg voor 5 vierkante meter aan biodiversiteit",
                 "Ontvang digitaal jou eigen persoonlijke certificaat",
                 "Kom bovenaan te staan op onze donateurs pagina",
-                "Ontvang digitaal een update over jouw donatie"
+                "Ontvang digitaal een update over jouw donatie die te delen is met vrienden"
             ],
             prijsLabel: "EENMALIG:",
-            prijs: "€15,-"
+            prijs: "€50,-"
         },
         {
             featured: true,
@@ -289,10 +289,10 @@ const cardsData = {
                 "Zorg voor 2 vierkante meter aan biodiversiteit",
                 "Ontvang digitaal jou eigen persoonlijke certificaat",
                 "Kom tussen onze mede donateurs te staan op onze site",
-                "Ontvang digitaal een update over jouw donatie"
+                "Ontvang digitaal een update over jouw donatie die te delen is met vrienden"
             ],
             prijsLabel: "EENMALIG:",
-            prijs: "€50,-"
+            prijs: "€15,-"
         },
         {
             featured: false,
@@ -300,9 +300,9 @@ const cardsData = {
             img: "/images/eigenbedrag.png",
             items: [
                 "Ontvang een digitale supporter badge",
-                "Vanaf €50 ontvang je een persoonlijke bedankmail van ons team",
+                "Vanaf €100 ontvang je een persoonlijke bedankmail van ons team",
                 "Kom tussen onze mede donateurs te staan op onze site",
-                "Ontvang digitaal een update over jouw donatie"
+                "Ontvang digitaal een update over jouw donatie die te delen is met vrienden"
             ],
             prijsLabel: "EENMALIG:",
             prijs: "€-,-"
