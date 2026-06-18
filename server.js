@@ -115,6 +115,10 @@ app.get("/kies-oeverpagina", (req, res) => {
   res.render("kies-oeverpagina")
 })
 
+app.get("/kies-oeverbedrijven", (req, res) => {
+  res.render("kies-oeverbedrijven")
+})
+
 app.get("/betaalpagina", (req, res) => {
   res.render("betaalpagina")
 })
