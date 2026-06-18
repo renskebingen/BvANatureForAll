@@ -3,7 +3,7 @@ require("dotenv").config()
 const express = require("express")
 const mongoose = require("mongoose")
 
-const Farm = require("./models/Farm")
+const Farm = require("./models/farm")
 const Verkooppunt = require("./models/Verkooppunt")
 const boerenData = require("./static/data/boeren.json")
 
