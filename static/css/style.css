@@ -2240,9 +2240,17 @@ body.evenementenpagina footer img{
   box-shadow: 0 0 0 4px rgba(33,40,184,0.12);
 }
 
-.logo {
+.logo  {
   height: 4em;
   width: auto;
+  pointer-events: auto;
+}
+
+.logo a {
+  position: absolute;
+  height: 4em;
+  width: auto;
+  pointer-events: auto;
 }
 
 .progressbar {
