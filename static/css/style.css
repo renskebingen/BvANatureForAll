@@ -1246,6 +1246,7 @@ body.oeverpagina {
     align-items: center;
     border-radius: 1rem 1rem 0 0;
     flex-shrink: 0;
+    background: linear-gradient(to bottom, #2128B8 0%, #3554D6 100%);
 }
 
 .card-top h3 {
@@ -2338,6 +2339,15 @@ footer {
 .button-right {
   position: absolute;
   right: 7em;
+}
+
+.button-left:hover, .button-right:hover {
+  transform: translateY(-3px);
+  filter: drop-shadow(0 4px 8px rgba(0,0,0,0.15));
+}
+
+.button-left:active, .button-right:active {
+  transform: translateY(1px);
 }
 
 .betaalmethode {
