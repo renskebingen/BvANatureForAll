@@ -1318,6 +1318,19 @@ body.oeverpagina {
 .prijs {
     margin-top: auto;
     text-align: right;
+    position: relative;
+    padding-top: 0.7rem; /* ruimte boven de lijn */
+}
+
+.prijs::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 40%;
+    height: 3px;
+    background: #2128B8; /* dun licht lijntje */
+    border-radius: 50em;
 }
 
 .prijs p {
