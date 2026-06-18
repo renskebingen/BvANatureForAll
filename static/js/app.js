@@ -52,29 +52,32 @@ L.rectangle(
 /* -----------------------------
    POLYGON GROUPS
 ------------------------------*/
-const allPolygons = L.featureGroup().addTo(map)
-const amstellandGroup = L.featureGroup().addTo(map)
+const allPolygons = L.featureGroup().addTo(map);
+const amstellandGroup = L.featureGroup().addTo(map);
 
 
 /* -----------------------------
    LOAD POLYGONS
 ------------------------------*/
-function loadPolygon(url, style, group = allPolygons) {
+function loadPolygon(url, style, naam, group = allPolygons) {
 
   fetch(url)
     .then(res => res.json())
     .then(data => {
 
-      L.geoJSON(data, {
-
+      const polygon = L.geoJSON(data, {
         style,
-
         interactive: false
+      }).addTo(group);
 
-      }).addTo(group)
+      polygon.bindTooltip(naam, {
+        permanent: true,
+        direction: 'center',
+        className: 'polder-tooltip'
+      }).openTooltip();
 
     })
-    .catch(err => console.error(url, err))
+    .catch(err => console.error(url, err));
 
 }
 
@@ -85,12 +88,13 @@ function loadPolygon(url, style, group = allPolygons) {
 loadPolygon(
   '/poldergebieden/rondehoep.geojson',
   {
-    color: 'green',
+    color: '#3d63e1',
     weight: 3,
-    fillColor: '#51af4c',
+    fillColor: '#3d63e133',
     fillOpacity: 0.2
-  }
-)
+  },
+  'Ronde Hoep'
+);
 
 
 /* -----------------------------
@@ -99,12 +103,13 @@ loadPolygon(
 loadPolygon(
   '/poldergebieden/bovenkerkerpolder.geojson',
   {
-    color: 'blue',
+    color: '#3d63e1',
     weight: 3,
-    fillColor: '#4f8cff',
+    fillColor: '#3d63e133',
     fillOpacity: 0.2
-  }
-)
+  },
+  'Bovenkerkerpolder'
+);
 
 
 /* -----------------------------
@@ -113,12 +118,13 @@ loadPolygon(
 loadPolygon(
   '/poldergebieden/middenpolder.geojson',
   {
-    color: 'orange',
+    color: '#3d63e1',
     weight: 3,
-    fillColor: '#ff9800',
+    fillColor: '#3d63e133',
     fillOpacity: 0.2
-  }
-)
+  },
+  'Middenpolder'
+);
 
 
 /* -----------------------------
@@ -127,9 +133,9 @@ loadPolygon(
 loadPolygon(
   '/amstelland/amstelland.geojson',
   {
-    color: '#7b1fa2',
+    color: '#1E3881',
     weight: 4,
-    fillColor: '#ba68c8',
+    fillColor: '#1e388164',
     fillOpacity: 0.15
   },
   amstellandGroup

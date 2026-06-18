@@ -163,17 +163,17 @@ const tabIndicator = document.querySelector(".tab-indicator");
 // =============================
 
 const tabThemes = {
-    0: { // Jaarlijks - blauw naar lichtblauw
+    0: {
         cardTop: "linear-gradient(to bottom, #3554D6 0%, #1A90D9 100%)",
         btnGradient: "linear-gradient(to right, #2128B8 0%, #3554D6 100%)",
         btnShadow: "inset 0 2px 6px rgba(255,255,255,0.25), inset 0 -3px 8px rgba(0,0,0,0.3), 0 8px 20px rgba(33, 40, 184, 0.4)"
     },
-    1: { // Maandelijks - blauw (origineel)
+    1: {
         cardTop: "linear-gradient(to bottom, #2128B8 0%, #3347e6 100%)",
         btnGradient: "linear-gradient(to right, #2128B8 0%, #3554D6 100%)",
         btnShadow: "inset 0 2px 6px rgba(255,255,255,0.25), inset 0 -3px 8px rgba(0,0,0,0.3), 0 8px 20px rgba(33, 40, 184, 0.4)"
     },
-    2: { // Eenmalig - blauw naar ijsblauw
+    2: {
         cardTop: "linear-gradient(to bottom, #3554D6 0%, #BFE5FD 100%)",
         btnGradient: "linear-gradient(to right, #2128B8 0%, #3554D6 100%)",
         btnShadow: "inset 0 2px 6px rgba(255,255,255,0.25), inset 0 -3px 8px rgba(0,0,0,0.3), 0 8px 20px rgba(33, 40, 184, 0.4)"
@@ -185,7 +185,7 @@ const tabThemes = {
 // =============================
 
 const cardsData = {
-    0: [ // Jaarlijks
+    0: [
         {
             featured: false,
             title: "Weide beschermer",
@@ -197,7 +197,7 @@ const cardsData = {
                 "Ontvang digitaal een update over jouw donatie die te delen is met vrienden"
             ],
             prijsLabel: "PER JAAR:",
-            prijs: "€50,-"
+            prijs: "€100,-"
         },
         {
             featured: true,
@@ -210,7 +210,7 @@ const cardsData = {
                 "Ontvang digitaal een update over jouw donatie die te delen is met vrienden"
             ],
             prijsLabel: "PER JAAR:",
-            prijs: "€100,-"
+            prijs: "€50,-"
         },
         {
             featured: false,
@@ -226,7 +226,7 @@ const cardsData = {
             prijs: "€-,-"
         }
     ],
-    1: [ // Maandelijks
+    1: [
         {
             featured: false,
             title: "Weide beschermer",
@@ -267,7 +267,7 @@ const cardsData = {
             prijs: "€-,-"
         }
     ],
-    2: [ // Eenmalig
+    2: [
         {
             featured: false,
             title: "Weide beschermer",
@@ -316,43 +316,56 @@ function buildCards(tabIndex) {
 
     container.innerHTML = "";
 
-    cardsData[tabIndex].forEach((data, i) => {
+    cardsData[tabIndex].forEach((data) => {
         const article = document.createElement("article");
-        if (data.featured) article.classList.add("featured-card");
+
+        if (data.featured) {
+            article.classList.add("featured-card");
+        }
 
         article.innerHTML = `
             ${data.featured ? `
                 <div class="meest-gekozen">
                     <img src="/images/meestgekozen.svg" alt="Meest gekozen">
-                </div>` : ""}
+                </div>
+            ` : ""}
+
             <div class="card-top" style="background: ${theme.cardTop};">
                 <h3>${data.title}</h3>
                 <img src="${data.img}" alt="Oevertje" class="oevertje-image">
             </div>
+
             <div class="card-content">
                 <ul>
                     ${data.items.map(item => `<li>${item}</li>`).join("")}
                 </ul>
+
                 <div class="prijs">
                     <p>${data.prijsLabel}</p>
                     <span>${data.prijs}</span>
                 </div>
-                <button class="kopen-btn" style="background: ${theme.btnGradient}; box-shadow: ${theme.btnShadow};">
+
+                <button
+                    class="kopen-btn"
+                    onclick="window.location.href='/betaalpagina?pakket=${encodeURIComponent(data.title)}'">
                     Oevertje kopen
                 </button>
             </div>
+
             <img src="/images/footer.png" alt="footer" class="card-footer">
         `;
 
         container.appendChild(article);
     });
 
-    // herstel active state op middelste kaart
     const cards = document.querySelectorAll(".oevertje-cards article");
-    cards.forEach(c => c.classList.remove("active"));
-    if (cards[1]) cards[1].classList.add("active");
 
-    // klik gedrag opnieuw koppelen
+    cards.forEach(c => c.classList.remove("active"));
+
+    if (cards[1]) {
+        cards[1].classList.add("active");
+    }
+
     cards.forEach(card => {
         card.addEventListener("click", () => {
             cards.forEach(c => c.classList.remove("active"));
@@ -368,20 +381,25 @@ function buildCards(tabIndex) {
 if (tabs.length && tabIndicator) {
 
     let activeTab = document.querySelector(".donatie-tabs p.active");
-    let activeTabIndex = 1; // standaard maandelijks
+    let activeTabIndex = 1;
 
     if (!activeTab) {
         activeTab = tabs[0];
         activeTab.classList.add("active");
         activeTabIndex = 0;
     } else {
-        tabs.forEach((t, i) => { if (t === activeTab) activeTabIndex = i; });
+        tabs.forEach((t, i) => {
+            if (t === activeTab) {
+                activeTabIndex = i;
+            }
+        });
     }
 
     function moveTabIndicator(tab) {
         const parentRect = tab.parentElement.getBoundingClientRect();
         const tabRect = tab.getBoundingClientRect();
         const offsetX = tabRect.left - parentRect.left;
+
         tabIndicator.style.transform = `translateX(${offsetX}px)`;
         tabIndicator.style.width = `${tabRect.width}px`;
     }
@@ -397,8 +415,10 @@ if (tabs.length && tabIndicator) {
         tab.addEventListener("click", () => {
             activeTab.classList.remove("active");
             tab.classList.add("active");
+
             activeTab = tab;
             activeTabIndex = index;
+
             moveTabIndicator(activeTab);
             buildCards(activeTabIndex);
         });
@@ -475,4 +495,16 @@ cards.forEach(card => {
 
 document.querySelector('.leesmeerbtn').addEventListener('click', () => {
     document.querySelector('.waarom').scrollIntoView({ behavior: 'smooth' });
+});
+
+// =============================
+// HORECA BUTTON
+// =============================
+
+document.querySelector('a[href="#horecawaarom"]').addEventListener('click', function(e) {
+    e.preventDefault();
+
+    document.getElementById('horecawaarom').scrollIntoView({
+        behavior: 'smooth'
+    });
 });
